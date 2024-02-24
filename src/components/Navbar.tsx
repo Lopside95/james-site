@@ -7,7 +7,7 @@ const Navbar = () => {
   const activePage = (path: string) => router.pathname === path;
 
   return (
-    <div className="flex w-3/5 py-2 px-1 justify-between ">
+    <div className="flex w-3/5 py-2 px-1 justify-between fixed top-0 bg-base-bg z-50  ">
       <div>
         <Button
           className={`text-lg pr-10 hover:underline-offset-[6px] ${
@@ -19,22 +19,36 @@ const Navbar = () => {
         </Button>
       </div>
       <div>
-        <Button className="text-lg hover:underline-offset-[6px]" variant="link">
-          <Link href="https://github.com/Lopside95">Github</Link>
-        </Button>
-        <Button className="text-lg hover:underline-offset-[6px]" variant="link">
-          <Link href="https://www.linkedin.com/in/james-wallington-2a122bb6/">
-            LinkedIn
-          </Link>
-        </Button>
         <Button
-          className={`text-lg pr-10 hover:underline-offset-[6px] ${
+          className={`text-lg  hover:underline-offset-[6px] ${
             activePage("/writing") ? "underline underline-offset-[6px]   " : ""
           }`}
           variant="link"
         >
           <Link href="/writing">Writing</Link>
         </Button>
+        <Button
+          className={`text-lg  hover:underline-offset-[6px] ${
+            activePage("/cv") ? "underline underline-offset-[6px]   " : ""
+          }`}
+          variant="link"
+        >
+          <Link href="/cv">CV</Link>
+        </Button>
+        <Button
+          className="text-lg hover:underline-offset-[6px] pr-5"
+          variant="link"
+        >
+          <Link href="https://github.com/Lopside95">Github</Link>
+        </Button>
+        {/* <Button
+          className="text-lg hover:underline-offset-[6px] pr-5"
+          variant="link"
+        >
+          <Link href="https://www.linkedin.com/in/james-wallington-2a122bb6/">
+            LinkedIn
+          </Link>
+        </Button> */}
       </div>
     </div>
   );

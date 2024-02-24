@@ -22,8 +22,8 @@ const Intro = () => {
           <CardTitle className="text-3xl">{`Hi, I'm James.`}</CardTitle>
         </CardHeader>
         <CardContent className="text-xl">
-          {`I'm a frontend developer and have just finished a six month internship at Regulars, 
-          where I helped to develop web and mobile components.`}
+          {`I'm a frontend developer interning at Regulars, 
+          where I'm helping to build the company's service through the development of mobile and web components.`}
         </CardContent>
       </Card>
     </div>
@@ -31,15 +31,3 @@ const Intro = () => {
 };
 
 export default Intro;
-
-{
-  /* <NavItems /> */
-}
-{
-  /* <article className="w-3/5 h-52">
-          <h1 className="text-3xl">{`Hi, I'm James`}</h1>
-          <h2 className="text-2xl">{`I'm a frontend developer and have just finished a six month internship at Regulars, 
-            where I helped to develop web and mobile components. `}</h2>
-        </article>
-        <article className=""></article> */
-}

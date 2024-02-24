@@ -32,8 +32,7 @@ const GeneralInfo = () => {
           , I created and told stories. For a brief while I made furniture –
           only as a hobby but the pieces were good enough for me and I still use
           them. Now, as a developer, I want to build websites and apps. But
-          unlike my furniture, I want other people to use them – and enjoy using
-          them.
+          unlike my furniture, I want other people to use them.
         </CardContent>
       </Card>
     </div>

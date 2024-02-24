@@ -9,12 +9,10 @@ import {
 
 const TechStack = () => {
   return (
-    <div className="align-middle w-full ">
+    <div className="align-middle w-full py-5 ">
       <Card className="w-full  bg-transparent border-none text-base-txtClr">
         <CardHeader>
           <CardTitle className="text-3xl pl-3 -mb-4">{`Tech stack`}</CardTitle>
-          {/* <CardDescription>
-        </CardDescription> */}
         </CardHeader>
         <CardContent className="pl-10">
           <dl>
@@ -22,8 +20,7 @@ const TechStack = () => {
             <li>TypeScript</li>
             <li>Next.js</li>
             <li>Tailwind CSS</li>
-            <li>JavaScript</li>
-            <li>Git</li>{" "}
+            <li>Git</li> {/* <li>JavaScript</li> */}
             {/* <li>CSS</li>
             <li>HTML</li>` */}
           </dl>
