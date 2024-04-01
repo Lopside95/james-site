@@ -22,8 +22,16 @@ const Intro = () => {
           <CardTitle className="text-3xl">{`Hi, I'm James.`}</CardTitle>
         </CardHeader>
         <CardContent className="text-xl">
-          {`I'm a frontend developer interning at Regulars, 
-          where I'm helping to build the company's service through the development of mobile and web components.`}
+          I&apos;m a frontend developer at{" "}
+          <Link
+            href="https://www.getregulars.com/"
+            className="underline underline-offset-4"
+            target="_blank"
+          >
+            Regulars
+          </Link>
+          , where I&apos;m helping to build the company&apos;s service through
+          the development of mobile and web components.
         </CardContent>
       </Card>
     </div>

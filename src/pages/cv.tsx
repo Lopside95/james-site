@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import Education from "../components/cv/education";
 import Experience from "../components/cv/experience";
+import Footer from "../components/footer";
 
 const CV = () => {
   return (
@@ -14,6 +15,7 @@ const CV = () => {
           <Education />
         </article>
       </section>
+      <Footer />
     </div>
   );
 };

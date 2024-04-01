@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 const config = {
   darkMode: ["class"],
@@ -79,7 +80,18 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    // plugin(function ({ addUtilities, theme, e }) {
+    //   const newUtils = {
+    //     ".focus-underline": {
+    //       outline: "none",
+    //       textDecoration: "underline",
+    //     },
+    //   };
+    //   addUtilities(newUtils, ["focus"]);
+    // }),
+  ],
 } satisfies Config;
 
 export default config;

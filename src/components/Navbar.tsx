@@ -15,31 +15,43 @@ const Navbar = () => {
           }`}
           variant="link"
         >
-          <Link href="/">Home</Link>
+          <Link tabIndex={-1} href="/" prefetch={true}>
+            Home
+          </Link>
         </Button>
       </div>
       <div>
-        <Button
-          className={`text-lg  hover:underline-offset-[6px] ${
-            activePage("/writing") ? "underline underline-offset-[6px]   " : ""
-          }`}
-          variant="link"
-        >
-          <Link href="/writing">Writing</Link>
-        </Button>
         <Button
           className={`text-lg  hover:underline-offset-[6px] ${
             activePage("/cv") ? "underline underline-offset-[6px]   " : ""
           }`}
           variant="link"
         >
-          <Link href="/cv">CV</Link>
+          <Link tabIndex={-1} href="/cv">
+            CV
+          </Link>
+        </Button>
+        <Button
+          className={`text-lg  hover:underline-offset-[6px] focus:outline-none focus:disabled ${
+            activePage("/writing") ? "underline underline-offset-[6px]   " : ""
+          }`}
+          variant="link"
+        >
+          <Link className="" tabIndex={-1} href="/writing">
+            Writing
+          </Link>
         </Button>
         <Button
           className="text-lg hover:underline-offset-[6px] pr-5"
           variant="link"
         >
-          <Link href="https://github.com/Lopside95">Github</Link>
+          <Link
+            tabIndex={-1}
+            target="_blank"
+            href="https://github.com/Lopside95"
+          >
+            GitHub
+          </Link>
         </Button>
         {/* <Button
           className="text-lg hover:underline-offset-[6px] pr-5"

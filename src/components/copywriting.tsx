@@ -17,10 +17,8 @@ import {
 import { useRef, useState } from "react";
 
 const Copywriting = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-
   return (
-    <div className="py-5 flex flex-col h-full bg-transparent">
+    <div className="py-5 px-1 flex flex-col h-full bg-transparent">
       <Card className="w-full bg-transparent border-none text-base-txtClr">
         <CardHeader>
           <CardTitle className="text-xl">
@@ -29,7 +27,7 @@ const Copywriting = () => {
           </CardTitle>
         </CardHeader>
         <CardContent className="text-2xl">
-          But I do like writing (code included)
+          But I do like writing (copy as well as code)
         </CardContent>
       </Card>
 
@@ -48,15 +46,20 @@ const Copywriting = () => {
             className="  w-[30rem] flex justify-evenly bg-base-bg shadow-none  text-lg text-base-txtClr -mt-12 border-none "
           >
             <Link
-              className="pl-3  underline underline-offset-4"
+              className="pl-3 underline underline-offset-4"
               href="https://www.monkeyland.co.za/page/monkeyland-in-a-nutshell"
+              target="_blank"
             >
+              {/* <a target="_blank" rel="noopener noreferrer">
+
+              </a> */}
               Monkeyland in a nutshell
             </Link>
             |
             <Link
               className="pr-3 underline underline-offset-4"
               href="https://www.monkeyland.co.za/page/our-vision"
+              target="_blank"
             >
               Our vision
             </Link>

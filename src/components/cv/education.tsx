@@ -15,7 +15,7 @@ const Education = () => {
     <div className="w-full flex flex-col">
       <h1 className="text-2xl pl-5 py-5 ">Education</h1>
 
-      <Card className="flex justify-between   border-none ">
+      <Card className="flex flex-col justify-between   border-none ">
         <div className="flex">
           <CardHeader className="self-start ">
             <CardTitle className="text-2xl ">
@@ -29,14 +29,14 @@ const Education = () => {
             </CardDescription>
           </CardHeader>
         </div>
-        <CardContent className="text-lg w-1/2 self-center">
+        <CardContent className="text-lg w-full self-center">
           Red & Yellow focusses on practical experience and, alongside technical
           know-how, the school emphasises the development of distinctly human
           traits like creativity and empathy.
         </CardContent>
       </Card>
 
-      <Card className="flex justify-between border-none py-10">
+      <Card className="flex flex-col justify-between border-none py-10">
         <div className="flex">
           <CardHeader>
             <CardTitle className="text-2xl">Diploma in Copywriting</CardTitle>
@@ -48,7 +48,7 @@ const Education = () => {
             </CardDescription>
           </CardHeader>
         </div>
-        <CardContent className="text-lg w-1/2">
+        <CardContent className="text-lg w-full">
           Passed with merit and two of my{" "}
           <ProjectLink href={"/writing"}>projects</ProjectLink> were finalists
           in the Loeries’ student competitions, which recognises and awards

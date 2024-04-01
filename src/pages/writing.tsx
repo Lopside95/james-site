@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import Copywriting from "../components/copywriting";
+import Footer from "../components/footer";
 import NavItems from "../components/navItems";
 
 export default function Writing() {
@@ -9,6 +10,7 @@ export default function Writing() {
       <div className="w-3/5 pt-8">
         <Copywriting />
       </div>
+      <Footer />
     </div>
   );
 }

@@ -12,7 +12,7 @@ const TechStack = () => {
     <div className="align-middle w-full py-5 ">
       <Card className="w-full  bg-transparent border-none text-base-txtClr">
         <CardHeader>
-          <CardTitle className="text-3xl pl-3 -mb-4">{`Tech stack`}</CardTitle>
+          <CardTitle className="text-3xl pl-3 -mb-4">Stack</CardTitle>
         </CardHeader>
         <CardContent className="pl-10">
           <dl>
@@ -20,7 +20,25 @@ const TechStack = () => {
             <li>TypeScript</li>
             <li>Next.js</li>
             <li>Tailwind CSS</li>
-            <li>Git</li> {/* <li>JavaScript</li> */}
+            <li>Git</li>
+            <li>Responsive design</li>
+            {/* <li>JavaScript</li> */}
+            {/* <li>CSS</li>
+            <li>HTML</li>` */}
+          </dl>
+        </CardContent>
+      </Card>
+      <Card className="w-full  bg-transparent border-none text-base-txtClr">
+        <CardHeader>
+          <CardTitle className="text-3xl pl-3 -mb-4">Skills</CardTitle>
+        </CardHeader>
+        <CardContent className="pl-10">
+          <dl>
+            <li>Brand and campaign strategy</li>
+            <li>Writing</li>
+            <li>Holistic design</li>
+
+            {/* <li>JavaScript</li> */}
             {/* <li>CSS</li>
             <li>HTML</li>` */}
           </dl>
