@@ -33,12 +33,12 @@ const Navbar = () => {
         </Button>
         <Button
           className={`text-lg  hover:underline-offset-[6px] focus:outline-none focus:disabled ${
-            activePage("/writing") ? "underline underline-offset-[6px]   " : ""
+            activePage("/work") ? "underline underline-offset-[6px]   " : ""
           }`}
           variant="link"
         >
-          <Link className="" tabIndex={-1} href="/writing">
-            Writing
+          <Link className="" tabIndex={-1} href="/work">
+            Work
           </Link>
         </Button>
         <Button

@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+
 import Link from "next/link";
 import NavItems from "./navItems";
 import { Button } from "./ui/button";
@@ -19,7 +21,7 @@ import { useRef, useState } from "react";
 const Copywriting = () => {
   return (
     <div className="py-5 px-1 flex flex-col h-full bg-transparent">
-      <Card className="w-full bg-transparent border-none text-base-txtClr">
+      {/* <Card className="w-full bg-transparent border-none text-base-txtClr">
         <CardHeader>
           <CardTitle className="text-xl">
             <p>{`My feelings toward long walks on the beach are varied and inconclusive.`}</p>
@@ -29,7 +31,7 @@ const Copywriting = () => {
         <CardContent className="text-2xl">
           But I do like writing (copy as well as code)
         </CardContent>
-      </Card>
+      </Card> */}
 
       <div className="flex items-center  w-full justify-evenly ">
         <Popover>
