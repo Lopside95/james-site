@@ -53,34 +53,9 @@ const Navbar = () => {
             GitHub
           </Link>
         </Button>
-        {/* <Button
-          className="text-lg hover:underline-offset-[6px] pr-5"
-          variant="link"
-        >
-          <Link href="https://www.linkedin.com/in/james-wallington-2a122bb6/">
-            LinkedIn
-          </Link>
-        </Button> */}
       </div>
     </div>
   );
 };
 
 export default Navbar;
-// import Link from "next/link";
-// import { Button, ButtonProps } from "./ui/button";
-
-// const Navbar = () => {
-//   return (
-//     <div className="flex mb-5 border bg-black border-black w-full justify-center gap-3">
-//       <Button>
-//         <Link href="/">Home</Link>
-//       </Button>
-//       <Button>
-//         <Link href="/writing">Writing</Link>
-//       </Button>
-//     </div>
-//   );
-// };
-
-// export default Navbar;

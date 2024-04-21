@@ -1,8 +1,9 @@
-/* eslint-disable @next/next/no-img-element */
-
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import { Card, CardContent, CardHeader } from "./ui/card";
+import { Button } from "./ui/button";
 
 const HeroBuilder = () => {
   const router = useRouter();
@@ -11,18 +12,37 @@ const HeroBuilder = () => {
   return (
     <div className="flex-col gap-5 flex pt-10 w-full">
       <div className="flex  items-center justify-evenly">
-        <Link href="/">
-          <h1 className="text-3xl">Hero Builder</h1>
-        </Link>
-        <img
-          src="/hero-builder.png"
-          className={`cursor-pointer object-contain w-80 pr-2 h-full hover:ease-in-out transition-all duration-300 hover:brightness-[.2] ${
-            isHover && "brightness-[.2]"
-          } `}
+        <Card className=" border-none w-1/2">
+          <CardHeader>
+            {" "}
+            <Link
+              className="text-3xl text-center"
+              href="https://herobuilder.vercel.app/"
+              target="_blank"
+            >
+              Hero Builder
+            </Link>
+          </CardHeader>
+          <CardContent>
+            <p className="text-xl">
+              A full stack web app built with TypeScript, Next.js, tRPC and
+              Prisma.
+            </p>
+            <p className="text-xl">
+              I’ve used MongoDB as the database and the project also involves
+              Zod and React Hook Form.
+            </p>
+          </CardContent>
+        </Card>
+        <Image
+          width={500}
+          height={500}
           alt=""
-          onClick={() => router.push("/cv")}
+          className="w-1/3"
+          src="/snapHero.png"
         />
       </div>
+
       <div className="items-center justify-evenly flex">
         <h1 className="text-3xl">Regulars Work (?)</h1>
         <div className="w-80 h-80 bg-gray-800"></div>
@@ -31,23 +51,14 @@ const HeroBuilder = () => {
   );
 };
 export default HeroBuilder;
-// <div className="relative flex text-transparent items-center justify-center   focus-within:text-base-txtClr hover:text-base-txtClr hover:ease-in-out duration-300 h-3/4   ">
-//     <Link
-//       href="/cv"
-//       className="absolute left-1/2 z-10 -translate-x-1/2 top-1/2 text-2xl brightness-125 focus-within:outline-none -translate-y-1/2  "
-//       onMouseEnter={() => setIsHover(true)}
-//       onMouseLeave={() => setIsHover(false)}
-//     >
-//       Hero Builder
-//       <br />
-//       <span className="text-sm">*Fix typos</span>
-//     </Link>
-// <img
-//   src="/hero-builder.png"
-//   className={`cursor-pointer object-contain w-11/12 pr-2 h-full hover:ease-in-out transition-all duration-300 hover:brightness-[.2] ${
-//     isHover && "brightness-[.2]"
-//   } `}
-//   alt=""
-//   onClick={() => router.push("/cv")}
-// />
-//   </div>
+
+{
+  /* <img
+          src="/hero-builder.png"
+          className={`cursor-pointer object-contain w-80 pr-2 h-full hover:ease-in-out transition-all duration-300 hover:brightness-[.2] ${
+            isHover && "brightness-[.2]"
+          } `}
+          alt=""
+          onClick={() => router.push("https://herobuilder.vercel.app/")}
+        /> */
+}

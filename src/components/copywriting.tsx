@@ -16,23 +16,10 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { useRef, useState } from "react";
 
 const Copywriting = () => {
   return (
     <div className="py-5 px-1 flex flex-col h-full bg-transparent">
-      {/* <Card className="w-full bg-transparent border-none text-base-txtClr">
-        <CardHeader>
-          <CardTitle className="text-xl">
-            <p>{`My feelings toward long walks on the beach are varied and inconclusive.`}</p>
-            <p>{`It’s been several years since I watched a horror film and I don't like olives.`}</p>
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="text-2xl">
-          But I do like writing (copy as well as code)
-        </CardContent>
-      </Card> */}
-
       <div className="flex items-center  w-full justify-evenly ">
         <Popover>
           <PopoverTrigger className=" text-xl pr-5 ">
@@ -52,9 +39,6 @@ const Copywriting = () => {
               href="https://www.monkeyland.co.za/page/monkeyland-in-a-nutshell"
               target="_blank"
             >
-              {/* <a target="_blank" rel="noopener noreferrer">
-
-              </a> */}
               Monkeyland in a nutshell
             </Link>
             |

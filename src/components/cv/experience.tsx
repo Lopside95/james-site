@@ -21,12 +21,6 @@ const Experience = () => {
           <CardHeader>
             <CardTitle className="text-2xl">
               Junior frontend developer
-              {/* <HoverCard>
-                <HoverCardTrigger> intern</HoverCardTrigger>
-                <HoverCardContent>
-                  My current title is &lsquo;Software Engineer&rsquo;
-                </HoverCardContent>
-              </HoverCard> */}
             </CardTitle>
             <CardDescription className="text-xl">Regulars</CardDescription>
             <CardDescription className="text-base-txtClr text-md">
@@ -34,7 +28,6 @@ const Experience = () => {
             </CardDescription>
           </CardHeader>
         </div>
-
         <CardContent className="text-lg ">
           I have helped to develop the company’s website and mobile components.
           During this time I gained experience with TypeScript, Next.js and
@@ -53,7 +46,6 @@ const Experience = () => {
             <CardTitle className="text-2xl">
               Consulting strategist and copywriter
             </CardTitle>
-
             <CardDescription className="text-xl">
               Serious Moonlight Consulting
             </CardDescription>
@@ -62,7 +54,6 @@ const Experience = () => {
             </CardDescription>
           </CardHeader>
         </div>
-
         <CardContent className="text-lg">
           I have freelanced for Serious Moonlight Consulting, developing
           strategies, concepts and content for about three years. What often
@@ -71,13 +62,13 @@ const Experience = () => {
           aspects and asides. But at the end of the day, it’s a story, one which
           should be simple and cohesive and finds meaning in empty spaces.
         </CardContent>
-        <CardContent className="text-lg">
+        {/* <CardContent className="text-lg">
           {" "}
           Serious Moonlight’s philosophy – as well as its name, which David
           Bowie fans might recognise – comes from his song <i>Let’s Dance</i>.
           ‘Sway through the crowd to an empty place’, which is what the company
           does for its clients and itself.
-        </CardContent>
+        </CardContent> */}
       </Card>
     </div>
   );

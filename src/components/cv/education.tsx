@@ -50,8 +50,8 @@ const Education = () => {
         </div>
         <CardContent className="text-lg w-full">
           Passed with merit and two of my{" "}
-          <ProjectLink href={"/writing"}>projects</ProjectLink> were finalists
-          in the Loeries’ student competitions, which recognises and awards
+          <ProjectLink href={"/work"}>projects</ProjectLink> were finalists in
+          the Loeries’ student competitions, which recognises and awards
           advertising agencies and campaigns.
         </CardContent>
       </Card>
