@@ -1,5 +1,5 @@
 import type { AppProps } from "next/app";
-import "../globals.css"; // Import global styles here
+import "../globals.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;

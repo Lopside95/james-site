@@ -22,9 +22,6 @@ const TechStack = () => {
             <li>Tailwind CSS</li>
             <li>Git</li>
             <li>Responsive design</li>
-            {/* <li>JavaScript</li> */}
-            {/* <li>CSS</li>
-            <li>HTML</li>` */}
           </dl>
         </CardContent>
       </Card>
@@ -37,10 +34,6 @@ const TechStack = () => {
             <li>Brand and campaign strategy</li>
             <li>Writing</li>
             <li>Holistic design</li>
-
-            {/* <li>JavaScript</li> */}
-            {/* <li>CSS</li>
-            <li>HTML</li>` */}
           </dl>
         </CardContent>
       </Card>

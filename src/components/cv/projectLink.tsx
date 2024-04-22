@@ -8,21 +8,11 @@ function ProjectLink(props: { children: React.ReactNode; href: string }) {
     color: router.asPath === props.href ? "red" : "black",
   };
 
-  // | React.KeyboardEvent<HTMLInputElement>
-  // | React.KeyboardEvent<HTMLDivElement>
-  // | KeyboardEvent,
-
   const handleClick = (e: React.MouseEvent) => {
     e.preventDefault();
     router.push(props.href).then(() => {
       const storyEl = document.querySelector("#storyEl");
       storyEl?.scrollIntoView({ block: "end" });
-
-      // setTimeout(() => {
-      // const storyEl = document.querySelector("#storyEl");
-
-      //   storyEl?.scrollIntoView({ behavior: "smooth", block: "center" });
-      // }, 300);
     });
   };
 

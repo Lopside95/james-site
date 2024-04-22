@@ -58,7 +58,7 @@ const Copywriting = () => {
         />
       </div>
 
-      <div className="flex flex-col h-full w-full ">
+      <div className="flex flex-col h-full py-10 w-full ">
         <h1 className="text-xl w-11/12 pl-5">
           As a creative and perceptive person with an appreciation for
           well-developed concepts, as well as the finer details of writing, I
@@ -72,6 +72,36 @@ const Copywriting = () => {
           it is an invaluable tool.
         </h1>
       </div>
+      <div className="flex items-center  w-full justify-evenly gap-16 ">
+        <Popover>
+          <PopoverTrigger className=" text-xl pr-5 ">
+            <p>
+              <span className="underline underline-offset-8">
+                Zero-error Warehousing
+              </span>{" "}
+              - DSV
+            </p>
+          </PopoverTrigger>
+          <PopoverContent
+            style={{ animationDuration: "3s" }}
+            className="  w-[30rem] flex justify-evenly bg-base-bg shadow-none  text-lg text-base-txtClr -mt-12 border-none "
+          >
+            <img src="/drones-writing.png" alt="" className="w-96" />
+          </PopoverContent>
+        </Popover>
+        <img
+          src="/drones.png"
+          alt=""
+          className="w-80 object-contain self-center py-8"
+        />
+      </div>
+      <h1 className="text-xl w-11/12 pl-5 py-10">
+        As one of the top global transport and logistics companies, much of the
+        work I’ve done for DSV, through Serious Moonlight Consulting, focusses
+        on technology and innovation. This ad showcases their use of drones as
+        they progress towards ‘zero-error warehousing’.
+      </h1>
+
       <div className="flex items-center w-full justify-evenly text-2xl ">
         <p>There&apos;s Always Time For A Short Story</p>
 

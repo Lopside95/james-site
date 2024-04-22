@@ -35,16 +35,16 @@ const Experience = () => {
           other developers and using git for version control.
         </CardContent>
         <CardContent className="text-lg">
-          Regulars is a company geared towards SME’s with B2B and B2C digital
-          solutions and strategies that offer a new way for businesses to engage
-          with and retain customers.
+          Regulars is a company geared towards restaurants with B2B and B2C
+          digital solutions and strategies that offer a new way for businesses
+          to engage with and retain customers.
         </CardContent>
       </Card>
       <Card className="flex flex-col justify-between border-none py-10">
         <div className="">
           <CardHeader>
             <CardTitle className="text-2xl">
-              Consulting strategist and copywriter
+              Freelance strategist and copywriter
             </CardTitle>
             <CardDescription className="text-xl">
               Serious Moonlight Consulting
@@ -62,13 +62,6 @@ const Experience = () => {
           aspects and asides. But at the end of the day, it’s a story, one which
           should be simple and cohesive and finds meaning in empty spaces.
         </CardContent>
-        {/* <CardContent className="text-lg">
-          {" "}
-          Serious Moonlight’s philosophy – as well as its name, which David
-          Bowie fans might recognise – comes from his song <i>Let’s Dance</i>.
-          ‘Sway through the crowd to an empty place’, which is what the company
-          does for its clients and itself.
-        </CardContent> */}
       </Card>
     </div>
   );
