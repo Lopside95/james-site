@@ -24,7 +24,7 @@ const Experience = () => {
             </CardTitle>
             <CardDescription className="text-xl">Regulars</CardDescription>
             <CardDescription className="text-base-txtClr text-md">
-              September 2023 - current
+              September 2023 - present
             </CardDescription>
           </CardHeader>
         </div>
@@ -50,7 +50,7 @@ const Experience = () => {
               Serious Moonlight Consulting
             </CardDescription>
             <CardDescription className="text-base-txtClr text-md">
-              July 2020 – December 2023
+              July 2020 – present
             </CardDescription>
           </CardHeader>
         </div>

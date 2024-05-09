@@ -6,7 +6,6 @@ import Intro from "../components/Intro";
 import GeneralInfo from "../components/generalInfo";
 import { useState } from "react";
 import { useRouter } from "next/router";
-
 import Footer from "../components/footer";
 
 export default function Home() {
