@@ -15,7 +15,7 @@ const Navbar = () => {
           }`}
           variant="link"
         >
-          <Link tabIndex={-1} href="/" prefetch={true}>
+          <Link tabIndex={-1} href="/">
             Home
           </Link>
         </Button>
