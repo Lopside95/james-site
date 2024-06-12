@@ -1,5 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-
 import Navbar from "../components/Navbar";
 import TechStack from "../components/techStack";
 import Intro from "../components/Intro";
@@ -9,10 +7,6 @@ import { useRouter } from "next/router";
 import Footer from "../components/footer";
 
 export default function Home() {
-  const router = useRouter();
-
-  const [isHover, setIsHover] = useState<boolean>();
-
   return (
     <div className="w-full items-center align-middle flex flex-col min-h-screen bg-base-bg text-base-txtClr ">
       <Navbar />

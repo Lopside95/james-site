@@ -16,10 +16,53 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import Image from "next/image";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { useEffect, useState } from "react";
 
 const Copywriting = () => {
   return (
     <div className="py-5 px-1 flex flex-col h-full bg-transparent">
+      <div className="flex items-center  w-full justify-between px-14 ">
+        <Dialog>
+          <DialogTrigger>
+            <p className="text-xl">
+              <span className="underline underline-offset-8">Cycling</span> -
+              DSV
+            </p>
+          </DialogTrigger>
+          <DialogContent className="w-full max-w-3xl">
+            <Image
+              src="/bikeAdText.png"
+              width={1000}
+              height={1000}
+              alt="Bicycle ad text"
+              className="w-full"
+            />
+          </DialogContent>
+        </Dialog>
+        <Image
+          src="/bikeAd.png"
+          alt="DSV bicycle ad"
+          className="w-80 object-contain self-center py-8"
+          width={500}
+          height={500}
+        />
+      </div>
+      <h1 className="text-xl w-11/12 pl-5 py-10">
+        The value of logistics lies in what it allows us to do with the
+        equipment. DSV is actively involved in cycling and cycling projects,
+        such as the DSV_SHIFT_ACADEMY, which is a youth program dedicate to
+        developing up-and-coming riders with riding skills as well as life
+        skills.
+      </h1>
       <div className="flex items-center  w-full justify-evenly ">
         <Popover>
           <PopoverTrigger className=" text-xl pr-5 ">
@@ -51,9 +94,11 @@ const Copywriting = () => {
             </Link>
           </PopoverContent>
         </Popover>
-        <img
+        <Image
+          width={500}
+          height={500}
           src="/monkeyland.jpg"
-          alt=""
+          alt="Monkeyland iamge"
           className="w-80 object-contain self-center py-8"
         />
       </div>
@@ -72,27 +117,32 @@ const Copywriting = () => {
           it is an invaluable tool.
         </h1>
       </div>
-      <div className="flex items-center  w-full justify-evenly gap-16 ">
-        <Popover>
-          <PopoverTrigger className=" text-xl pr-5 ">
-            <p>
+      <div className="flex items-center  w-full justify-between px-14 ">
+        <Dialog>
+          <DialogTrigger>
+            <p className="text-xl">
               <span className="underline underline-offset-8">
-                Zero-error Warehousing
+                Zero-error warehousing
               </span>{" "}
               - DSV
             </p>
-          </PopoverTrigger>
-          <PopoverContent
-            style={{ animationDuration: "3s" }}
-            className="  w-[30rem] flex justify-evenly bg-base-bg shadow-none  text-lg text-base-txtClr -mt-12 border-none "
-          >
-            <img src="/drones-writing.png" alt="" className="w-96" />
-          </PopoverContent>
-        </Popover>
-        <img
+          </DialogTrigger>
+          <DialogContent className="w-full max-w-xl">
+            <Image
+              src="/drones-writing.png"
+              width={500}
+              height={500}
+              alt="Drones ad text"
+              className="w-full"
+            />
+          </DialogContent>
+        </Dialog>
+        <Image
           src="/drones.png"
-          alt=""
+          alt="DSV drones ad"
           className="w-80 object-contain self-center py-8"
+          width={500}
+          height={500}
         />
       </div>
       <h1 className="text-xl w-11/12 pl-5 py-10">

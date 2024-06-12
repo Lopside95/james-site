@@ -9,7 +9,7 @@ import {
 
 const TechStack = () => {
   return (
-    <div className="align-middle w-full py-5 ">
+    <div className="align-middle w-full py-5 text-xl flex ">
       <Card className="w-full  bg-transparent border-none text-base-txtClr">
         <CardHeader>
           <CardTitle className="text-3xl pl-3 -mb-4">Stack</CardTitle>
@@ -20,8 +20,10 @@ const TechStack = () => {
             <li>TypeScript</li>
             <li>Next.js</li>
             <li>Tailwind CSS</li>
+            <li>tRPC</li>
+            <li>Prisma ORM</li>
+            <li>MongoDB</li>
             <li>Git</li>
-            <li>Responsive design</li>
           </dl>
         </CardContent>
       </Card>
@@ -31,9 +33,12 @@ const TechStack = () => {
         </CardHeader>
         <CardContent className="pl-10">
           <dl>
+            <li>Information architecture</li>
             <li>Brand and campaign strategy</li>
+            <li>Problem solving</li>
             <li>Writing</li>
             <li>Holistic design</li>
+            <li>Creativity</li>
           </dl>
         </CardContent>
       </Card>
