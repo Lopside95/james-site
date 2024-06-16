@@ -17,7 +17,7 @@ import NavItems from "./navItems";
 const Intro = () => {
   return (
     <div className=" py-5 flex h-full bg-transparent ">
-      <Card className="w-full bg-transparent border-none text-base-txtClr">
+      <Card className="w-full bg-transparent border-none ">
         <CardHeader>
           <CardTitle className="text-3xl">{`Hi, I'm James.`}</CardTitle>
         </CardHeader>

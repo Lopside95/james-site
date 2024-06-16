@@ -32,7 +32,7 @@ const Footer = () => {
   };
 
   return (
-    <div className="flex flex-col text-base-txtClr w-3/5 pt-10 pb-5 gap-5 pl-7 px-1 justify-end bg-base-bg  ">
+    <div className="flex flex-col text-base-txtClr w-3/5 pt-10 pb-5 gap-5 pl-7 px-1 justify-end  ">
       <h1 className="text-xl">Contact</h1>
       <div className="flex">
         <HoverCard openDelay={200}>

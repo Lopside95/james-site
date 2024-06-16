@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 export default function NavItems() {
   return (
-    <div className="flex  w-1/3 border border-base-txtClr pr-30">
+    <div className="flex  w-1/3 border  pr-30">
       <Button className="text-lg" variant="link">
         <Link href="https://github.com/Lopside95">Github</Link>
       </Button>
