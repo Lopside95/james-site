@@ -2,7 +2,7 @@ import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/components/ui/hover-card";
+} from "@/src/components/ui/hover-card";
 import {
   Card,
   CardContent,
@@ -17,17 +17,13 @@ const Experience = () => {
     <div className="w-full flex flex-col">
       <h1 className="text-2xl pl-5 py-5 ">Experience</h1>
       <Card className="flex flex-col justify-between border-none">
-        <div className="">
-          <CardHeader>
-            <CardTitle className="text-2xl">
-              Junior frontend developer
-            </CardTitle>
-            <CardDescription className="text-xl">Regulars</CardDescription>
-            <CardDescription className=" text-md">
-              September 2023 - present
-            </CardDescription>
-          </CardHeader>
-        </div>
+        <CardHeader>
+          <CardTitle className="">Junior frontend developer</CardTitle>
+          <CardDescription className="">Regulars</CardDescription>
+          <CardDescription className="text-base-txtClr text-md">
+            September 2023 - present
+          </CardDescription>
+        </CardHeader>
         <CardContent className="text-lg ">
           I have helped to develop the company’s website and mobile components.
           During this time I gained experience with TypeScript, Next.js and
@@ -49,7 +45,7 @@ const Experience = () => {
             <CardDescription className="text-xl">
               Serious Moonlight Consulting
             </CardDescription>
-            <CardDescription className=" text-md">
+            <CardDescription className=" text-base-txtClr text-md">
               July 2020 – present
             </CardDescription>
           </CardHeader>

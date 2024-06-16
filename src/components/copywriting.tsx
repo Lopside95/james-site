@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 
 import Link from "next/link";
-import NavItems from "./navItems";
 import { Button } from "./ui/button";
 import {
   Card,
@@ -15,7 +14,7 @@ import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover";
+} from "@/src/components/ui/popover";
 import Image from "next/image";
 import {
   Dialog,
@@ -24,13 +23,13 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
+} from "@/src/components/ui/dialog";
 import { useEffect, useState } from "react";
 
 const Copywriting = () => {
   return (
     <div className="py-5 px-1 flex flex-col h-full bg-transparent">
-      <div className="flex items-center  w-full justify-between px-14 ">
+      <div className="flex items-center w-full justify-between px-14 ">
         <Dialog>
           <DialogTrigger>
             <p className="text-xl">

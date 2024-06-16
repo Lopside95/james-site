@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
-import { useToast } from "@/components/ui/use-toast";
-import { FooterToast } from "@/components/ui/toaster";
+import { useToast } from "@/src/components/ui/use-toast";
+import { FooterToast } from "@/src/components/ui/toaster";
 import Emoji from "./ui/emoji";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/components/ui/hover-card";
+} from "@/src/components/ui/hover-card";
 
 const Footer = () => {
   const { toast } = useToast();

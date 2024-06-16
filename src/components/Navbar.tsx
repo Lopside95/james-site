@@ -7,7 +7,7 @@ const Navbar = () => {
   const activePage = (path: string) => router.pathname === path;
 
   return (
-    <div className="flex w-3/5 py-2 px-1 justify-between fixed top-0 bg-base-bg z-50  ">
+    <div className="flex w-full sm:w-3/5 py-2 px-1 justify-between fixed top-0 bg-base-bg z-50  ">
       <div>
         <Button
           className={`text-lg pr-10 hover:underline-offset-[6px] ${

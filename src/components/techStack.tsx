@@ -9,10 +9,12 @@ import {
 
 const TechStack = () => {
   return (
-    <div className="align-middle w-full py-5 text-xl flex ">
+    <div className="align-middle w-full py-5 text-3xl pl-10 sm:pl-0 sm:text-xl max-sm:flex-col flex ">
       <Card className="w-full  bg-transparent border-none ">
         <CardHeader>
-          <CardTitle className="text-3xl pl-3 -mb-4">Stack</CardTitle>
+          <CardTitle className="text-4xl sm:text-3xl pl-3 -mb-4">
+            Stack
+          </CardTitle>
         </CardHeader>
         <CardContent className="pl-10">
           <dl>
@@ -29,7 +31,9 @@ const TechStack = () => {
       </Card>
       <Card className="w-full  bg-transparent border-none ">
         <CardHeader>
-          <CardTitle className="text-3xl pl-3 -mb-4">Skills</CardTitle>
+          <CardTitle className="text-4xl sm:text-3xl pl-3 -mb-4">
+            Skills
+          </CardTitle>
         </CardHeader>
         <CardContent className="pl-10">
           <dl>

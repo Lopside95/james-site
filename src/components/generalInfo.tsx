@@ -12,19 +12,18 @@ import TechStack from "./techStack";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import { LinkButton } from "./ui/linkButton";
-import NavItems from "./navItems";
 
 const GeneralInfo = () => {
   return (
-    <div className=" py-5 pr-3  flex h-full bg-transparent  ">
-      <Card className=" bg-transparent border-none ">
+    <div className=" py-5 pr-3 w-full flex h-full bg-transparent  ">
+      <Card className=" w-full bg-transparent border-none ">
         <CardHeader>
-          <CardTitle className="text-xl -mb-4">
+          <CardTitle className="sm:text-xl text-3xl -mb-4">
             I have always appreciated the challenges and satisfactions that come
             with making things.
           </CardTitle>
         </CardHeader>
-        <CardContent className="text-lg">
+        <CardContent className="">
           As a{" "}
           <Link className="hover:underline" href="/writing">
             copywriter

@@ -6,8 +6,7 @@ import Footer from "../components/footer";
 const CV = () => {
   return (
     <div className="w-full items-center align-middle flex flex-col min-h-screen  ">
-      <Navbar />
-      <section className="w-3/5 mt-10 pt-8">
+      <section className="sm:w-3/5 mt-10 pt-8">
         <article className="flex">
           <Experience />
         </article>
