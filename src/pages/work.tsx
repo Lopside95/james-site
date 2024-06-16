@@ -6,7 +6,7 @@ import HeroBuilder from "../components/heroBuilder";
 
 export default function Work() {
   return (
-    <div className="w-full items-center align-middle flex flex-col min-h-screen bg-base-bg text-base-txtClr">
+    <div className="w-full items-center align-middle flex flex-col min-h-screen ">
       <Navbar />
       <div className="w-3/5 pt-8">
         <HeroBuilder />

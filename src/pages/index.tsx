@@ -8,7 +8,7 @@ import Footer from "../components/footer";
 
 export default function Home() {
   return (
-    <div className="w-full items-center align-middle flex flex-col min-h-screen bg-base-bg text-base-txtClr ">
+    <div className="w-full items-center align-middle flex flex-col min-h-screen ">
       <Navbar />
       <section className="w-3/5 pt-8">
         <Intro />
