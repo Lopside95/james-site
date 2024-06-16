@@ -29,10 +29,10 @@ import { useEffect, useState } from "react";
 const Copywriting = () => {
   return (
     <div className="py-5 px-1 flex flex-col h-full bg-transparent">
-      <div className="flex items-center w-full justify-between px-14 ">
+      <div className="flex items-center w-full justify-between px-4  ">
         <Dialog>
           <DialogTrigger>
-            <p className="text-xl">
+            <p className="text-xl sm:text-sm">
               <span className="underline underline-offset-8">Cycling</span> -
               DSV
             </p>
@@ -40,8 +40,8 @@ const Copywriting = () => {
           <DialogContent className="w-full max-w-3xl">
             <Image
               src="/bikeAdText.png"
-              width={1000}
-              height={1000}
+              width={500}
+              height={500}
               alt="Bicycle ad text"
               className="w-full"
             />
@@ -50,23 +50,23 @@ const Copywriting = () => {
         <Image
           src="/bikeAd.png"
           alt="DSV bicycle ad"
-          className="w-80 object-contain self-center py-8"
+          className="w-80 sm:w-1/2 object-contain self-center py-8"
           width={500}
           height={500}
         />
       </div>
-      <h1 className="text-xl w-11/12 pl-5 py-10">
+      <p className="sm:text-sm  text-2xl  px-2 py-10">
         The value of logistics lies in what it allows us to do with the
         equipment. DSV is actively involved in cycling and cycling projects,
         such as the DSV_SHIFT_ACADEMY, which is a youth program dedicate to
         developing up-and-coming riders with riding skills as well as life
         skills.
-      </h1>
-      <div className="flex items-center  w-full justify-evenly ">
+      </p>
+      <div className="flex items-center w-full justify-evenly ">
         <Popover>
-          <PopoverTrigger className=" text-xl pr-5 ">
+          <PopoverTrigger className="sm:text-sm max-sm:leading-loose text-xl pr-5 ">
             <p>
-              <span className=" underline underline-offset-8">
+              <span className=" underline underline-offset-4">
                 Copy editing
               </span>{" "}
               for Monkeyland Primate Sanctuary
@@ -98,12 +98,12 @@ const Copywriting = () => {
           height={500}
           src="/monkeyland.jpg"
           alt="Monkeyland iamge"
-          className="w-80 object-contain self-center py-8"
+          className="w-80 sm:w-1/2 object-contain self-center py-8"
         />
       </div>
 
       <div className="flex flex-col h-full py-10 w-full ">
-        <h1 className="text-xl w-11/12 pl-5">
+        <h1 className="sm:text-xs text-2xl  px-2">
           As a creative and perceptive person with an appreciation for
           well-developed concepts, as well as the finer details of writing, I
           write insightful work that remains true to an overarching narrative,
@@ -116,15 +116,15 @@ const Copywriting = () => {
           it is an invaluable tool.
         </h1>
       </div>
-      <div className="flex items-center  w-full justify-between px-14 ">
+      <div className="flex items-center w-full justify-between  ">
         <Dialog>
           <DialogTrigger>
-            <p className="text-xl">
-              <span className="underline underline-offset-8">
+            <h1 className="sm:text-xs max-sm:w-3/4 text-xl">
+              <span className="underline underline-offset-4">
                 Zero-error warehousing
               </span>{" "}
               - DSV
-            </p>
+            </h1>
           </DialogTrigger>
           <DialogContent className="w-full max-w-xl">
             <Image
@@ -139,19 +139,19 @@ const Copywriting = () => {
         <Image
           src="/drones.png"
           alt="DSV drones ad"
-          className="w-80 object-contain self-center py-8"
+          className="sm:w-1/2 w-80 object-contain self-center py-8"
           width={500}
           height={500}
         />
       </div>
-      <h1 className="text-xl w-11/12 pl-5 py-10">
+      <h1 className="text-2xl sm:text-xs  px-2 py-10">
         As one of the top global transport and logistics companies, much of the
         work I’ve done for DSV, through Serious Moonlight Consulting, focusses
         on technology and innovation. This ad showcases their use of drones as
         they progress towards ‘zero-error warehousing’.
       </h1>
 
-      <div className="flex items-center w-full justify-evenly text-2xl ">
+      <div className="flex items-center w-full justify-evenly sm:text-xs text-xl ">
         <p>There&apos;s Always Time For A Short Story</p>
 
         <img
@@ -161,7 +161,7 @@ const Copywriting = () => {
         />
       </div>
       <div>
-        <h1 className="text-xl w-11/12 pl-5 py-10" id="storyEl">
+        <h1 className="text-2xl px-2  sm:text-xs py-10" id="storyEl">
           This Red & Yellow project charged us with developing a promotional
           event for Exclusive Books. People often wish that they read more and
           one of the common issues faced is a shortage of time. We realised

@@ -6,24 +6,22 @@ import { Card, CardContent, CardHeader } from "./ui/card";
 import { Button } from "./ui/button";
 
 const HeroBuilder = () => {
-  const router = useRouter();
-
   return (
-    <div className="flex flex-col gap-5 pt-16 justify-between w-full items-center ">
+    <div className="flex flex-col gap-5 justify-between w-full items-center ">
       <Link
-        className="text-5xl text-center pb-7"
+        className="text-2xl text-center pb-7"
         href="https://herobuilder.vercel.app/"
         target="_blank"
       >
         Hero Builder
       </Link>
       <Card className=" border-none items-center flex w-full">
-        <CardHeader>
-          <p className="text-xl">
+        <CardHeader className="sm:text-xs text-2xl">
+          <p>
             A full stack web app built with TypeScript, Next.js, tRPC and
             Prisma.
           </p>
-          <p className="text-xl">
+          <p className="">
             I’ve used MongoDB as the database and the project also involves Zod
             and React Hook Form.
           </p>

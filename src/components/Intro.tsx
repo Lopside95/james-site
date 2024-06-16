@@ -17,9 +17,9 @@ const Intro = () => {
   return (
     <Card className="w-full bg-transparent border-none  ">
       <CardHeader>
-        <CardTitle className="text-3xl">{`Hi, I'm James.`}</CardTitle>
+        <CardTitle className="">{`Hi, I'm James.`}</CardTitle>
       </CardHeader>
-      <CardContent className="sm:text-xl text-3xl">
+      <CardContent className="">
         I&apos;m a frontend developer at{" "}
         <Link
           href="https://www.getregulars.com/"

@@ -71,6 +71,6 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground sm:w-full min-w-fit;
+    @apply bg-background text-foreground sm:w-full min-w-fit max-sm:px-4;
   }
 }

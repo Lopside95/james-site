@@ -7,48 +7,43 @@ import {
   CardFooter,
   CardHeader,
 } from "../ui/card";
-import { useRouter } from "next/router";
 import ProjectLink from "./projectLink";
 
 const Education = () => {
   return (
     <div className="w-full flex flex-col">
-      <h1 className="text-2xl pl-5 py-5 ">Education</h1>
+      <h1 className="text-2xl pl-6 py-4 ">Education</h1>
 
       <Card className="flex flex-col justify-between   border-none ">
         <div className="flex">
           <CardHeader className="self-start ">
-            <CardTitle className="text-2xl ">
+            <CardTitle>
               Certificate in Design Techniques, <br /> User-centred Design
             </CardTitle>
-            <CardDescription className="text-xl">
+            <CardDescription>
               Red & Yellow, Creative School of Business
             </CardDescription>
-            <CardDescription className="text-base-txtClr text-md">
-              February 2021 - January 2022
-            </CardDescription>
+            <CardFooter>February 2021 - January 2022</CardFooter>
           </CardHeader>
         </div>
-        <CardContent className="text-lg w-full self-center">
+        <CardContent className="w-full self-center">
           Red & Yellow focusses on practical experience and, alongside technical
           know-how, the school emphasises the development of distinctly human
           traits like creativity and empathy.
         </CardContent>
       </Card>
 
-      <Card className="flex flex-col justify-between border-none py-10">
+      <Card className="flex flex-col justify-between border-none py-7">
         <div className="flex">
           <CardHeader>
-            <CardTitle className="text-2xl">Diploma in Copywriting</CardTitle>
-            <CardDescription className="text-xl">
+            <CardTitle className="">Diploma in Copywriting</CardTitle>
+            <CardDescription className="">
               Red & Yellow, Creative School of Business
             </CardDescription>
-            <CardDescription className="text-base-txtClr text-md">
-              January 2015 - December 2016
-            </CardDescription>
+            <CardFooter className="">January 2015 - December 2016</CardFooter>
           </CardHeader>
         </div>
-        <CardContent className="text-lg w-full">
+        <CardContent className=" w-full">
           Passed with merit and two of my{" "}
           <ProjectLink href={"/work"}>projects</ProjectLink> were finalists in
           the Loeries’ student competitions, which recognises and awards

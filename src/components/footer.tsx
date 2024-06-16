@@ -32,13 +32,13 @@ const Footer = () => {
   };
 
   return (
-    <div className="flex flex-col text-base-txtClr w-3/5 pt-10 pb-5 gap-5 pl-7 px-1 justify-end  ">
-      <h1 className="text-xl">Contact</h1>
-      <div className="flex">
+    <div className="flex flex-col items-center text-base-txtClr   w-full pt-10  gap-4 pl-7 px-1 justify-self-center  ">
+      {/* <h1 className="text-xl  self-start">Contact</h1> */}
+      <div className="flex ">
         <HoverCard openDelay={200}>
           <HoverCardTrigger asChild>
             <Button
-              className="pl-1 text-md underline "
+              className="pl-1 underline sm:text-xs text-lg"
               variant="smLine"
               onClick={() => handleCopy("james.p.wallington@gmail.com")}
             >
@@ -50,13 +50,13 @@ const Footer = () => {
           </HoverCardContent>
         </HoverCard>
         <Button
-          className="text-md underline"
+          className="underline sm:text-xs text-lg"
           variant="smLine"
           onClick={() => handleCopy("+41 76 570 1553")}
         >
           +41 76 570 1553
         </Button>
-        <Button className=" underline text-md" variant="smLine">
+        <Button className=" underline sm:text-xs text-lg " variant="smLine">
           <Link
             tabIndex={-1}
             target="_blank"
