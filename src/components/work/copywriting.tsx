@@ -42,7 +42,7 @@ const Copywriting = () => {
         </Dialog>
         <Image
           alt="DSV bicycle ad"
-          className="w-80 sm:w-1/2 object-contain self-center py-8"
+          className="w-80 sm:w-[23rem] object-contain self-center py-8"
           height={500}
           src="/bikeAd.png"
           width={500}
