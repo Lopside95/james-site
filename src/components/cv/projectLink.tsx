@@ -3,10 +3,6 @@ import React from "react";
 
 function ProjectLink(props: { children: React.ReactNode; href: string }) {
   const router = useRouter();
-  const style = {
-    marginRight: 10,
-    color: router.asPath === props.href ? "red" : "black",
-  };
 
   const handleClick = (e: React.MouseEvent) => {
     e.preventDefault();

@@ -1,8 +1,6 @@
-import { Separator } from "@/src/components/ui/separator";
-import Navbar from "../components/Navbar";
-import Copywriting from "../components/copywriting";
-import Footer from "../components/footer";
-import HeroBuilder from "../components/heroBuilder";
+import { Separator } from "@ui/separator";
+import Copywriting from "@work/copywriting";
+import HeroBuilder from "@work/heroBuilder";
 
 export default function Work() {
   return (

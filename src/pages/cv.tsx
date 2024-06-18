@@ -1,6 +1,5 @@
-import Education from "../components/cv/education";
-import Experience from "../components/cv/experience";
-import Footer from "../components/footer";
+import Education from "@cv/education";
+import Experience from "@cv/experience";
 
 export default function CV() {
   return (

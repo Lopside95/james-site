@@ -1,6 +1,6 @@
-import TechStack from "../components/techStack";
-import Intro from "../components/Intro";
-import GeneralInfo from "../components/generalInfo";
+import TechStack from "@home/techStack";
+import Intro from "@home/Intro";
+import GeneralInfo from "@home/generalInfo";
 
 export default function Home() {
   return (

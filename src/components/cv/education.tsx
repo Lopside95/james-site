@@ -1,4 +1,3 @@
-import Link from "next/link";
 import {
   Card,
   CardContent,
@@ -6,14 +5,13 @@ import {
   CardTitle,
   CardFooter,
   CardHeader,
-} from "../ui/card";
+} from "@ui/card";
 import ProjectLink from "./projectLink";
 
 const Education = () => {
   return (
     <div className="w-full flex flex-col">
       <h1 className="text-2xl pl-6 py-4 ">Education</h1>
-
       <Card className="flex flex-col justify-between   border-none ">
         <div className="flex">
           <CardHeader className="self-start ">

@@ -1,16 +1,11 @@
 import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/src/components/ui/hover-card";
-import {
   Card,
   CardContent,
   CardDescription,
   CardTitle,
   CardFooter,
   CardHeader,
-} from "../ui/card";
+} from "@ui/card";
 
 const Experience = () => {
   return (

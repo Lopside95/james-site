@@ -1,13 +1,9 @@
 import Link from "next/link";
-import { Button } from "./ui/button";
-import { useToast } from "@/src/components/ui/use-toast";
-import { FooterToast } from "@/src/components/ui/toaster";
-import Emoji from "./ui/emoji";
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/src/components/ui/hover-card";
+import { Button } from "@ui/button";
+import { useToast } from "@ui/use-toast";
+import { FooterToast } from "@ui/toaster";
+import Emoji from "@ui/emoji";
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "@ui/hover-card";
 
 const Footer = () => {
   const { toast } = useToast();
@@ -25,22 +21,21 @@ const Footer = () => {
     } catch (error: unknown) {
       toast({
         title: "Failed to copy",
-        description: <Emoji symbol="😶" label="silent" />,
+        description: <Emoji label="silent" symbol="😶" />,
       });
       console.log(error);
     }
   };
 
   return (
-    <div className="flex flex-col items-center text-base-txtClr   w-full pt-10  gap-4 pl-7 px-1 justify-self-center  ">
-      {/* <h1 className="text-xl  self-start">Contact</h1> */}
-      <div className="flex ">
+    <div className="flex flex-col w-full pt-10 items-center sm:pl-3  gap-4  px-1  ">
+      <div className="flex  sm:w-3/5">
         <HoverCard openDelay={200}>
           <HoverCardTrigger asChild>
             <Button
-              className="pl-1 underline sm:text-xs text-lg"
-              variant="smLine"
+              className="pl-1 underline sm:text-base text-lg"
               onClick={() => handleCopy("james.p.wallington@gmail.com")}
+              variant="smLine"
             >
               james.p.wallington@gmail.com
             </Button>
@@ -50,17 +45,17 @@ const Footer = () => {
           </HoverCardContent>
         </HoverCard>
         <Button
-          className="underline sm:text-xs text-lg"
-          variant="smLine"
+          className="underline sm:text-base text-lg"
           onClick={() => handleCopy("+41 76 570 1553")}
+          variant="smLine"
         >
           +41 76 570 1553
         </Button>
-        <Button className=" underline sm:text-xs text-lg " variant="smLine">
+        <Button className=" underline sm:text-base text-lg " variant="smLine">
           <Link
+            href="https://www.linkedin.com/in/james-wallington-2a122bb6/"
             tabIndex={-1}
             target="_blank"
-            href="https://www.linkedin.com/in/james-wallington-2a122bb6/"
           >
             LinkedIn
           </Link>

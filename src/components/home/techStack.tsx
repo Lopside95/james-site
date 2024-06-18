@@ -1,11 +1,4 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardTitle,
-  CardFooter,
-  CardHeader,
-} from "./ui/card";
+import { Card, CardContent, CardTitle, CardHeader } from "@ui/card";
 
 const TechStack = () => {
   return (

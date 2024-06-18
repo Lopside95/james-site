@@ -1,29 +1,17 @@
-import Image from "next/image";
-import Navbar from "./Navbar";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardTitle,
-  CardFooter,
-  CardHeader,
-} from "./ui/card";
-import TechStack from "./techStack";
-import { Button } from "./ui/button";
+import { Card, CardContent, CardTitle, CardHeader } from "@ui/card";
 import Link from "next/link";
-import { LinkButton } from "./ui/linkButton";
 
 const Intro = () => {
   return (
     <Card className="w-full bg-transparent border-none  ">
       <CardHeader>
-        <CardTitle className="">{`Hi, I'm James.`}</CardTitle>
+        <CardTitle className="sm:text-3xl">{`Hi, I'm James.`}</CardTitle>
       </CardHeader>
       <CardContent className="">
         I&apos;m a frontend developer at{" "}
         <Link
-          href="https://www.getregulars.com/"
           className="underline underline-offset-4"
+          href="https://www.getregulars.com/"
           target="_blank"
         >
           Regulars

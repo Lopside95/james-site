@@ -1,61 +1,54 @@
-/* eslint-disable @next/next/no-img-element */
-
 import Link from "next/link";
-import { Button } from "./ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardTitle,
-  CardFooter,
-  CardHeader,
-} from "./ui/card";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/src/components/ui/popover";
+import { Popover, PopoverContent, PopoverTrigger } from "@ui/popover";
 import Image from "next/image";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/src/components/ui/dialog";
-import { useEffect, useState } from "react";
+import { Dialog, DialogContent, DialogTrigger } from "@ui/dialog";
+import { useState } from "react";
 
 const Copywriting = () => {
+  const [popIsOpen, setPopIsOpen] = useState<boolean>(false);
+
+  // On different screen sizes the underlying text of the monkeyland
+  // popover was visible. This makes sure it's invisibleif the popover is open
+  const handleClose = () => {
+    if (popIsOpen) {
+      setPopIsOpen(false);
+    }
+  };
+
   return (
-    <div className="py-5 px-1 flex flex-col h-full bg-transparent">
+    <div
+      className="py-5 px-1 flex flex-col h-full bg-transparent"
+      onClick={() => handleClose()}
+    >
       <div className="flex items-center w-full justify-between px-4  ">
         <Dialog>
           <DialogTrigger>
-            <p className="text-xl sm:text-sm">
-              <span className="underline underline-offset-8">Cycling</span> -
-              DSV
+            <p className="text-2xl ">
+              <span className="underline underline-offset-8 sm:pl-20">
+                Cycling
+              </span>{" "}
+              - DSV
             </p>
           </DialogTrigger>
           <DialogContent className="w-full max-w-3xl">
             <Image
-              src="/bikeAdText.png"
-              width={500}
-              height={500}
               alt="Bicycle ad text"
               className="w-full"
+              height={1000}
+              src="/bikeAdText.png"
+              width={1000}
             />
           </DialogContent>
         </Dialog>
         <Image
-          src="/bikeAd.png"
           alt="DSV bicycle ad"
           className="w-80 sm:w-1/2 object-contain self-center py-8"
-          width={500}
           height={500}
+          src="/bikeAd.png"
+          width={500}
         />
       </div>
-      <p className="sm:text-sm  text-2xl  px-2 py-10">
+      <p className="text-2xl sm:text-xl  px-2 py-10">
         The value of logistics lies in what it allows us to do with the
         equipment. DSV is actively involved in cycling and cycling projects,
         such as the DSV_SHIFT_ACADEMY, which is a youth program dedicate to
@@ -64,17 +57,20 @@ const Copywriting = () => {
       </p>
       <div className="flex items-center w-full justify-evenly ">
         <Popover>
-          <PopoverTrigger className="sm:text-sm max-sm:leading-loose text-xl pr-5 ">
-            <p>
-              <span className=" underline underline-offset-4">
+          <PopoverTrigger className="sm:text-2xl max-sm:leading-loose text-xl pr-5 ">
+            <p
+              className={popIsOpen ? "text-transparent" : ""}
+              onClick={() => setPopIsOpen(true)}
+            >
+              <span className=" underline underline-offset-8">
                 Copy editing
               </span>{" "}
-              for Monkeyland Primate Sanctuary
+              - Monkeyland Primate Sanctuary
             </p>
           </PopoverTrigger>
           <PopoverContent
+            className="  w-[30rem] flex justify-evenly bg-base-bg shadow-none  text-xl text-base-txtClr -mt-12 mr-5 border-none "
             style={{ animationDuration: "3s" }}
-            className="  w-[30rem] flex justify-evenly bg-base-bg shadow-none  text-lg text-base-txtClr -mt-12 border-none "
           >
             <Link
               className="pl-3 underline underline-offset-4"
@@ -94,16 +90,16 @@ const Copywriting = () => {
           </PopoverContent>
         </Popover>
         <Image
-          width={500}
+          alt="Monkeyland iamge"
+          className="w-80 sm:w-2/5 object-contain self-center py-8"
           height={500}
           src="/monkeyland.jpg"
-          alt="Monkeyland iamge"
-          className="w-80 sm:w-1/2 object-contain self-center py-8"
+          width={500}
         />
       </div>
 
       <div className="flex flex-col h-full py-10 w-full ">
-        <h1 className="sm:text-xs text-2xl  px-2">
+        <p className=" text-2xl sm:text-xl px-2">
           As a creative and perceptive person with an appreciation for
           well-developed concepts, as well as the finer details of writing, I
           write insightful work that remains true to an overarching narrative,
@@ -114,12 +110,12 @@ const Copywriting = () => {
           be effective as they act in concert with the narratives around them.
           Storytelling is one of my strengths I value most and as a copywriter
           it is an invaluable tool.
-        </h1>
+        </p>
       </div>
       <div className="flex items-center w-full justify-between  ">
         <Dialog>
           <DialogTrigger>
-            <h1 className="sm:text-xs max-sm:w-3/4 text-xl">
+            <h1 className=" max-sm:w-3/4 sm:pl-10  text-2xl">
               <span className="underline underline-offset-4">
                 Zero-error warehousing
               </span>{" "}
@@ -128,47 +124,51 @@ const Copywriting = () => {
           </DialogTrigger>
           <DialogContent className="w-full max-w-xl">
             <Image
-              src="/drones-writing.png"
-              width={500}
-              height={500}
               alt="Drones ad text"
               className="w-full"
+              height={1000}
+              src="/drones-writing.png"
+              width={1000}
             />
           </DialogContent>
         </Dialog>
         <Image
-          src="/drones.png"
           alt="DSV drones ad"
           className="sm:w-1/2 w-80 object-contain self-center py-8"
-          width={500}
           height={500}
+          src="/drones.png"
+          width={500}
         />
       </div>
-      <h1 className="text-2xl sm:text-xs  px-2 py-10">
+      <h1 className="text-2xl sm:text-xl   px-2 py-10">
         As one of the top global transport and logistics companies, much of the
         work I’ve done for DSV, through Serious Moonlight Consulting, focusses
         on technology and innovation. This ad showcases their use of drones as
         they progress towards ‘zero-error warehousing’.
       </h1>
 
-      <div className="flex items-center w-full justify-evenly sm:text-xs text-xl ">
-        <p>There&apos;s Always Time For A Short Story</p>
+      <div className="flex items-center w-full max-sm:pr-5 justify-evenly text-2xl ">
+        <p className="max-sm:text-center pr-2">
+          There&apos;s Always Time For A Short Story
+        </p>
 
-        <img
-          src="/shortStories.jpeg"
+        <Image
           alt=""
           className="w-80 object-contain self-center pt-10"
+          height={500}
+          src="/shortStories.jpeg"
+          width={500}
         />
       </div>
       <div>
-        <h1 className="text-2xl px-2  sm:text-xs py-10" id="storyEl">
+        <p className="text-2xl sm:text-xl px-2 py-10" id="storyEl">
           This Red & Yellow project charged us with developing a promotional
           event for Exclusive Books. People often wish that they read more and
           one of the common issues faced is a shortage of time. We realised
           short stories – in truth these are vignettes – can be read quickly and
           in any setting. During the promotion, stories were placed around the
           mall - on receipts, in elevators, and on limited edition packets.
-        </h1>
+        </p>
       </div>
     </div>
   );

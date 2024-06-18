@@ -1,22 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import { useState } from "react";
-import { Card, CardContent, CardHeader } from "./ui/card";
-import { Button } from "./ui/button";
+import { Card, CardContent, CardHeader } from "@ui/card";
+import { Button } from "@ui/button";
 
 const HeroBuilder = () => {
   return (
     <div className="flex flex-col gap-5 justify-between w-full items-center ">
       <Link
-        className="text-2xl text-center pb-7"
+        className=" sm:text-4xl text-3xl text-center pb-7"
         href="https://herobuilder.vercel.app/"
         target="_blank"
       >
         Hero Builder
       </Link>
       <Card className=" border-none items-center flex w-full">
-        <CardHeader className="sm:text-xs text-2xl">
+        <CardHeader className="sm:text-2xl text-2xl">
           <p>
             A full stack web app built with TypeScript, Next.js, tRPC and
             Prisma.
@@ -28,18 +26,18 @@ const HeroBuilder = () => {
         </CardHeader>
         <CardContent>
           <Link
+            className="flex pr-10 gap-5 items-center flex-col cursor-pointer"
             href="https://herobuilder.vercel.app/"
             target="_blank"
-            className="flex pr-10 gap-5 items-center flex-col cursor-pointer"
           >
             <Image
-              width={300}
-              height={300}
               alt=""
               className="w-full"
+              height={300}
               src="/snapHero.png"
+              width={300}
             />
-            <Button variant="ghost" className="border hover:bg-white ">
+            <Button className="border hover:bg-white " variant="ghost">
               <span className="flex gap-1 text-xl pb-1">
                 <h1 className="text-yellow-500 ">pnpm</h1> run dev
               </span>
