@@ -1,17 +1,17 @@
-import Education from "@cv/education";
-import Experience from "@cv/experience";
+// import Education from "@cv/education";
+// import Experience from "@cv/experience";
 
-export default function CV() {
-  return (
-    <div className="w-full items-center align-middle flex flex-col min-h-screen  ">
-      <section className="sm:w-3/5 ">
-        <article className="flex">
-          <Experience />
-        </article>
-        <article>
-          <Education />
-        </article>
-      </section>
-    </div>
-  );
-}
+// export default function CV() {
+//   return (
+//     <div className="w-full items-center align-middle flex flex-col min-h-screen  ">
+//       <section className="sm:w-3/5 ">
+//         <article className="flex">
+//           <Experience />
+//         </article>
+//         <article>
+//           <Education />
+//         </article>
+//       </section>
+//     </div>
+//   );
+// }

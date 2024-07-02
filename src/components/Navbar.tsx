@@ -12,18 +12,18 @@ const Navbar = () => {
     }`;
 
   return (
-    <div className="flex w-full sm:w-3/5 py-2 mb-3 sm:h-14 h-[4.5rem] justify-self-center inset-0   bg-base-bg  justify-between fixed  top-0  z-50  ">
+    <div className="flex w-full sm:w-3/5 py-2 mb-3 sm:h-14 h-[4.5rem] justify-self-center inset-0   text-base-txtClr  bg-base-bg justify-between fixed  top-0  z-50  ">
       <Button className={navItemStyle("/")} variant="link">
         <Link href="/" tabIndex={-1}>
           Home
         </Link>
       </Button>
       <div className="flex ">
-        <Button className={navItemStyle("/cv")} variant="link">
+        {/* <Button className={navItemStyle("/cv")} variant="link">
           <Link href="/cv" tabIndex={-1}>
             CV
           </Link>
-        </Button>
+        </Button> */}
         <Button className={navItemStyle("/work")} variant="link">
           <Link className="" href="/work" tabIndex={-1}>
             Work

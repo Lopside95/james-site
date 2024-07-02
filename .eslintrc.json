@@ -21,7 +21,8 @@
     "no-extra-boolean-cast": "off",
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
-    "react-hooks/exhaustive-deps": "off"
+    "react-hooks/exhaustive-deps": "off",
+    "react/no-unescaped-entities": "off"
   },
   "settings": {
     "react": {

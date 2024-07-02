@@ -6,7 +6,7 @@ const GeneralInfo = () => {
     <div className=" py-5 pr-3 w-full flex h-full bg-transparent  ">
       <Card className=" w-full bg-transparent border-none ">
         <CardHeader>
-          <CardTitle className="sm:text-xl text-2xl -mb-4">
+          <CardTitle className="sm:text-3xl text-2xl -mb-4">
             I have always appreciated the challenges and satisfactions that come
             with making things.
           </CardTitle>

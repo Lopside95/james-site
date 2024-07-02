@@ -62,8 +62,8 @@ const config = {
         },
         base: {
           // text: "rgb(229, 229, 229)",
-          txtClr: "#e6e2da",
-          bg: "#111112",
+          txtClr: "hsl(var(--foreground))",
+          bg: "hsl(var(--background))",
         },
       },
       borderRadius: {
