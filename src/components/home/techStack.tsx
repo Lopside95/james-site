@@ -50,7 +50,10 @@ const TechStack = () => {
           {stack.map((x) => {
             return (
               <span key="">
-                {x} {x !== "Git" && "|"}{" "}
+                {x}{" "}
+                {x !== "Git" && (
+                  <span className="text-muted-foreground">|</span>
+                )}{" "}
               </span>
             );
           })}

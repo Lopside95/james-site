@@ -17,11 +17,7 @@ const HeroBuilder = () => {
         <CardHeader className="sm:text-2xl text-2xl">
           <p>
             A full stack web app built with TypeScript, Next.js, tRPC and
-            Prisma.
-          </p>
-          <p className="">
-            I’ve used MongoDB as the database and the project also involves Zod
-            and React Hook Form.
+            Prisma, with MongoDB as the database.
           </p>
         </CardHeader>
         <CardContent>

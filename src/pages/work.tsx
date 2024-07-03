@@ -1,3 +1,4 @@
+import Hammer from "@/components/hammer";
 import { Separator } from "@ui/separator";
 import Copywriting from "@work/copywriting";
 import HeroBuilder from "@work/heroBuilder";
@@ -10,6 +11,7 @@ export default function Work() {
         <Separator className="my-10 bg-base-txtClr/40 w-full justify-self-center self-center" />
         <Copywriting />
       </div>
+      <Hammer />
     </div>
   );
 }
