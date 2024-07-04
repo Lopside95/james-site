@@ -7,6 +7,7 @@ import Image from "next/image";
 
 import { motion, useScroll } from "framer-motion";
 import Hammer from "@/components/hammer";
+import Nail from "@/components/nail";
 
 export default function Home() {
   return (
@@ -28,7 +29,10 @@ export default function Home() {
           <Education />
         </article>
       </section>
-      <Hammer />
+      <div className="flex flex-col justify-between h-[200px]">
+        <Nail />
+      </div>
+      {/* <Hammer /> */}
     </div>
   );
 }
