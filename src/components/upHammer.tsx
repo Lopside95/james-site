@@ -15,16 +15,6 @@ const UpHammer = () => {
   const [prevScroll, setPrevScroll] = useState<number>(0);
   const [isVisisble, setIsVisible] = useState<boolean>(false);
 
-  // useMotionValueEvent(scrollY, "change", (latest) => {
-  //   // const current = scrollY.get();
-  //   const scrollPrev = scrollY.getPrevious();
-
-  //   console.log("scrollPrev", scrollPrev);
-
-  //   if (latest) console.log("Page scroll: ", latest);
-  //   // console.log("scrollY", scrollY);
-  // });
-
   useMotionValueEvent(scrollY, "change", (latest) => {
     const scrollPrev = scrollY.getPrevious();
 

@@ -12,7 +12,6 @@ import UpHammer from "@/components/upHammer";
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
-  const rotation = useTransform(scrollYProgress, [0, 1], [0, Math.PI * 2]);
 
   return (
     <div className="sm:w-full sm:items-center sm:align-middle flex flex-col min-h-screen ">
@@ -35,7 +34,7 @@ export default function Home() {
       </section>
       {/* <div className="flex flex-col justify-between h-[200px]">
       </div> */}
-      <UpHammer />
+      {/* <UpHammer /> */}
       <Hammer />
     </div>
   );

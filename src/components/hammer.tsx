@@ -14,23 +14,21 @@ const Hammer = () => {
   const [rotation, setrotation] = useState();
 
   // const swingHammer = useTransform(scrollYProgress, [0, 1], [-45, 45]);
-  const swingHammer = useTransform(scrollYProgress, [0, 1], [45, -45]);
+  const swingHammer = useTransform(scrollYProgress, [0, 1], [50, -45]);
   //   const swingHammer = useTransform(scrollY, [0, 500], [60, -45]);
   // const hammerUp = useTransform(scrollYProgress, [1, 0], [-45, 45]);
 
-  const [is0, setIs0] = useState<boolean>(true);
+  // useMotionValueEvent(scrollY, "change", (latest) => {
+  //   const scrollPrev = scrollY.getPrevious();
 
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    const scrollPrev = scrollY.getPrevious();
+  //   console.log("scrollYProgress", scrollYProgress);
 
-    console.log("scrollYProgress", scrollYProgress);
-
-    if (latest < scrollPrev) {
-      setIsVisible(false);
-    } else if (latest > scrollPrev) {
-      setIsVisible(true);
-    }
-  });
+  //   if (latest < scrollPrev) {
+  //     setIsVisible(false);
+  //   } else if (latest > scrollPrev) {
+  //     setIsVisible(true);
+  //   }
+  // });
 
   return (
     <motion.div
@@ -49,7 +47,7 @@ const Hammer = () => {
         height={400}
         src="/hammer.png"
         width={400}
-        style={{ visibility: isVisisble ? "visible" : "hidden" }}
+        // style={{ visibility: isVisisble ? "visible" : "hidden" }}
       />
     </motion.div>
   );
