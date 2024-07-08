@@ -5,11 +5,15 @@ import Experience from "@/components/cv/experience";
 import Education from "@/components/cv/education";
 import Image from "next/image";
 
-import { motion, useScroll } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Hammer from "@/components/hammer";
 import Nail from "@/components/nail";
+import UpHammer from "@/components/upHammer";
 
 export default function Home() {
+  const { scrollYProgress } = useScroll();
+  const rotation = useTransform(scrollYProgress, [0, 1], [0, Math.PI * 2]);
+
   return (
     <div className="sm:w-full sm:items-center sm:align-middle flex flex-col min-h-screen ">
       <section className="sm:w-3/5">
@@ -30,9 +34,10 @@ export default function Home() {
         </article>
       </section>
       <div className="flex flex-col justify-between h-[200px]">
-        <Nail />
+        {/* <UpHammer /> */}
+        {/* <Nail /> */}
       </div>
-      {/* <Hammer /> */}
+      <Hammer />
     </div>
   );
 }

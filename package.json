@@ -16,10 +16,12 @@
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-toast": "^1.1.5",
     "@radix-ui/themes": "^2.0.3",
+    "@react-three/fiber": "8.2.2",
     "@types/tailwindcss": "^3.1.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "framer-motion": "^11.2.12",
+    "framer-motion-3d": "11.2.0",
     "lucide-react": "^0.330.0",
     "next": "14.1.0",
     "radix-ui": "^1.0.1",
@@ -27,7 +29,8 @@
     "react-dom": "^18",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7",
-    "tech-stack-icons": "^2.0.3"
+    "tech-stack-icons": "^2.0.3",
+    "three": "0.137.0"
   },
   "devDependencies": {
     "@types/node": "^20",
