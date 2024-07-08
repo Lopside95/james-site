@@ -33,10 +33,9 @@ export default function Home() {
           <Education />
         </article>
       </section>
-      <div className="flex flex-col justify-between h-[200px]">
-        {/* <UpHammer /> */}
-        {/* <Nail /> */}
-      </div>
+      {/* <div className="flex flex-col justify-between h-[200px]">
+      </div> */}
+      <UpHammer />
       <Hammer />
     </div>
   );

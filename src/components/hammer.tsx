@@ -9,25 +9,28 @@ import { useState } from "react";
 
 const Hammer = () => {
   const { scrollYProgress, scrollY } = useScroll();
+  const [isVisisble, setIsVisible] = useState<boolean>(true);
 
   const [rotation, setrotation] = useState();
 
   // const swingHammer = useTransform(scrollYProgress, [0, 1], [-45, 45]);
-  const swingHammer = useTransform(scrollYProgress, [0, 1], [60, -45]);
+  const swingHammer = useTransform(scrollYProgress, [0, 1], [45, -45]);
   //   const swingHammer = useTransform(scrollY, [0, 500], [60, -45]);
-  const hammerUp = useTransform(scrollYProgress, [1, 0], [-45, 45]);
-  // const swingHammer = useTransform(scrollY, (val) => {
-  //   const swing = 600;
-  //   const progress = val % swing;
-  //   // console.log("val", val);
-  //   console.log("progress", progress);
+  // const hammerUp = useTransform(scrollYProgress, [1, 0], [-45, 45]);
 
-  //   return progress < 300 ? 45 - progress * 0.5 : 45 - (600 - progress) * 0.5;
-  // });
+  const [is0, setIs0] = useState<boolean>(true);
 
-  // useMotionValueEvent(scrollY, "change", (latest) => {
-  //   console.log("Page scroll: ", latest);
-  // });
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const scrollPrev = scrollY.getPrevious();
+
+    console.log("scrollYProgress", scrollYProgress);
+
+    if (latest < scrollPrev) {
+      setIsVisible(false);
+    } else if (latest > scrollPrev) {
+      setIsVisible(true);
+    }
+  });
 
   return (
     <motion.div
@@ -36,11 +39,18 @@ const Hammer = () => {
         x: 49,
         y: -4,
         scale: 1,
-        rotate: hammerUp,
+        rotate: swingHammer,
       }}
       //   style={{ rotateY: scrollYProgress }}
     >
-      <Image alt="" className="" height={400} src="/hammer.png" width={400} />
+      <Image
+        alt=""
+        className=""
+        height={400}
+        src="/hammer.png"
+        width={400}
+        style={{ visibility: isVisisble ? "visible" : "hidden" }}
+      />
     </motion.div>
   );
 };
