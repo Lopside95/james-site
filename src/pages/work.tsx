@@ -1,5 +1,6 @@
 import Hammer from "@/components/hammer";
 import Nail from "@/components/nail";
+import CaseStudy from "@/components/work/caseStudy";
 import Regulars from "@/components/work/regulars";
 import { Separator } from "@ui/separator";
 import Copywriting from "@work/copywriting";
@@ -12,7 +13,8 @@ export default function Work() {
         <div>
           <h1>Regulars</h1>
         </div>
-        <Regulars />
+        <CaseStudy />
+        {/* <Regulars /> */}
         <HeroBuilder />
         <Separator className="my-10 bg-base-txtClr/40 w-full justify-self-center self-center" />
         <Copywriting />

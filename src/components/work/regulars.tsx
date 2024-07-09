@@ -42,21 +42,6 @@ const Regulars = () => {
   });
   //   const slideX = useTransform(scrollYProgress, [0, 0.5, 1]);
 
-  const OtherCard = () => {
-    return (
-      <div>
-        <Card className="flex flex-col items-center w-80 h-[300px] border justify-between bg-green-100">
-          <CardTitle>Card Page</CardTitle>
-          <CardDescription></CardDescription>
-          <CardContent>
-            Here companies create cards
-            {/* <Image width={500} height={500} src="" alt="" /> */}
-          </CardContent>
-        </Card>
-      </div>
-    );
-  };
-
   //   const { scrollYProgress } = useScroll({
   //     target: contRef,
   //     offset: ["start start", "end end"],
@@ -177,4 +162,18 @@ const DesignCard = () => {
     image="/regulars/design.png"
     title="Design Page"
   />;
+};
+export const OtherCard = () => {
+  return (
+    <div>
+      <Card className="flex flex-col items-center w-80 h-[300px] border justify-between bg-green-100">
+        <CardTitle>Card Page</CardTitle>
+        <CardDescription></CardDescription>
+        <CardContent>
+          Here companies create cards
+          {/* <Image width={500} height={500} src="" alt="" /> */}
+        </CardContent>
+      </Card>
+    </div>
+  );
 };

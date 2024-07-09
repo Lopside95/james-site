@@ -11,21 +11,20 @@ import { Variants, motion } from "framer-motion";
 
 type CardProps = {
   image: string;
-  title: string;
-  desc: string;
+  title?: string;
+  desc?: string;
 };
 
 const RegularsCard = ({ image, title, desc }: CardProps) => {
   return (
-    <>
+    <div className="w-full">
       <Card>
+        <Image width={500} height={500} src={image} alt="" />
         <CardTitle>{title}</CardTitle>
         <CardDescription>{desc}</CardDescription>
-        <CardContent>
-          <Image width={800} height={800} src={image} alt="" />
-        </CardContent>
+        <CardContent></CardContent>
       </Card>
-    </>
+    </div>
   );
 };
 
