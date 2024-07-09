@@ -4,6 +4,7 @@ import {
   Variants,
   motion,
   transform,
+  useInView,
   useScroll,
   useSpring,
   useTransform,
@@ -44,7 +45,7 @@ const Regulars = () => {
   const OtherCard = () => {
     return (
       <div>
-        <Card className="flex flex-col items-center h-[300px] border justify-between bg-green-100">
+        <Card className="flex flex-col items-center w-80 h-[300px] border justify-between bg-green-100">
           <CardTitle>Card Page</CardTitle>
           <CardDescription></CardDescription>
           <CardContent>
@@ -67,72 +68,89 @@ const Regulars = () => {
     ["0", "50%", "100%"]
   );
 
+  const yVal = scrollYProgress.get();
+
+  console.log("xVal", yVal);
+
   //   console.log("scrollYProgress", scrollYProgress);
 
   //   const {scrollXProgress} = useScroll
 
+  // const handleX = useTransform(
+  //   scrollYProgress,
+  //   [0, 0.6, 1],
+  //   ["100%", "80%", "-20%"]
+  // );
   const handleX = useTransform(
     scrollYProgress,
     [0, 0.6, 1],
-    ["20%", "-25%", "-100%"]
+    ["0", "115%", "185%"]
   );
 
-  const handleY = useSpring(scrollY);
+  // const handleY = useTransform(scrollY, [0, 1])
+
+  // const dlInView = useInView(dlRef, {margin:  })
 
   // const handleY = useTransform(scrollXProgress, [0, 1], ["0", "0"]);
   return (
     <div
-      className="flex relative w-full h-[400px] overflow-scroll bg-blue-300"
+      className="flex relative w-full h-[400px] overflow-x-hidden gap-5  "
       ref={contRef}
     >
       {/* <ArrowBigRight className="w-20 h-auto " /> */}
-      <motion.div
-        className="flex w-full mr-20 "
-        style={{
-          x: handleX,
-          y: scrollY,
-        }}
+      <div>
+        <motion.div
+          className="flex flex-row-reverse w-full pt-10 "
+          style={{
+            x: handleX,
+            y: scrollY,
+          }}
 
-        // whileInView={{ opacity: 1 }}
-        //   style={{
-        //     transform: {
-        //         x: handleScroll
-        //     }
-        //   }}
-        // style={{
-        //     transform:
-        // }}
+          // whileInView={{ opacity: 1 }}
+          //   style={{
+          //     transform: {
+          //         x: handleScroll
+          //     }
+          //   }}
+          // style={{
+          //     transform:
+          // }}
 
-        // initial={{
-        //   x: 0,
-        // }}
-        // animate={{
-        //   scaleX: scrollYProgress,
-        // }}
+          // initial={{
+          //   x: 0,
+          // }}
+          // animate={{
+          //   scaleX: scrollYProgress,
+          // }}
+        >
+          <Image
+            alt=" "
+            className="  p-5"
+            height={600}
+            src="/regulars/download.png"
+            width={600}
+          />
+          <Image
+            alt=" "
+            className="p-5"
+            height={600}
+            src="/regulars/design.png"
+            width={600}
+          />
+          <Image
+            alt=" "
+            className=" p-5"
+            height={600}
+            src="/regulars/backside.png"
+            width={600}
+          />
+        </motion.div>
+      </div>
+
+      <div
+        ref={cardRef}
+        className="justify-self-end z-20 gap-10 bg-base-bg h-[200%] flex flex-col pb-5 "
       >
-        <Image
-          alt=" "
-          className=" p-5"
-          height={600}
-          src="/regulars/download.png"
-          width={600}
-        />
-        <Image
-          alt=" "
-          className="p-5"
-          height={600}
-          src="/regulars/design.png"
-          width={600}
-        />
-        <Image
-          alt=" "
-          className=" p-5"
-          height={600}
-          src="/regulars/backside.png"
-          width={600}
-        />
-      </motion.div>
-      <div ref={cardRef} className="justify-self-end z-20 ">
         <OtherCard />
         <OtherCard />
         <OtherCard />
