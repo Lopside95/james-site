@@ -136,9 +136,9 @@ const Regulars = () => {
         ref={cardRef}
         className="justify-self-end z-20 gap-10 bg-base-bg h-[200%] flex flex-col pb-5 "
       >
+        {/* <OtherCard />
         <OtherCard />
-        <OtherCard />
-        <OtherCard />
+        <OtherCard /> */}
       </div>
     </div>
   );
@@ -167,7 +167,7 @@ export const OtherCard = () => {
   return (
     <div>
       <Card className="flex flex-col items-center w-80 h-[300px] border justify-between bg-green-100">
-        <CardTitle>Card Page</CardTitle>
+        <CardTitle>Card</CardTitle>
         <CardDescription></CardDescription>
         <CardContent>
           Here companies create cards

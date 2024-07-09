@@ -42,45 +42,13 @@ const CaseStudy = () => {
   const designRef = useRef(null);
   const backRef = useRef(null);
 
-  // const handleNext = async () => {
-  //   if (currentGroup === "download") {
-  //     await imageControls.start("downloadOut");
-  //     await imageControls.start("designIn");
-  //     setCurrentGroup("design");
-  //     return;
-  //   }
-
-  //   // if (currentGroup === "design") {
-  //   //   await imageControls.start("designOut");
-  //   //   await imageControls.start("backIn");
-  //   //   setCurrentGroup("backside");
-  //   // }
-
-  //   // imageControls.start("imageOut");
-  // };
-
   const getGroup = () => {};
 
   const currentIndex = itemGroups.indexOf(currentGroup);
+  const nextGroup = itemGroups.at(currentIndex + 1);
   const handleNext = async () => {
-    const nextGroup = itemGroups.at(currentIndex + 1);
     await imageControls.start(`${currentGroup}In`);
-
-    if (nextGroup !== undefined) {
-      setCurrentGroup(nextGroup as ImageProps);
-    }
   };
-
-  // useEffect(() => {
-  // if (nextGroup !== undefined) {
-  //   setCurrentGroup(nextGroup);
-  // }
-  // })
-
-  // useEffect(() => {
-  //   console.log('currentIndex', currentIndex)
-  //   handleNext();
-  // }, []);
 
   const handleMiddle = () => {};
 
@@ -89,33 +57,48 @@ const CaseStudy = () => {
   };
 
   useEffect(() => {
-    handleImageIn();
-  }, []);
+    if (nextGroup !== undefined) {
+      setCurrentGroup(nextGroup as ImageProps);
+    }
+  }, [currentGroup]);
+
+  type Variants = {
+    [key: string]: {};
+  };
+
+  const variants: Variants = itemGroups.reduce((acc, item) => {
+    acc[item + "In"] = imageIn;
+    acc[item + "Out"] = imageOut;
+
+    return acc;
+  }, {} as Variants);
 
   return (
     <div className="flex w-full relative h-[500px] bg-blue-100 overflow-x-hidden">
-      <motion.div
-        animate={imageControls}
-        className="absolute top-10"
-        initial="initial"
-        ref={designRef}
-        transition={{
-          duration: 1,
-        }}
-        variants={{
-          initial: imageInit,
-          downloadOut: imageOut,
-          downloadIn: imageIn,
-        }}
-      >
-        <Image
-          alt=" "
-          className="w-96"
-          height={600}
-          src="/regulars/download.png"
-          width={600}
-        />
-      </motion.div>
+      {itemGroups.map((item) => {
+        return (
+          <motion.div
+            key={item}
+            animate={imageControls}
+            className="absolute top-10"
+            // initial="initial"
+            initial={{
+              opacity: 0,
+              left: -100,
+            }}
+            variants={variants}
+          >
+            <Image
+              alt=" "
+              className="w-96"
+              height={600}
+              src={`/regulars/${item}.png`}
+              width={600}
+            />
+          </motion.div>
+        );
+      })}
+
       <motion.div
         animate={{
           top: 10,
@@ -136,115 +119,13 @@ const CaseStudy = () => {
         <Card className="flex flex-col items-center w-80 h-[300px] border justify-between bg-green-100">
           <CardTitle>Design card</CardTitle>
           <CardDescription></CardDescription>
-          <CardContent>Here companies create cards</CardContent>
-        </Card>
-      </motion.div>
-      <motion.div
-        className="absolute top-10"
-        initial="initial"
-        ref={designRef}
-        transition={{
-          duration: 1,
-        }}
-        variants={{
-          initial: imageInit,
-          designIn: imageIn,
-          designOut: imageOut,
-        }}
-        animate={imageControls}
-        // initial={initImage}
-        // animate={animateImage}
-        // transition={{
-        //   duration: 1,
-        // }}
-      >
-        <Image
-          alt=" "
-          className="w-96"
-          height={600}
-          src="/regulars/design.png"
-          width={600}
-        />
-      </motion.div>
-      <motion.div
-        animate={{
-          top: 10,
-          opacity: 1,
-          right: 10,
-        }}
-        className="absolute"
-        initial={{
-          opacity: 0,
-          top: -100,
-          right: 10,
-        }}
-        ref={designRef}
-        transition={{
-          duration: 1,
-        }}
-      >
-        <Card className="flex flex-col items-center w-80 h-[300px] border justify-between bg-green-100">
-          <CardTitle>Download Card</CardTitle>
-          <CardDescription></CardDescription>
           <CardContent>
             Here companies create cards
             {/* <Image width={500} height={500} src="" alt="" /> */}
           </CardContent>
         </Card>
       </motion.div>
-      <motion.div
-        className="absolute top-10"
-        initial="initial"
-        ref={backRef}
-        transition={{
-          duration: 1,
-        }}
-        variants={{
-          initial: imageInit,
-          backsideIn: imageIn,
-          backsideOut: imageOut,
-        }}
-        animate={imageControls}
-        // initial={initImage}
-        // animate={animateImage}
-        // transition={{
-        //   duration: 1,
-        // }}
-      >
-        <Image
-          alt=" "
-          className="w-96"
-          height={600}
-          src="/regulars/backside.png"
-          width={600}
-        />
-      </motion.div>
-      <motion.div
-        animate={{
-          top: 10,
-          opacity: 1,
-          right: 10,
-        }}
-        className="absolute"
-        initial={{
-          opacity: 0,
-          top: -100,
-          right: 10,
-        }}
-        ref={backRef}
-        transition={{
-          duration: 1,
-        }}
-      >
-        <Card className="flex flex-col items-center w-80 h-[300px] border justify-between bg-green-100">
-          <CardTitle>Backside</CardTitle>
-          <CardDescription></CardDescription>
-          <CardContent>
-            Here companies create cards
-            {/* <Image width={500} height={500} src="" alt="" /> */}
-          </CardContent>
-        </Card>
-      </motion.div>
+
       <Button onClick={handleNext}>Next</Button>
       <Button onClick={handleImageIn}>come back</Button>
     </div>

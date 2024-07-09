@@ -1,6 +1,7 @@
 import Hammer from "@/components/hammer";
 import Nail from "@/components/nail";
 import CaseStudy from "@/components/work/caseStudy";
+import FixedScroll from "@/components/work/fixedScroll";
 import Regulars from "@/components/work/regulars";
 import { Separator } from "@ui/separator";
 import Copywriting from "@work/copywriting";
@@ -13,6 +14,7 @@ export default function Work() {
         <div>
           <h1>Regulars</h1>
         </div>
+        {/* <FixedScroll /> */}
         <CaseStudy />
         {/* <Regulars /> */}
         <HeroBuilder />
