@@ -10,16 +10,14 @@ import {
 import { Variants, motion } from "framer-motion";
 
 type CardProps = {
-  image: string;
   title?: string;
   desc?: string;
 };
 
-const RegularsCard = ({ image, title, desc }: CardProps) => {
+const RegularsCard = ({ title, desc }: CardProps) => {
   return (
     <div className="w-full">
       <Card>
-        <Image width={500} height={500} src={image} alt="" />
         <CardTitle>{title}</CardTitle>
         <CardDescription>{desc}</CardDescription>
         <CardContent></CardContent>

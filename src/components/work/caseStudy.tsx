@@ -43,33 +43,11 @@ const CaseStudy = () => {
 
   const imageControls = useAnimationControls();
 
-  const dlRef = useRef(null);
-  const designRef = useRef(null);
-  const backRef = useRef(null);
-
-  // const handleNext = async () => {
-  //   if (currentGroup === "download") {
-  //     await imageControls.start("downloadOut");
-  //     await imageControls.start("designIn");
-  //     setCurrentGroup("design");
-  //     return;
-  //   }
-
-  //   // if (currentGroup === "design") {
-  //   //   await imageControls.start("designOut");
-  //   //   await imageControls.start("backIn");
-  //   //   setCurrentGroup("backside");
-  //   // }
-
-  //   // imageControls.start("imageOut");
-  // };
-
   const getGroup = () => {};
 
+  const currentIndex = itemGroups.indexOf(currentGroup);
   const handleNext = async () => {
-    const currentIndex = itemGroups.indexOf(currentGroup);
     const nextGroup = itemGroups.at(currentIndex + 1);
-    // const nextGroup = itemGroups[(currentIndex + 1) % itemGroups.length];
     await imageControls.start(`${nextGroup}In`);
 
     console.log("nextGroup", nextGroup);
@@ -85,7 +63,22 @@ const CaseStudy = () => {
     imageControls.start("downloadIn");
   };
 
-  const handleImageOut = () => {};
+  const handleImageOut = () => {
+    const prevGroup = itemGroups.at(currentIndex - 1);
+
+    if (currentIndex !== 0) {
+      imageControls.start(`${currentGroup}Out`);
+      imageControls.start(`${prevGroup}Show`);
+    }
+
+    // console.log("prevGroup", prevGroup);
+    console.log("currentIndex", currentIndex);
+
+    if (prevGroup !== undefined && currentIndex !== 0) {
+      setCurrentGroup(prevGroup as ImageProps);
+    }
+    console.log("currentGroup", currentGroup);
+  };
 
   const handleImageHide = () => {
     imageControls.start(`${currentGroup}Hide`);
@@ -99,14 +92,9 @@ const CaseStudy = () => {
 
   useEffect(() => {
     handleImageIn();
-    // handleNext();
-    // setCurrentGroup("download");
+
     console.log("currentGroup", currentGroup);
   }, []);
-
-  // useEffect(() => {
-  //   handleImageIn();
-  // }, []);
 
   const designVariants = {
     initial: imageInit,
@@ -114,6 +102,22 @@ const CaseStudy = () => {
     designOut: imageOut,
     designShow: imageShow,
     designHide: imageHide,
+  };
+
+  const donwloadVariants = {
+    initial: imageInit,
+    downloadOut: imageOut,
+    downloadIn: imageIn,
+    downloadShow: imageShow,
+    downloadHide: imageHide,
+  };
+
+  const backsideVariants = {
+    initial: imageInit,
+    backsideIn: imageIn,
+    backsideOut: imageOut,
+    backsideShow: imageShow,
+    backsideHide: imageHide,
   };
 
   return (
@@ -125,13 +129,7 @@ const CaseStudy = () => {
         transition={{
           duration: 1,
         }}
-        variants={{
-          initial: imageInit,
-          downloadOut: imageOut,
-          downloadIn: imageIn,
-          downloadShow: imageShow,
-          downloadHide: imageHide,
-        }}
+        variants={donwloadVariants}
       >
         <Image
           alt=" "
@@ -153,16 +151,11 @@ const CaseStudy = () => {
           top: -100,
           right: 10,
         }}
-        ref={designRef}
         transition={{
           duration: 1,
         }}
       >
-        <Card className="flex flex-col items-center w-80 h-[300px] border justify-between bg-green-100">
-          <CardTitle>Design card</CardTitle>
-          <CardDescription></CardDescription>
-          <CardContent>Here companies create cards</CardContent>
-        </Card>
+        <RegularsCard />
       </motion.div>
       <motion.div
         className="absolute top-10"
@@ -170,13 +163,14 @@ const CaseStudy = () => {
         transition={{
           duration: 1,
         }}
-        variants={{
-          initial: imageInit,
-          designIn: imageIn,
-          designOut: imageOut,
-          designShow: imageShow,
-          designHide: imageHide,
-        }}
+        variants={designVariants}
+        // variants={{
+        //   initial: imageInit,
+        //   designIn: imageIn,
+        //   designOut: imageOut,
+        //   designShow: imageShow,
+        //   designHide: imageHide,
+        // }}
         animate={imageControls}
         // initial={initImage}
         // animate={animateImage}
@@ -223,13 +217,7 @@ const CaseStudy = () => {
         transition={{
           duration: 1,
         }}
-        variants={{
-          initial: imageInit,
-          backsideIn: imageIn,
-          backsideOut: imageOut,
-          backsideShow: imageShow,
-          backsideHide: imageHide,
-        }}
+        variants={backsideVariants}
         animate={imageControls}
         // initial={initImage}
         // animate={animateImage}
@@ -257,7 +245,6 @@ const CaseStudy = () => {
           top: -100,
           right: 10,
         }}
-        ref={backRef}
         transition={{
           duration: 1,
         }}
@@ -272,6 +259,7 @@ const CaseStudy = () => {
         </Card>
       </motion.div>
       <Button onClick={handleNext}>Next</Button>
+      <Button onClick={handleImageOut}>Back</Button>
       {/* <Button onClick={handleImageIn}>come back</Button> */}
       <Button onClick={handleImageHide}>Hide</Button>
       <Button onClick={handleImageShow}>Show</Button>
