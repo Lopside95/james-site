@@ -136,9 +136,9 @@ const Regulars = () => {
         ref={cardRef}
         className="justify-self-end z-20 gap-10 bg-base-bg h-[200%] flex flex-col pb-5 "
       >
-        {/* <OtherCard />
         <OtherCard />
-        <OtherCard /> */}
+        <OtherCard />
+        <OtherCard />
       </div>
     </div>
   );
@@ -167,10 +167,12 @@ export const OtherCard = () => {
   return (
     <div>
       <Card className="flex flex-col items-center w-80 h-[300px] border justify-between bg-green-100">
-        <CardTitle>Card</CardTitle>
+        <CardTitle>Form Creation</CardTitle>
         <CardDescription></CardDescription>
         <CardContent>
-          Here companies create cards
+          Companies can decide which fields they want present, the name of that
+          field and whether or not the field is required. Choices are reflected
+          on the preview.
           {/* <Image width={500} height={500} src="" alt="" /> */}
         </CardContent>
       </Card>

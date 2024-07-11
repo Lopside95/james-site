@@ -30,7 +30,7 @@ type AnimateProps = {
 type ItemProps = ["download", "design", "backside"];
 type ImageControls = "downloadIn" | "downloadOut" | "designIn" | "designOut";
 
-const CaseStudy = () => {
+const FixedScroll = () => {
   const [isDownload, setIsDownload] = useState<boolean>();
   const [isDesign, setIsDesign] = useState<boolean>();
   const [isBack, setIsBack] = useState<boolean>();
@@ -132,7 +132,7 @@ const CaseStudy = () => {
   );
 };
 
-export default CaseStudy;
+export default FixedScroll;
 {
   /* <motion.div>
         <Image

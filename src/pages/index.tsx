@@ -9,6 +9,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Hammer from "@/components/hammer";
 import Nail from "@/components/nail";
 import UpHammer from "@/components/upHammer";
+import Regulars from "@/components/work/regulars";
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
@@ -16,6 +17,7 @@ export default function Home() {
   return (
     <div className="sm:w-full sm:items-center sm:align-middle flex flex-col min-h-screen ">
       <section className="sm:w-3/5">
+        <Regulars />
         <Intro />
         {/* <article className="flex ">
           <GeneralInfo />

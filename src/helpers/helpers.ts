@@ -8,19 +8,22 @@
 
 export const imageInit = {
   opacity: 0,
-  left: -100,
+  left: -300,
 };
 
 export const imageIn = {
   opacity: 1,
-  left: 10,
+  left: 15,
+  transition: {
+    duration: 0.4,
+  },
 };
 
 export const imageOut = {
   opacity: 0,
-  left: -100,
+  left: -300,
   transition: {
-    duration: 0.5,
+    duration: 0.2,
   },
 };
 
@@ -34,6 +37,6 @@ export const imageShow = {
 export const imageHide = {
   opacity: 0,
   transition: {
-    duration: 0.5,
+    duration: 0.2,
   },
 };
