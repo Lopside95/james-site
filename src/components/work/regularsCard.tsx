@@ -16,13 +16,11 @@ type CardProps = {
 
 const RegularsCard = ({ title, desc }: CardProps) => {
   return (
-    <div className="w-full">
-      <Card>
-        <CardTitle>{title}</CardTitle>
-        <CardDescription>{desc}</CardDescription>
-        <CardContent></CardContent>
-      </Card>
-    </div>
+    <Card className="bg-green-200 h-60 w-72">
+      <CardTitle>{title}</CardTitle>
+      <CardDescription>{desc}</CardDescription>
+      <CardContent></CardContent>
+    </Card>
   );
 };
 
