@@ -1,13 +1,4 @@
-import Image from "next/image";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "../ui/card";
-import { Variants, motion } from "framer-motion";
+import { Card, CardContent, CardTitle } from "../ui/card";
 import Emoji from "../ui/emoji";
 
 type CardProps = {

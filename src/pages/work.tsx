@@ -11,7 +11,7 @@ type CardProps = {
 export default function Work() {
   return (
     <div className="w-full items-center align-middle flex flex-col min-h-screen">
-      <section className="sm:w-3/5 pt-8">
+      <section className="sm:w-3/5 pt-8 flex-col flex gap-5">
         <h1 className="">Regulars</h1>
         <h1 className="pt-1 pb-5">Junior frontend developer</h1>
         <article className="flex items-center">
@@ -38,51 +38,33 @@ export default function Work() {
             width={600}
           />
         </article>
-        <section className="flex flex-col gap-2">
+        <article className="flex flex-col gap-2">
           <h2 className="pl-[3.4rem]">
             Three things I loved working on at Regulars
           </h2>
           <MenuItem
-            symbol="🔧"
             desc="The card creator which allows companies to build and customise the
               cards they’ll give to their customers."
             label="spanner"
+            symbol="🔧"
           />
-          {/* <article className="flex gap-4 items-center">
-            <Emoji label="spanner" className="text-3xl" symbol="🔧" />
-            <p>
-              The card creator which allows companies to build and customise the
-              cards they’ll give to their customers.
-            </p>
-          </article> */}
           <MenuItem
             desc=" The card page, a dynamically generated form customers fill in in
               order to download digital loyalty cards."
-            symbol="☕️"
             label="coffee"
+            symbol="☕️"
           />
-          {/* <article className="flex gap-4 items-center">
-            <Emoji label="cup" symbol="☕️" className="text-3xl " />
-            <p>
-              The card page, a dynamically generated form customers fill in in
-              order to download digital loyalty cards.
-            </p>
-          </article> */}
           <MenuItem
             desc="Account management interface where companies and employees can
               update and delete their accounts."
-            symbol="📝"
             label="notepad"
+            symbol="📝"
           />
-          {/* <article className="flex gap-4 items-center">
-            <Emoji label="notepad" symbol="📝" className="text-3xl" />
-            <p>
-              Account management interface where companies and employees can
-              update and delete their accounts.
-            </p>
-          </article> */}
-        </section>
+        </article>
         <CardCreator />
+        {/* <article className="">
+          <CardCreator />
+        </article> */}
       </section>
     </div>
   );
@@ -91,7 +73,7 @@ export default function Work() {
 export const MenuItem = ({ label, symbol, desc }: CardProps) => {
   return (
     <article className="flex gap-4 items-center">
-      <Emoji label={label} symbol={symbol} className="text-3xl" />
+      <Emoji className="text-3xl" label={label} symbol={symbol} />
       <p>{desc}</p>
     </article>
   );

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import hljs from "highlight.js";
+import "highlight.js/styles/github.css";
 
 import React from "react";
 import { Toaster } from "@ui/toaster";
