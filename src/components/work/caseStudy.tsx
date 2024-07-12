@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { OtherCard } from "./regulars";
+import { OtherCard } from "./cardCreator";
 import RegularsCard from "./regularsCard";
 import { use, useEffect, useRef, useState } from "react";
 import {
@@ -22,7 +22,6 @@ import {
 import { Milestone } from "lucide-react";
 
 type ImageProps = "download" | "design" | "backside";
-// type AnimateProps = "opacity" | "left" | "transition" | "duration"
 
 export type AnimateProps = {
   opacity?: number;
@@ -36,15 +35,12 @@ export type AnimateProps = {
 const CaseStudy = () => {
   const [currentGroup, setCurrentGroup] = useState<ImageProps>("download");
   const itemGroups: string[] = ["download", "design", "backside"];
-  const [contDisabled, setContDisabled] = useState<boolean>(false);
   const imageControls = useAnimationControls();
   const cardControls = useAnimationControls();
   const tapControls = useAnimationControls();
   const currentIndex = itemGroups.indexOf(currentGroup);
 
   const contRef = useRef<HTMLDivElement>(null);
-
-  // const { scrollY } = useScroll({ container: contRef });
 
   const { scrollY } = useScroll();
 
@@ -60,8 +56,7 @@ const CaseStudy = () => {
 
     imageControls.start(`${nextGroup}In`);
     cardControls.start(`${nextGroup}In`);
-    // await imageControls.start(`${nextGroup}In`);
-    // await cardControls.start(`${nextGroup}In`);
+
     if (nextGroup !== undefined) {
       setCurrentGroup(nextGroup as ImageProps);
     }
@@ -75,7 +70,6 @@ const CaseStudy = () => {
     const prevGroup = itemGroups.at(currentIndex - 1);
 
     if (currentIndex !== 0) {
-      // imageControls.start(`${currentGroup}Out`);
       imageFunc("Out");
       cardControls.start(`${currentGroup}Out`);
       imageControls.start(`${prevGroup}Show`);
@@ -101,7 +95,6 @@ const CaseStudy = () => {
         transition={{
           duration: 1,
         }}
-        // viewport={{ root: contRef }}
         variants={donwloadVariants}
       >
         <Image
@@ -276,43 +269,3 @@ const CaseStudy = () => {
 };
 
 export default CaseStudy;
-
-// const handleImageHide = () => {
-//   imageControls.start(`${currentGroup}Hide`);
-//   console.log("hiding image, group:", currentGroup);
-// };
-
-// const handleImageShow = () => {
-//   imageControls.start(`${currentGroup}Show`);
-//   console.log("showing image, group:", currentGroup);
-// };
-
-// useEffect(() => {
-//   const container = contRef.current;
-
-//   const onWheel = async (event: WheelEvent) => {
-//     if (event.deltaY > 0 && !contDisabled) {
-//       handleNext();
-//       setContDisabled(true);
-//       setTimeout(() => {
-//         setContDisabled(false);
-//       }, 400);
-//     } else if (event.deltaY <= 0 && !contDisabled) {
-//       handlePrev();
-//       setContDisabled(true);
-//       setTimeout(() => {
-//         setContDisabled(false);
-//       }, 400);
-//     }
-//   };
-
-//   if (container) {
-//     container.addEventListener("wheel", onWheel);
-//   }
-
-//   return () => {
-//     if (container) {
-//       container.removeEventListener("wheel", onWheel);
-//     }
-//   };
-// }, [currentIndex]);

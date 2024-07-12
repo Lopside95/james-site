@@ -78,6 +78,15 @@
   body {
     @apply bg-background text-foreground sm:w-full min-w-fit max-sm:px-4;
   }
+  h1 {
+    @apply sm:text-3xl font-medium;
+  }
+  h2 {
+    @apply sm:text-2xl;
+  }
+  p {
+    @apply sm:text-xl;
+  }
   .scrollbar {
     scrollbar-color: #000 red;
     scrollbar-width: thin;

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { OtherCard } from "./regulars";
+import { OtherCard } from "./cardCreator";
 import RegularsCard from "./regularsCard";
 import { use, useEffect, useRef, useState } from "react";
 import {

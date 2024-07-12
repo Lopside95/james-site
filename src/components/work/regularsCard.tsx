@@ -8,16 +8,20 @@ import {
   CardTitle,
 } from "../ui/card";
 import { Variants, motion } from "framer-motion";
+import Emoji from "../ui/emoji";
 
 type CardProps = {
-  title?: string;
+  emoji?: string;
+  label?: string;
   desc?: string;
 };
 
-const RegularsCard = ({ title, desc }: CardProps) => {
+const RegularsCard = ({ label, emoji, desc }: CardProps) => {
   return (
     <Card className="bg-green-200 h-60 w-72">
-      <CardTitle>{title}</CardTitle>
+      <CardTitle>
+        <Emoji label={label} emoji={emoji} />
+      </CardTitle>
       <CardContent>{desc}</CardContent>
     </Card>
   );
