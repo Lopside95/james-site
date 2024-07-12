@@ -1,5 +1,8 @@
 // import { useTransform } from "framer-motion";
 
+import { AnimateProps } from "@/components/work/caseStudy";
+import { delay } from "framer-motion";
+
 // export const scrollAction = useTransform(scrollY, (val) => {
 //     const swing = 600;
 //     const progress = val % swing;
@@ -13,7 +16,7 @@ export const imageInit = {
 
 export const cardInit = {
   opacity: 0,
-  top: -100,
+  top: -200,
   right: 10,
 };
 
@@ -38,15 +41,22 @@ export const imageOut = {
   opacity: 0,
   left: -300,
   transition: {
-    duration: 0.2,
+    // duration: 0.4,
+    opacity: {
+      duration: 0.4,
+      delay: 0.1,
+    },
+    left: {
+      duration: 0.7,
+    },
   },
 };
 
-export const cardOut = {
+export const cardOut: AnimateProps = {
   opacity: 0,
   top: -200,
   transition: {
-    duration: 0.2,
+    duration: 0.4,
   },
 };
 
@@ -54,6 +64,7 @@ export const imageShow = {
   opacity: 1,
   transition: {
     duration: 0.5,
+    delay: 0.2,
   },
 };
 export const cardShow = {

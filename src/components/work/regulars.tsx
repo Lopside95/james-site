@@ -146,23 +146,23 @@ const Regulars = () => {
 
 export default Regulars;
 
-const DownloadCard = () => {
-  return (
-    <RegularsCard
-      desc="This is the download page"
-      image="/regulars/download.png"
-      title="Download Page"
-    />
-  );
-};
+// const DownloadCard = () => {
+//   return (
+//     <RegularsCard
+//       desc="This is the download page"
+//       image="/regulars/download.png"
+//       title="Download Page"
+//     />
+//   );
+// };
 
-const DesignCard = () => {
-  <RegularsCard
-    desc="This is the design page"
-    image="/regulars/design.png"
-    title="Design Page"
-  />;
-};
+// const DesignCard = () => {
+//   <RegularsCard
+//     desc="This is the design page"
+//     image="/regulars/design.png"
+//     title="Design Page"
+//   />;
+// };
 export const OtherCard = () => {
   return (
     <div>

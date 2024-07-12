@@ -8,9 +8,9 @@ import {
   useAnimationControls,
   AnimatePresence,
   backInOut,
+  useScroll,
 } from "framer-motion";
 import { Button } from "../ui/button";
-import { Card, CardContent, CardDescription, CardTitle } from "../ui/card";
 import {
   backsideCardVariants,
   backsideVariants,
@@ -18,29 +18,37 @@ import {
   designVariants,
   donwloadVariants,
   downloadCardVariants,
-  imageHide,
-  imageIn,
-  imageInit,
-  imageOut,
-  imageShow,
 } from "@/helpers/helpers";
+import { Milestone } from "lucide-react";
 
 type ImageProps = "download" | "design" | "backside";
 // type AnimateProps = "opacity" | "left" | "transition" | "duration"
 
-type AnimateProps = {
+export type AnimateProps = {
   opacity?: number;
+  top?: number;
   left?: number;
   transition?: {};
   duration?: number;
+  right?: number;
 };
 
 const CaseStudy = () => {
   const [currentGroup, setCurrentGroup] = useState<ImageProps>("download");
   const itemGroups: string[] = ["download", "design", "backside"];
+  const [contDisabled, setContDisabled] = useState<boolean>(false);
   const imageControls = useAnimationControls();
   const cardControls = useAnimationControls();
+  const tapControls = useAnimationControls();
   const currentIndex = itemGroups.indexOf(currentGroup);
+
+  const contRef = useRef<HTMLDivElement>(null);
+
+  // const { scrollY } = useScroll({ container: contRef });
+
+  const { scrollY } = useScroll();
+
+  console.log("scrollY", scrollY);
 
   const handleNext = async () => {
     const nextGroup = itemGroups.at(currentIndex + 1);
@@ -50,18 +58,25 @@ const CaseStudy = () => {
       cardControls.start(`${currentGroup}Hide`);
     }
 
-    await imageControls.start(`${nextGroup}In`);
-    await cardControls.start(`${nextGroup}In`);
+    imageControls.start(`${nextGroup}In`);
+    cardControls.start(`${nextGroup}In`);
+    // await imageControls.start(`${nextGroup}In`);
+    // await cardControls.start(`${nextGroup}In`);
     if (nextGroup !== undefined) {
       setCurrentGroup(nextGroup as ImageProps);
     }
+  };
+
+  const imageFunc = (img: string) => {
+    return imageControls.start(currentGroup + img);
   };
 
   const handlePrev = () => {
     const prevGroup = itemGroups.at(currentIndex - 1);
 
     if (currentIndex !== 0) {
-      imageControls.start(`${currentGroup}Out`);
+      // imageControls.start(`${currentGroup}Out`);
+      imageFunc("Out");
       cardControls.start(`${currentGroup}Out`);
       imageControls.start(`${prevGroup}Show`);
       cardControls.start(`${prevGroup}Show`);
@@ -78,7 +93,7 @@ const CaseStudy = () => {
   }, []);
 
   return (
-    <div className="flex w-full relative h-[500px] bg-blue-100 overflow-x-hidden">
+    <div className="flex w-full relative h-[500px] bg-blue-100 " ref={contRef}>
       <motion.div
         animate={imageControls}
         className="absolute top-10"
@@ -86,6 +101,7 @@ const CaseStudy = () => {
         transition={{
           duration: 1,
         }}
+        // viewport={{ root: contRef }}
         variants={donwloadVariants}
       >
         <Image
@@ -100,22 +116,15 @@ const CaseStudy = () => {
         animate={cardControls}
         className="absolute"
         initial="initial"
-        // animate={{
-        // top: 10,
-        // opacity: 1,
-        // right: 10,
-        // }}
         variants={downloadCardVariants}
-        // initial={{
-        //   opacity: 0,
-        //   top: -100,
-        //   right: 10,
-        // }}
         transition={{
           duration: 1,
         }}
       >
-        <RegularsCard desc="this is the download card" title="Download Card" />
+        <RegularsCard
+          desc="Card creation is a 3-step process, beggining with the form, or 'Card Page', which visitors will use to download their cards. "
+          title="Download Card"
+        />
       </motion.div>
       <motion.div
         animate={imageControls}
@@ -139,29 +148,11 @@ const CaseStudy = () => {
         className="absolute"
         initial="initial"
         variants={designCardVariants}
-        // animate={{
-        //   top: 10,
-        //   opacity: 1,
-        //   right: 10,
-        // }}
-        // className="absolute"
-        // initial={{
-        //   opacity: 0,
-        //   top: -100,
-        //   right: 10,
-        // }}
         transition={{
           duration: 1,
         }}
       >
         <RegularsCard desc="deisfifnsdin" title="Design card" />
-        {/* <Card className="flex flex-col items-center w-80 h-[300px] border justify-between bg-green-100">
-          <CardTitle>Download Card</CardTitle>
-          <CardDescription></CardDescription>
-          <CardContent>
-            Here companies create cards
-          </CardContent>
-        </Card> */}
       </motion.div>
       <motion.div
         animate={imageControls}
@@ -171,11 +162,6 @@ const CaseStudy = () => {
           duration: 1,
         }}
         variants={backsideVariants}
-        // initial={initImage}
-        // animate={animateImage}
-        // transition={{
-        //   duration: 1,
-        // }}
       >
         <Image
           alt=" "
@@ -186,38 +172,105 @@ const CaseStudy = () => {
         />
       </motion.div>
       <motion.div
-        // animate={{
-        //   top: 10,
-        //   opacity: 1,
-        //   right: 10,
-        // }}
         animate={cardControls}
         className="absolute"
         initial="initial"
-        // initial={{
-        //   opacity: 0,
-        //   top: -100,
-        //   right: 10,
-        // }}
         variants={backsideCardVariants}
         transition={{
           duration: 1,
         }}
       >
         <RegularsCard desc="Backside" title="this is the backside" />
-        {/* <Card className="flex flex-col items-center w-80 h-[300px] border justify-between bg-green-100">
-          <CardTitle>Backside</CardTitle>
-          <CardDescription></CardDescription>
-          <CardContent>
-            Here companies create cards
-          </CardContent>
-        </Card> */}
       </motion.div>
+      <motion.div
+        initial={{ rotateY: "180deg" }}
+        className="absolute bottom-10 cursor-pointer right-20"
+        // whileTap={{
+        //   rotateY: "360deg",
+        //   transition: {
+        //     duration: 0.8,
+        //   },
+        // }}
+        onClick={() => {
+          handlePrev();
+          tapControls.start("spinPrev");
+        }}
+        variants={{
+          spinPrev: {
+            rotateY: "540deg",
+            transition: {
+              duration: 0.8,
+            },
+          },
+          // spinAgain: {
+          //   rotateY: "720deg",
+          //   transition: {
+          //     duration: 0.8,
+          //   },
+          // },
+          // spinBack: {
+          //   rotateY: "0deg",
+          //   transition: {
+          //     duration: 0.8,
+          //   },
+          // },
+        }}
+        animate={tapControls}
+        // onClick={tapControls.start({
+        //   rotateY: "360deg",
+        //   transition: {
+        //     duration: 0.8
+        //   }
+        // })}
+      >
+        <Milestone className=" w-10 h-10" fill="brown" />
+      </motion.div>
+      <motion.div
+        className="absolute bottom-10 cursor-pointer right-10"
+        // whileTap={{
+        //   rotateY: "360deg",
+        //   transition: {
+        //     duration: 0.8,
+        //   },
+        // }}
+        onClick={() => {
+          handleNext();
+          tapControls.start("spin");
+        }}
+        variants={{
+          spin: {
+            rotateY: "360deg",
+            transition: {
+              duration: 0.8,
+            },
+          },
+          spinAgain: {
+            rotateY: "720deg",
+            transition: {
+              duration: 0.8,
+            },
+          },
+          spinBack: {
+            rotateY: "0deg",
+            transition: {
+              duration: 0.8,
+            },
+          },
+        }}
+        animate={tapControls}
+        // onClick={tapControls.start({
+        //   rotateY: "360deg",
+        //   transition: {
+        //     duration: 0.8
+        //   }
+        // })}
+      >
+        <Milestone className=" w-10 h-10" fill="brown" />
+      </motion.div>
+      <Button onClick={() => tapControls.start("spinBack")}>SpinBackS</Button>
+      <Button onClick={() => tapControls.start("spinAgain")}>Spin1</Button>
       <Button onClick={handleNext}>Next</Button>
       <Button onClick={handlePrev}>Back</Button>
-      {/* <Button onClick={handleImageIn}>come back</Button> */}
-      {/* <Button onClick={handleImageHide}>Hide</Button>
-      <Button onClick={handleImageShow}>Show</Button> */}
     </div>
   );
 };
@@ -233,3 +286,33 @@ export default CaseStudy;
 //   imageControls.start(`${currentGroup}Show`);
 //   console.log("showing image, group:", currentGroup);
 // };
+
+// useEffect(() => {
+//   const container = contRef.current;
+
+//   const onWheel = async (event: WheelEvent) => {
+//     if (event.deltaY > 0 && !contDisabled) {
+//       handleNext();
+//       setContDisabled(true);
+//       setTimeout(() => {
+//         setContDisabled(false);
+//       }, 400);
+//     } else if (event.deltaY <= 0 && !contDisabled) {
+//       handlePrev();
+//       setContDisabled(true);
+//       setTimeout(() => {
+//         setContDisabled(false);
+//       }, 400);
+//     }
+//   };
+
+//   if (container) {
+//     container.addEventListener("wheel", onWheel);
+//   }
+
+//   return () => {
+//     if (container) {
+//       container.removeEventListener("wheel", onWheel);
+//     }
+//   };
+// }, [currentIndex]);
