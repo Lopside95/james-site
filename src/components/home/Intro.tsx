@@ -1,8 +1,12 @@
 import { Card, CardContent, CardTitle, CardHeader } from "@ui/card";
 import Link from "next/link";
 import Emoji from "../ui/emoji";
+import { Button } from "../ui/button";
+import { useRouter } from "next/router";
 
 const Intro = () => {
+  const router = useRouter();
+
   return (
     <Card className="w-full bg-transparent border-none sm:text-3xl ">
       <CardHeader>
@@ -36,6 +40,15 @@ const Intro = () => {
           only as a hobby but the pieces were good enough for me and I still use
           them. Now, as a developer, I want to build websites and apps.
         </p>
+        <Button className="w-40">
+          <Link
+            href="https://herobuilder.vercel.app/"
+            tabIndex={-1}
+            target="_blank"
+          >
+            To Hero Builder
+          </Link>
+        </Button>
       </CardContent>
     </Card>
   );

@@ -14,7 +14,7 @@ const CardPage = () => {
           they’re at the café or not.
         </p>
       </article>
-      <div className="flex w-2/3 justify-between items-center self-center">
+      <div className="flex w-2/3 justify-between items-center py-5 self-center">
         <Image
           alt="Download preview"
           className="w-[15rem] h-[26.5rem]"
@@ -30,7 +30,7 @@ const CardPage = () => {
           width={800}
         />
       </div>
-      <p>
+      <p className="w-1/2">
         After hitting ‘download’, customers are redirected to their apple or
         google wallet and can save the card to their phone .
       </p>

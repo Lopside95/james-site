@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const StepTwo = () => {
   return (
-    <div className="flex items-center gap-10">
+    <div className="flex items-center py-10 gap-10">
       <Image
         alt="Design preview"
         className="w-3/5 pr-5"

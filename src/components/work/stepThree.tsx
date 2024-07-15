@@ -4,7 +4,7 @@ const StepThree = () => {
   return (
     <div className="flex items-center py-10 ">
       <div className="w-2/3">
-        <h2>Step one</h2>
+        <h2>Step three</h2>
         <p className="w-4/5 py-4">
           Finally, the backside of the card holds any links or relevant
           information, including options for customers to refer friends and
