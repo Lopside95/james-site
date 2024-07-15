@@ -29,7 +29,7 @@ const Intro = () => {
           with making things.
         </p>
         <p>
-          As a copywriter , I created and told stories. For a brief while I made
+          As a copywriter I created and told stories. For a while I made
           furniture – only as a hobby but the pieces were good enough for me and
           I still use them. Now, as a developer, I want to build websites and
           apps.

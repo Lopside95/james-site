@@ -4,6 +4,7 @@ import { useToast } from "@ui/use-toast";
 import { FooterToast } from "@ui/toaster";
 import Emoji from "@ui/emoji";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@ui/hover-card";
+import { ArrowUp } from "lucide-react";
 
 const Footer = () => {
   const { toast } = useToast();
@@ -60,6 +61,15 @@ const Footer = () => {
             LinkedIn
           </Link>
         </Button>
+        <ArrowUp
+          className="w-5 cursor-pointer font-normal mt-2"
+          onClick={() =>
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            })
+          }
+        />
       </div>
       <FooterToast />
     </div>
