@@ -1,17 +1,9 @@
 import Image from "next/image";
-import { OtherCard } from "./cardCreator";
-import RegularsCard from "./regularsCard";
-import { use, useEffect, useRef, useState } from "react";
-import {
-  animate,
-  motion,
-  useAnimationControls,
-  AnimatePresence,
-  backInOut,
-} from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { motion, useAnimationControls } from "framer-motion";
 import { Button } from "../ui/button";
 import { Card, CardContent, CardDescription, CardTitle } from "../ui/card";
-import { imageIn, imageInit, imageOut } from "@/helpers/helpers";
+import { imageIn, imageOut } from "@/helpers/helpers";
 
 type ImageProps = "download" | "design" | "backside";
 // type AnimateProps = "opacity" | "left" | "transition" | "duration"
@@ -31,9 +23,6 @@ type ItemProps = ["download", "design", "backside"];
 type ImageControls = "downloadIn" | "downloadOut" | "designIn" | "designOut";
 
 const FixedScroll = () => {
-  const [isDownload, setIsDownload] = useState<boolean>();
-  const [isDesign, setIsDesign] = useState<boolean>();
-  const [isBack, setIsBack] = useState<boolean>();
   const itemGroups: string[] = ["download", "design", "backside"];
   const [currentGroup, setCurrentGroup] = useState<ImageProps>("download");
   const imageControls = useAnimationControls();
@@ -78,7 +67,6 @@ const FixedScroll = () => {
       {itemGroups.map((item) => {
         return (
           <motion.div
-            key={item}
             animate={imageControls}
             className="absolute top-10"
             // initial="initial"
@@ -86,6 +74,7 @@ const FixedScroll = () => {
               opacity: 0,
               left: -100,
             }}
+            key={item}
             variants={variants}
           >
             <Image

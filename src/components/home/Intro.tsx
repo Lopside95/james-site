@@ -1,13 +1,9 @@
 import { Card, CardContent, CardTitle, CardHeader } from "@ui/card";
 import Link from "next/link";
 import Emoji from "../ui/emoji";
-import { Button } from "../ui/button";
-import { useRouter } from "next/router";
-import { ExternalLink, LucideArrowUpRightFromSquare } from "lucide-react";
+import { LucideArrowUpRightFromSquare } from "lucide-react";
 
 const Intro = () => {
-  const router = useRouter();
-
   return (
     <Card className="w-full bg-transparent border-none sm:text-3xl ">
       <CardHeader>

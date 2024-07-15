@@ -1,5 +1,4 @@
 import { Card, CardContent, CardTitle, CardHeader } from "@ui/card";
-import Link from "next/link";
 
 const GeneralInfo = () => {
   return (

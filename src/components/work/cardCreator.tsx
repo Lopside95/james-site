@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Emoji from "../ui/emoji";
 import StepOne from "./stepOne";
 import StepTwo from "./stepTwo";
 import StepThree from "./stepThree";

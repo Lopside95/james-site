@@ -5,9 +5,10 @@ type CardProps = {
   emoji?: string;
   label?: string;
   desc?: string;
+  title?: string;
 };
 
-const RegularsCard = ({ label, emoji, desc }: CardProps) => {
+const RegularsCard = ({ label, emoji, desc, title }: CardProps) => {
   return (
     <Card className="bg-green-200 h-60 w-72">
       <CardTitle>

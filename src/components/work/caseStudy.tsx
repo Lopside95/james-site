@@ -1,15 +1,7 @@
 import Image from "next/image";
-import { OtherCard } from "./regulars";
 import RegularsCard from "./regularsCard";
-import { use, useEffect, useRef, useState } from "react";
-import {
-  animate,
-  motion,
-  useAnimationControls,
-  AnimatePresence,
-  backInOut,
-  useScroll,
-} from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { motion, useAnimationControls, useScroll } from "framer-motion";
 import { Button } from "../ui/button";
 import {
   backsideCardVariants,
@@ -109,10 +101,10 @@ const CaseStudy = () => {
         animate={cardControls}
         className="absolute"
         initial="initial"
-        variants={downloadCardVariants}
         transition={{
           duration: 1,
         }}
+        variants={downloadCardVariants}
       >
         <RegularsCard
           desc="Card creation is a 3-step process, beggining with the form, or 'Card Page', which visitors will use to download their cards. "
@@ -140,10 +132,10 @@ const CaseStudy = () => {
         animate={cardControls}
         className="absolute"
         initial="initial"
-        variants={designCardVariants}
         transition={{
           duration: 1,
         }}
+        variants={designCardVariants}
       >
         <RegularsCard desc="deisfifnsdin" title="Design card" />
       </motion.div>
@@ -168,16 +160,17 @@ const CaseStudy = () => {
         animate={cardControls}
         className="absolute"
         initial="initial"
-        variants={backsideCardVariants}
         transition={{
           duration: 1,
         }}
+        variants={backsideCardVariants}
       >
         <RegularsCard desc="Backside" title="this is the backside" />
       </motion.div>
       <motion.div
-        initial={{ rotateY: "180deg" }}
+        animate={tapControls}
         className="absolute bottom-10 cursor-pointer right-20"
+        initial={{ rotateY: "180deg" }}
         // whileTap={{
         //   rotateY: "360deg",
         //   transition: {
@@ -208,7 +201,6 @@ const CaseStudy = () => {
           //   },
           // },
         }}
-        animate={tapControls}
         // onClick={tapControls.start({
         //   rotateY: "360deg",
         //   transition: {
@@ -219,6 +211,7 @@ const CaseStudy = () => {
         <Milestone className=" w-10 h-10" fill="brown" />
       </motion.div>
       <motion.div
+        animate={tapControls}
         className="absolute bottom-10 cursor-pointer right-10"
         // whileTap={{
         //   rotateY: "360deg",
@@ -250,7 +243,6 @@ const CaseStudy = () => {
             },
           },
         }}
-        animate={tapControls}
         // onClick={tapControls.start({
         //   rotateY: "360deg",
         //   transition: {

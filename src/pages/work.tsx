@@ -3,7 +3,6 @@ import CardCreator from "@/components/work/cardCreator";
 import CardPage from "@/components/work/cardPage";
 import Settings from "@/components/work/settings";
 import Image from "next/image";
-import { useRouter } from "next/router";
 import React, { useRef } from "react";
 
 type CardProps = {

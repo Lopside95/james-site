@@ -1,4 +1,3 @@
-import { Card, CardContent, CardTitle, CardHeader } from "@ui/card";
 import { useEffect, useState } from "react";
 
 const TechStack = () => {
