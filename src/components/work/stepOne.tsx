@@ -76,9 +76,9 @@ const StepOne = () => {
       <Image
         alt="Download preview"
         className="w-72 pr-5"
-        height={600}
+        height={800}
         src="/cardPagePreview.png"
-        width={500}
+        width={800}
       />
     </div>
   );

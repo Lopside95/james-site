@@ -1,5 +1,7 @@
 import Emoji from "@/components/ui/emoji";
 import CardCreator from "@/components/work/cardCreator";
+import CardPage from "@/components/work/cardPage";
+import Settings from "@/components/work/settings";
 import Image from "next/image";
 
 type CardProps = {
@@ -62,9 +64,8 @@ export default function Work() {
           />
         </article>
         <CardCreator />
-        {/* <article className="">
-          <CardCreator />
-        </article> */}
+        <CardPage />
+        <Settings />
       </section>
     </div>
   );
