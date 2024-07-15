@@ -12,13 +12,10 @@ const GeneralInfo = () => {
           </CardTitle>
         </CardHeader>
         <CardContent className="">
-          As a{" "}
-          <Link className="hover:underline" href="/writing">
-            copywriter
-          </Link>
-          , I created and told stories. For a brief while I made furniture –
-          only as a hobby but the pieces were good enough for me and I still use
-          them. Now, as a developer, I want to build websites and apps.
+          As a copywriter , I created and told stories. For a brief while I made
+          furniture – only as a hobby but the pieces were good enough for me and
+          I still use them. Now, as a developer, I want to build websites and
+          apps.
         </CardContent>
       </Card>
     </div>

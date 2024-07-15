@@ -3,6 +3,7 @@ import Link from "next/link";
 import Emoji from "../ui/emoji";
 import { Button } from "../ui/button";
 import { useRouter } from "next/router";
+import { ExternalLink, LucideArrowUpRightFromSquare } from "lucide-react";
 
 const Intro = () => {
   const router = useRouter();
@@ -11,7 +12,7 @@ const Intro = () => {
     <Card className="w-full bg-transparent border-none sm:text-3xl ">
       <CardHeader>
         <CardTitle className="sm:text-4xl">
-          Hi, I'm James <Emoji label="waving" symbol="🧑‍🔧" />
+          Hi, I'm James <Emoji label="engineer" symbol="🧑‍🔧" />
         </CardTitle>
       </CardHeader>
       <CardContent className="sm:text-3xl flex sm:gap-2  flex-col">
@@ -32,23 +33,20 @@ const Intro = () => {
           with making things.
         </p>
         <p>
-          As a{" "}
-          <Link className="hover:underline" href="/writing">
-            copywriter
-          </Link>
-          , I created and told stories. For a brief while I made furniture –
-          only as a hobby but the pieces were good enough for me and I still use
-          them. Now, as a developer, I want to build websites and apps.
-        </p>
-        <Button className="w-40">
+          As a copywriter , I created and told stories. For a brief while I made
+          furniture – only as a hobby but the pieces were good enough for me and
+          I still use them. Now, as a developer, I want to build websites and
+          apps.
           <Link
+            className="text-base font-[550] items-center pt-2 flex gap-[0.6rem]"
             href="https://herobuilder.vercel.app/"
             tabIndex={-1}
             target="_blank"
           >
-            To Hero Builder
+            Hero builder
+            <LucideArrowUpRightFromSquare className="w-3" />
           </Link>
-        </Button>
+        </p>
       </CardContent>
     </Card>
   );

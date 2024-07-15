@@ -5,7 +5,7 @@ const StepOne = () => {
     <div className="flex items-center pb-10 ">
       <div className="w-2/3">
         <h2>Step one</h2>
-        <p className="w-4/5 py-4">
+        <p className="w-4/5 pt-4 pb-6">
           Companies can decide which fields they want present, the name of that
           field and whether or not the field is required. Choices are reflected
           on the preview.

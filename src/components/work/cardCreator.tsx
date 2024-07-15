@@ -8,15 +8,15 @@ const CardCreator = () => {
   return (
     <article className="flex-col flex ">
       <div className="w-[26rem]">
-        <h1>The Card Creator</h1>
+        <h1 className="">The Card Creator</h1>
         <p className="pt-5 pb-3">
           Companies needed a way to generate their digital loyalty cards.
         </p>
         <p>
-          We designed a 3-step process to create a card. beginning with the
-          form, or ‘Card Page’, which will generate a card that customers can
-          then download.{" "}
+          The card creator is a three step process, beginning with the form, or
+          ‘Card Page’, from which customers can download the card.{" "}
         </p>
+        <p>My role mostly involved the preview of the card page.</p>
       </div>
       <Image
         alt="Regulars home page"

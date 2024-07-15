@@ -30,9 +30,9 @@ const CardPage = () => {
           width={800}
         />
       </div>
-      <p className="w-1/2">
+      <p className="w-1/2 pt-5">
         After hitting ‘download’, customers are redirected to their apple or
-        google wallet and can save the card to their phone .
+        google wallet and can save the card to their phone.
       </p>
     </div>
   );

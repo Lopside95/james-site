@@ -84,6 +84,9 @@
   h2 {
     @apply sm:text-2xl font-medium;
   }
+  h3 {
+    @apply sm:text-2xl;
+  }
   p {
     @apply sm:text-xl;
   }
