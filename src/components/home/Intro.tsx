@@ -11,7 +11,7 @@ const Intro = () => {
           Hi, I'm James <Emoji label="engineer" symbol="🧑‍🔧" />
         </CardTitle>
       </CardHeader>
-      <CardContent className="sm:text-3xl flex sm:gap-2  flex-col">
+      <CardContent className="sm:text-3xl flex gap-4 sm:gap-2  flex-col">
         <p>
           I&apos;m a frontend developer at{" "}
           <Link

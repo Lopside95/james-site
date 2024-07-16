@@ -10,9 +10,9 @@ import {
 const Experience = () => {
   return (
     <div className="w-full flex flex-col">
-      <h1 className="text-3xl pl-6 pt-5">Experience</h1>
+      <h1 className="pl-6 pt-5">Experience</h1>
       <Card className="flex flex-col justify-between border-none">
-        <CardHeader className="-mb-4">
+        <CardHeader className="-mb-2 sm:-mb-4">
           <CardTitle>Junior frontend developer</CardTitle>
           <CardDescription>Regulars</CardDescription>
           <CardFooter>September 2023 - present</CardFooter>
@@ -28,7 +28,7 @@ const Experience = () => {
         </CardContent>
       </Card>
       <Card className="flex flex-col justify-between border-none py-10">
-        <CardHeader className="-mb-4 -mt-12">
+        <CardHeader className=" -mb-2 sm:-mb-4 -mt-12">
           <CardTitle>Freelance strategist and copywriter</CardTitle>
           <CardDescription>Serious Moonlight Consulting</CardDescription>
           <CardFooter>July 2020 – present</CardFooter>

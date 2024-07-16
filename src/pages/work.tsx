@@ -109,27 +109,6 @@ export default function Work() {
               their accounts.
             </h3>
           </article>
-          {/* <MenuItem
-            desc="The card creator which allows companies to build and customise the
-              cards they’ll give to their customers."
-            label="spanner"
-            symbol="🔧"
-            onClick={(e) => handleNav(e, creatorRef)}
-          /> */}
-          {/* <MenuItem
-            desc=" The card page, a dynamically generated form customers fill in in
-            order to download digital loyalty cards."
-            label="coffee"
-            symbol="☕️"
-            onClick={(e) => handleNav(e, cardPageRef)}
-          />
-          <MenuItem
-            desc="Account management interface where companies and employees can
-            update and delete their accounts."
-            label="notepad"
-            symbol="📝"
-            onClick={(e) => handleNav(e, settingsRef)}
-          /> */}
         </article>
         <div ref={creatorRef}>
           <CardCreator />

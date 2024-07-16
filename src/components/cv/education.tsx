@@ -14,7 +14,7 @@ const Education = () => {
       <h1 className="text-3xl pl-6 py-4 ">Education</h1>
       <Card className="flex flex-col justify-between   border-none ">
         <div className="flex">
-          <CardHeader className="self-start -mb-4">
+          <CardHeader className="self-start -mb-2 sm:-mb-4">
             <CardTitle>
               Certificate in Design Techniques, <br /> User-centred Design
             </CardTitle>
@@ -33,7 +33,7 @@ const Education = () => {
 
       <Card className="flex flex-col justify-between border-none py-7">
         <div className="flex">
-          <CardHeader className="-mb-4 -mt-12">
+          <CardHeader className="-mb-2 sm:-mb-4 -mt-12">
             <CardTitle className="">Diploma in Copywriting</CardTitle>
             <CardDescription className="">
               Red & Yellow, Creative School of Business

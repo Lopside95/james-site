@@ -32,9 +32,9 @@ const TechStack = () => {
   });
 
   return (
-    <div className="align-middle w-full py-5 pl-5  sm:text-xl max-sm:flex-col flex ">
+    <div className="align-middle w-full py-5 pl-5 sm:text-xl max-sm:flex-col flex ">
       {isMobile ? (
-        <dl>
+        <dl className="max-md:text-pBase">
           <li>React</li>
           <li>TypeScript</li>
           <li>Next.js</li>
