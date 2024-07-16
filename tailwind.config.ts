@@ -86,7 +86,7 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       fontSize: {
-        pBase: ["1.65rem", { lineHeight: "2rem" }],
+        pBase: ["1.65rem", { lineHeight: "2.1rem" }],
       },
     },
   },

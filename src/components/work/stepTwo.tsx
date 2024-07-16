@@ -12,7 +12,7 @@ const StepTwo = () => {
       />
       <div className="w-2/5">
         <h2>Step two</h2>
-        <p className="w-2/3 py-4">
+        <p className="md:w-2/3 py-4">
           Next, companies will design their cards - choosing, among other
           things, logos, colours and stamp icons.
         </p>

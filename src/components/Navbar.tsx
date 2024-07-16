@@ -7,12 +7,12 @@ const Navbar = () => {
   const activePage = (path: string) => router.pathname === path;
 
   const navItemStyle = (page: string) =>
-    ` hover:underline-offset-[6px] max-sm:mt-3 sm:text-xl text-2xl ${
+    ` hover:underline-offset-[6px] max-md:mt-3 md:text-xl text-2xl ${
       activePage(page) ? "underline underline-offset-[6px] " : ""
     }`;
 
   return (
-    <div className="flex w-full sm:w-3/5 py-2 mb-3 sm:h-14 h-[4.5rem] justify-self-center inset-0   text-base-txtClr  bg-base-bg justify-between fixed  top-0  z-50  ">
+    <div className="flex w-full py-2 mb-3 md:h-14 h-[4.5rem] px-5 md:px-[16rem] inset-0   text-base-txtClr  bg-base-bg justify-between fixed  top-0  z-50  ">
       <Button className={navItemStyle("/")} variant="link">
         <Link href="/" tabIndex={-1}>
           Info

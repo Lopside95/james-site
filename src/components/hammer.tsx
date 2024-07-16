@@ -17,7 +17,7 @@ const Hammer = () => {
 
   return (
     <motion.div
-      className="fixed right-36 top-24 w-32"
+      className="fixed right-32 top-24 w-32"
       style={{
         x: 49,
         y: -4,

@@ -5,13 +5,13 @@ import { LucideArrowUpRightFromSquare } from "lucide-react";
 
 const Intro = () => {
   return (
-    <Card className="w-full bg-transparent border-none sm:text-3xl ">
+    <Card className="w-full bg-transparent border-none md:text-3xl ">
       <CardHeader>
-        <CardTitle className="sm:text-4xl">
+        <CardTitle className="md:text-4xl">
           Hi, I'm James <Emoji label="engineer" symbol="🧑‍🔧" />
         </CardTitle>
       </CardHeader>
-      <CardContent className="sm:text-3xl flex gap-4 sm:gap-2  flex-col">
+      <CardContent className="md:text-3xl flex gap-4 md:gap-2  flex-col">
         <p>
           I&apos;m a frontend developer at{" "}
           <Link
@@ -34,13 +34,13 @@ const Intro = () => {
           I still use them. Now, as a developer, I want to build websites and
           apps.
           <Link
-            className="text-base font-[550] items-center pt-2 flex gap-[0.6rem]"
+            className=" font-[550] items-center pt-2 flex gap-[0.5rem]"
             href="https://herobuilder.vercel.app/"
             tabIndex={-1}
             target="_blank"
           >
             Hero builder
-            <LucideArrowUpRightFromSquare className="w-3" />
+            <LucideArrowUpRightFromSquare className="w-4 pt-[0.2rem] max-sm:w-6" />
           </Link>
         </p>
       </CardContent>

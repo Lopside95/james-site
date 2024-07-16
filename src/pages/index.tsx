@@ -5,8 +5,8 @@ import Intro from "@/components/home/Intro";
 
 export default function Home() {
   return (
-    <div className="sm:w-full sm:items-center sm:align-middle flex flex-col min-h-screen ">
-      <section className="sm:w-3/5">
+    <div className="sm:items-center w-full sm:align-middle flex flex-col min-h-screen ">
+      <section className="items-center  ">
         <Intro />
         <TechStack />
         <article className="flex">

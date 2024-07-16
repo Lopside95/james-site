@@ -20,7 +20,7 @@ const TechStack = () => {
 
   useEffect(() => {
     const handleSize = () => {
-      setIsMobile(window.innerWidth < 640);
+      setIsMobile(window.innerWidth < 800);
     };
 
     handleSize();

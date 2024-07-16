@@ -4,6 +4,7 @@ import CardPage from "@/components/work/cardPage";
 import Settings from "@/components/work/settings";
 import Image from "next/image";
 import React, { useRef } from "react";
+import { useMediaQuery } from "react-responsive";
 
 type CardProps = {
   symbol: string;
@@ -34,12 +35,13 @@ export default function Work() {
     }
   };
   return (
-    <div className="w-full items-center align-middle flex pl-5 flex-col min-h-screen">
-      <section className="sm:w-3/5 pt-8 flex-col flex gap-5">
+    <div className=" align-middle flex md:pl-5  flex-col min-h-screen">
+      <section className=" pt-8 flex-col flex gap-5">
         <h1 className="">Regulars</h1>
-        <h1 className="pt-1">Junior frontend developer</h1>
-        <article className="flex items-center">
-          <div className="flex flex-col w-2/3 gap-4">
+        <h2 className="pt-1">Junior frontend developer</h2>
+
+        <article className="flex max-md:flex-col items-center">
+          <div className="flex flex-col">
             <p>
               The company helps cafes by building customer loyalty, turning
               guests into regulars.
@@ -56,18 +58,18 @@ export default function Work() {
           </div>
           <Image
             alt="Regulars home page"
-            className=""
+            className="md:w-3/5"
             height={600}
             src="/regularsHome.png"
             width={600}
           />
         </article>
-        <article className="flex flex-col gap-5 w-[99%]  py-10 pl-10 bg-gray-200/75">
-          <h2 className="pl-[3.4rem]">
+        <article className="flex flex-col gap-5 w-[99%] py-10 pr-2 pl-10 bg-gray-200/75">
+          <h3 className=" font-medium md:pl-[3.4rem]">
             Three things I loved working on at Regulars
-          </h2>
+          </h3>
 
-          <article className="flex gap-4 items-center w-3/5">
+          <article className="flex gap-4 items-center md:w-3/5">
             <Emoji className="text-3xl" label="spanner" symbol="🔧" />
             <h3>
               The{" "}
@@ -81,7 +83,7 @@ export default function Work() {
               give to their customers.
             </h3>
           </article>
-          <article className="flex gap-4 items-center w-3/5">
+          <article className="flex gap-4 items-center md:w-3/5">
             <Emoji className="text-3xl" label="coffee" symbol="☕️" />
             <h3>
               The{" "}
@@ -95,7 +97,7 @@ export default function Work() {
               download digital loyalty cards.
             </h3>
           </article>
-          <article className="flex gap-4 w-3/5 items-center">
+          <article className="flex gap-4 md:w-3/5 items-center">
             <Emoji className="text-3xl" label="notes" symbol="📝" />
             <h3>
               The{" "}

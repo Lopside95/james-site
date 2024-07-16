@@ -3,7 +3,7 @@ import Image from "next/image";
 const CardPage = () => {
   return (
     <div className="flex flex-col">
-      <article className="flex flex-col gap-2 w-[26rem]">
+      <article className="flex flex-col gap-2 md:w-2/3">
         <h1 className="pb-4">The Card Page</h1>
         <p className="">
           Companies needed a way to make their cards accessible to their
@@ -30,7 +30,7 @@ const CardPage = () => {
           width={800}
         />
       </div>
-      <p className="w-1/2 pt-5">
+      <p className="md:w-1/2 w-2/3 pt-5">
         After hitting ‘download’, customers are redirected to their apple or
         google wallet and can save the card to their phone.
       </p>
