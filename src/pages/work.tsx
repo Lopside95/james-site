@@ -58,13 +58,13 @@ export default function Work() {
           </div>
           <Image
             alt="Regulars home page"
-            className="md:w-3/5"
+            className="md:w-3/5 max-md:py-5"
             height={600}
             src="/regularsHome.png"
             width={600}
           />
         </article>
-        <article className="flex flex-col gap-5 w-[99%] py-10 pr-2 pl-10 bg-gray-200/75">
+        <section className="flex flex-col gap-5 w-[99%] py-10 pr-2 pl-10 bg-gray-200/75">
           <h3 className=" font-medium md:pl-[3.4rem]">
             Three things I loved working on at Regulars
           </h3>
@@ -111,14 +111,14 @@ export default function Work() {
               their accounts.
             </h3>
           </article>
-        </article>
-        <div ref={creatorRef}>
+        </section>
+        <div className="py-5" ref={creatorRef}>
           <CardCreator />
         </div>
-        <div ref={cardPageRef}>
+        <div className="py-5" ref={cardPageRef}>
           <CardPage />
         </div>
-        <div ref={settingsRef}>
+        <div className="py-5" ref={settingsRef}>
           <Settings />
         </div>
       </section>

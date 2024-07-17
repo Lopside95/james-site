@@ -20,8 +20,8 @@ const Settings = () => {
           )}
         </div>
         <Image
-          alt="Regulars home page"
-          className=""
+          alt="Account settings"
+          className="max-md:py-8"
           height={600}
           src="/settingsLaptop.png"
           width={600}
@@ -33,7 +33,7 @@ const Settings = () => {
           </p>
         )}
       </article>
-      <article className="flex justify-evenly items-center mr-10">
+      <article className="flex justify-evenly max-md:py-8 items-center mr-10">
         <Image
           alt="Mobile settings view"
           className="md:w-1/4 w-72 h-auto"
