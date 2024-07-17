@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Navbar />
       <main className="pt-16 pb-5 max-md:px-5  flex flex-col items-center">
         {Boolean(isLaptop) && <Hammer />}
-        <div className="max-w-[1200px]">
+        <div className="max-w-[1100px]">
           <Component {...pageProps} />
         </div>
         <Footer />

@@ -42,7 +42,7 @@ const StepOne = () => {
       </div>
       <Image
         alt="Download preview"
-        className="w-48 md:w-72 py-5 pr-5"
+        className="w-48 md:w-72 py-5 md:mt-10 pr-5"
         height={800}
         src="/cardPagePreview.png"
         width={800}

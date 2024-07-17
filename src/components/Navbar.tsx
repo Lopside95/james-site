@@ -12,13 +12,13 @@ const Navbar = () => {
     }`;
 
   return (
-    <div className="flex w-full py-2 mb-3 md:h-14 h-[4.5rem] px-5 md:px-[16rem] inset-0   text-base-txtClr  bg-base-bg justify-between fixed  top-0  z-50  ">
+    <div className="flex w-full py-2 mb-3 md:h-14 h-[4.5rem] px-5 md:px-[14rem] inset-0   text-base-txtClr  bg-base-bg justify-between fixed  top-0  z-50  ">
       <Button className={navItemStyle("/")} variant="link">
         <Link href="/" tabIndex={-1}>
           Info
         </Link>
       </Button>
-      <div className="flex ">
+      <div className="flex md:pr-6 ">
         {/* <Button className={navItemStyle("/cv")} variant="link">
           <Link href="/cv" tabIndex={-1}>
             CV
