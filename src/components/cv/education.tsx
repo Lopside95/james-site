@@ -42,10 +42,10 @@ const Education = () => {
           </CardHeader>
         </div>
         <CardContent className=" w-full">
-          Passed with merit and two of my{" "}
-          <ProjectLink href={"/work"}>projects</ProjectLink> were finalists in
-          the Loeries’ student competitions, which recognises and awards
-          advertising agencies and campaigns.
+          Passed with merit and two of my projects were finalists in the
+          Loeries’ student competitions, which recognises and awards advertising
+          agencies and campaigns.
+          {/* <ProjectLink href={"/work"}>projects</ProjectLink>  */}
         </CardContent>
       </Card>
     </div>

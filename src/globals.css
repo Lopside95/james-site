@@ -88,7 +88,7 @@
     @apply text-[1.75rem] md:text-2xl;
   }
   p {
-    @apply text-pBase md:text-xl;
+    @apply text-pBase sm:text-xl;
   }
   .scrollbar {
     scrollbar-color: #000 red;

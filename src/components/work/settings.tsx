@@ -12,12 +12,10 @@ const Settings = () => {
         <div className="flex flex-col md:w-2/3 gap-4 ">
           <h1>User and Company Settings</h1>
 
-          {isLaptop && (
-            <p>
-              A tabbed interface allowing companies and employees to update or
-              delete their accounts.
-            </p>
-          )}
+          <p>
+            A tabbed interface allowing companies and employees to update or
+            delete their accounts.
+          </p>
         </div>
         <Image
           alt="Account settings"
@@ -26,17 +24,11 @@ const Settings = () => {
           src="/settingsLaptop.png"
           width={600}
         />
-        {!isLaptop && (
-          <p>
-            A tabbed interface allowing companies and employees to update or
-            delete their accounts.
-          </p>
-        )}
       </article>
       <article className="flex justify-evenly max-md:py-8 items-center mr-10">
         <Image
           alt="Mobile settings view"
-          className="md:w-1/4 w-72 h-auto"
+          className="md:w-1/4 max-sm:pr-10 sm:w-72 h-auto"
           height={600}
           src="/settingsMobile.png"
           width={600}
