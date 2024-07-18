@@ -29,19 +29,8 @@ const Intro = () => {
           with making things.
         </p>
         <p>
-          As a copywriter I created and told stories. For a while I made
-          furniture – only as a hobby but the pieces were good enough for me and
-          I still use them. Now, as a developer, I want to build websites and
-          apps.
-          <Link
-            className=" font-[550] items-center pt-2 flex gap-[0.5rem]"
-            href="https://herobuilder.vercel.app/"
-            tabIndex={-1}
-            target="_blank"
-          >
-            Hero builder
-            <LucideArrowUpRightFromSquare className="w-4 pt-[0.2rem] max-sm:w-6" />
-          </Link>
+          As a copywriter I created and told stories. I make furniture as a
+          hobby and, as a developer, I want to build websites and apps.
         </p>
       </CardContent>
     </Card>
@@ -52,4 +41,16 @@ export default Intro;
 
 {
   /* <Emoji label="construction-worker" symbol="🧑‍🔧" /> */
+}
+
+{
+  /* <Link
+            className=" font-[550] items-center pt-2 flex gap-[0.5rem]"
+            href="https://herobuilder.vercel.app/"
+            tabIndex={-1}
+            target="_blank"
+          >
+            Hero builder
+            <LucideArrowUpRightFromSquare className="w-4 pt-[0.2rem] max-sm:w-6" />
+          </Link> */
 }
