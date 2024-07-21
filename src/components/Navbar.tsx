@@ -13,9 +13,11 @@ const Navbar = () => {
 
   return (
     <div className="flex w-full mb-3 md:h-14 h-[4.5rem] inset-0 items-center justify-center  text-base-txtClr  bg-base-bg  fixed  top-0  z-50">
-      <div className="flex max-w-[1100px] md:w-[800px] xl:w-[1100px]  lg:w-[1000px] justify-between ">
+      <div className="flex max-w-[1100px] md:w-[800px] 2xl:pl-10 xl:w-[1100px]  lg:w-[1000px] max-md:w-full max-md:px-10 justify-between  ">
         <Button
-          className={`${navItemStyle("/")} xl:pl-0 md:-ml-5 lg:pl-28`}
+          className={`${navItemStyle(
+            "/"
+          )} 2xl:-ml-40 xl:ml-[-7.6rem] md:pl-8 lg:pl-24`}
           variant="link"
         >
           <Link href="/" tabIndex={-1}>
@@ -23,11 +25,11 @@ const Navbar = () => {
           </Link>
         </Button>
         <div className="flex md:pr-6 lg:pr-[7rem] ">
-          <Button className={navItemStyle("/cv")} variant="link">
+          {/* <Button className={navItemStyle("/cv")} variant="link">
             <Link href="/cv" tabIndex={-1}>
               CV
             </Link>
-          </Button>
+          </Button> */}
           <Button className={navItemStyle("/work")} variant="link">
             <Link className="" href="/work" tabIndex={-1}>
               Work

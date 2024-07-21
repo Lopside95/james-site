@@ -64,55 +64,55 @@ export default function Work() {
             width={600}
           />
         </article>
-        <section className="flex flex-col bg-transparent z-20 gap-5 w-[99%] pr-2 ">
-          <div className="bg-gray-200/75 h-[100%]  pl-20 py-20 w-[100vw] border">
-            <h3 className=" font-medium md:pl-[3.4rem]">
-              Three things I loved working on at Regulars
-            </h3>
+        <section className="flex flex-col bg-gray-200/75 relative pl-5 py-10 z-20 gap-5 w-[99%] pr-2 ">
+          {/* <div className="bg-gray-200/75 h-[120%] absolute m -translate-y-[5%] overflow-hidden -z-10 pl-20 py-20 w-[100vw] border" /> */}
+          <h3 className=" font-medium md:pl-[3.4rem]">
+            Three things I loved working on at Regulars
+          </h3>
 
-            <article className="flex gap-4 items-center md:w-3/5">
-              <Emoji className="text-3xl" label="spanner" symbol="🔧" />
-              <h3>
-                The{" "}
-                <span
-                  className="underline cursor-pointer underline-offset-4"
-                  onClick={(e) => handleNav(e, creatorRef)}
-                >
-                  card creator
-                </span>{" "}
-                which allows companies to build and customise the cards they’ll
-                give to their customers.
-              </h3>
-            </article>
-            <article className="flex gap-4 items-center md:w-3/5">
-              <Emoji className="text-3xl" label="coffee" symbol="☕️" />
-              <h3>
-                The{" "}
-                <span
-                  className="underline underline-offset-4 cursor-pointer"
-                  onClick={(e) => handleNav(e, cardPageRef)}
-                >
-                  card page,
-                </span>{" "}
-                a dynamically generated form customers fill in in order to
-                download digital loyalty cards.
-              </h3>
-            </article>
-            <article className="flex gap-4 md:w-3/5 items-center">
-              <Emoji className="text-3xl" label="notes" symbol="📝" />
-              <h3>
-                The{" "}
-                <span
-                  className="underline cursor-pointer underline-offset-4"
-                  onClick={(e) => handleNav(e, settingsRef)}
-                >
-                  account management
-                </span>{" "}
-                interface where companies and employees can update and delete
-                their accounts.
-              </h3>
-            </article>
-          </div>
+          <article className="flex gap-4 items-center md:w-3/5">
+            <Emoji className="text-3xl" label="spanner" symbol="🔧" />
+            <h3>
+              The{" "}
+              <span
+                className="underline cursor-pointer underline-offset-4"
+                onClick={(e) => handleNav(e, creatorRef)}
+              >
+                card creator
+              </span>{" "}
+              which allows companies to build and customise the cards they’ll
+              give to their customers.
+            </h3>
+          </article>
+          <article className="flex gap-4 items-center md:w-3/5">
+            <Emoji className="text-3xl" label="coffee" symbol="☕️" />
+            <h3>
+              The{" "}
+              <span
+                className="underline underline-offset-4 cursor-pointer"
+                onClick={(e) => handleNav(e, cardPageRef)}
+              >
+                card page,
+              </span>{" "}
+              a dynamically generated form customers fill in in order to
+              download digital loyalty cards.
+            </h3>
+          </article>
+          <article className="flex gap-4 md:w-3/5 items-center">
+            <Emoji className="text-3xl" label="notes" symbol="📝" />
+            <h3>
+              The{" "}
+              <span
+                className="underline cursor-pointer underline-offset-4"
+                onClick={(e) => handleNav(e, settingsRef)}
+              >
+                account management
+              </span>{" "}
+              interface where companies and employees can update and delete
+              their accounts.
+            </h3>
+          </article>
+          {/* </div> */}
         </section>
         <div className="py-5" ref={creatorRef}>
           <CardCreator />

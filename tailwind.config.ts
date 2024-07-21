@@ -24,6 +24,7 @@ const config = {
         lg2: "1150px",
         xl: "1280px",
         "2xl": "1400px",
+        xl3: "1650px",
       },
     },
     extend: {

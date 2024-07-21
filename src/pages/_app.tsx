@@ -33,8 +33,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         {Boolean(isLaptop) && <Hammer />}
         <div className="xl:max-w-[1150px] max-xl:-ml-0 md:pl-5  lg:-ml-24 md:max-w-[800px]">
           <Component {...pageProps} />
+          <Footer />
         </div>
-        <Footer />
       </main>
     </>
   );

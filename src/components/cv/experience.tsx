@@ -6,18 +6,29 @@ import {
   CardFooter,
   CardHeader,
 } from "@ui/card";
+import ExperienceCard from "../home/experienceType";
+import { useState } from "react";
 
 const Experience = () => {
+  const [isShown, setIsShown] = useState(false);
+
   return (
-    <div className="w-full flex flex-col">
+    <div className="w-full flex flex-col relative">
       <h1 className="pl-6 pt-5">Experience</h1>
-      <Card className="flex flex-col justify-between border-none">
+      <Card className="flex flex-col justify-between relative border-none">
+        {/* <div className="absolute z-10 left-96 -top-16">
+          {Boolean(isShown) && <ExperienceCard />}
+        </div> */}
         <CardHeader className="-mb-2 sm:-mb-4">
           <CardTitle>Junior frontend developer</CardTitle>
           <CardDescription>Regulars</CardDescription>
           <CardFooter>September 2023 - present</CardFooter>
         </CardHeader>
-        <CardContent className="">
+        <CardContent
+          className=""
+          // onMouseEnter={() => setIsShown(true)}
+          // onMouseLeave={() => setIsShown(false)}
+        >
           I have helped to develop the company’s website and mobile components.
           During this time I gained experience with TypeScript, Next.js and
           Tailwind CSS. The ongoing project also involves collaboration with
@@ -42,6 +53,7 @@ const Experience = () => {
           should be simple and cohesive and finds meaning in empty spaces.
         </CardContent>
       </Card>
+      {/* <ExperienceCard /> */}
     </div>
   );
 };
