@@ -4,7 +4,6 @@ import CardPage from "@/components/work/cardPage";
 import Settings from "@/components/work/settings";
 import Image from "next/image";
 import React, { useRef } from "react";
-import { useMediaQuery } from "react-responsive";
 
 type CardProps = {
   symbol: string;
