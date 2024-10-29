@@ -5,6 +5,7 @@ import Settings from "@/components/work/settings";
 import React, { useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 import Image from "next/image";
+import SeriousMoonlight from "@/components/work/seriousMoonlight";
 
 type CardProps = {
   symbol: string;
@@ -36,6 +37,7 @@ export default function Work() {
   };
   return (
     <div className=" align-middle flex md:pl-5  flex-col min-h-screen">
+      <SeriousMoonlight />
       <section className=" pt-8 flex-col flex gap-5">
         <h1 className="">Regulars</h1>
         <h2 className="pt-1">Junior frontend developer</h2>
