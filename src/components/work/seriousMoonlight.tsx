@@ -6,7 +6,7 @@ const SeriousMoonlight = () => {
 
   return (
     <div className="flex justify-between">
-      <p className="  w-96 text-2xl ">
+      <p className="w-96 text-2xl ">
         Serious Moonlight Consulting develops strategies, concepts – doing the
         simple things right and the complicated things simply – to tell
         compelling stories which take customers out of crowded marketplaces to

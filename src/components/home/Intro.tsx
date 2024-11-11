@@ -12,7 +12,8 @@ const Intro = () => {
         </CardTitle>
       </CardHeader>
       <CardContent className="md:text-3xl flex gap-4 md:gap-2  flex-col">
-        <p>
+        I'm a software engineer.
+        {/* <p>
           I&apos;m a frontend developer at{" "}
           <Link
             className="underline underline-offset-4"
@@ -23,7 +24,7 @@ const Intro = () => {
           </Link>
           , where I&apos;m helping to build the company&apos;s service through
           the development of mobile and web components.
-        </p>
+        </p> */}
         <p>
           I have always appreciated the challenges and satisfactions that come
           with making things.

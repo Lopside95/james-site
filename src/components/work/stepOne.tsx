@@ -15,7 +15,7 @@ const StepOne = () => {
           field and whether or not the field is required. Choices are reflected
           on the preview.
         </p>
-        {Boolean(isLaptop) && (
+        {/* {Boolean(isLaptop) && (
           <pre className="p-3 bg-gray-200/75 rounded-sm md:w-[95%]">
             <code className="max-md:w-80 ">
               {`const convertSettingsToArray = (settings: TLandingPage) => {
@@ -38,7 +38,7 @@ const StepOne = () => {
         };`}
             </code>
           </pre>
-        )}
+        )} */}
       </div>
       <Image
         alt="Download preview"

@@ -5,15 +5,29 @@ const TechStack = () => {
   //   list.replace(/|\g, "<span className='text-muted-foreground'> | </span>")
   // }
 
+  // const stack = [
+  //   "React",
+  //   "TypeScript",
+  //   "Next.js",
+  //   "Tailwind CSS",
+  //   "tRPC",
+  //   "Prisma ORM",
+  //   "MongoDB",
+  //   "Git",
+  // ];
   const stack = [
     "React",
     "TypeScript",
     "Next.js",
     "Tailwind CSS",
-    "tRPC",
-    "Prisma ORM",
-    "MongoDB",
-    "Git",
+    "Sass",
+    "Node",
+    "MySQL",
+    "Jest",
+    "Heroku",
+    "Loom",
+    "Express.js",
+    "Git", // Git always needs to be last because of how the ' | ' is rendered
   ];
 
   const [isMobile, setIsMobile] = useState<boolean>();
@@ -32,37 +46,43 @@ const TechStack = () => {
   });
 
   return (
-    <div className="align-middle w-full py-5 pl-5 sm:text-xl max-sm:flex-col flex ">
-      {isMobile ? (
-        <dl className="max-md:text-pBase">
-          <li>React</li>
-          <li>TypeScript</li>
-          <li>Next.js</li>
-          <li>Tailwind CSS</li>
-          <li>tRPC</li>
+    <>
+      <div className="align-middle w-full py-5 pl-5 sm:text-xl max-sm:flex-col flex">
+        {isMobile ? (
+          <dl className="max-md:text-pBase">
+            <li>TypeScript</li>
+            <li>React</li>
+            <li>Next.js</li>
+            <li>Tailwind CSS</li>
+            <li>Sass</li>
+            <li>Node</li>
+            <li>MySQL</li>
+
+            {/* <li>tRPC</li>
           <li>Prisma ORM</li>
-          <li>MongoDB</li>
-          <li>Git</li>
-        </dl>
-      ) : (
-        <p>
-          {stack.map((x) => {
-            return (
-              <span key="">
-                {x}{" "}
-                {x !== "Git" && (
-                  <span className="text-muted-foreground">|</span>
-                )}{" "}
-              </span>
-            );
-          })}
-        </p>
-        // <p>
-        //   React | TypeScript | Next.js | Tailwind CSS | tRPC | Prisma ORM |
-        //   MongoDB | Git
-        // </p>
-      )}
-      {/* <Card className="w-full bg-transparent border-none ">
+          <li>MongoDB</li> */}
+            <li>Git</li>
+          </dl>
+        ) : (
+          <p>
+            {stack.map((skill) => {
+              return (
+                <span key="">
+                  {skill}{" "}
+                  {skill !== "Git" && (
+                    <span className="text-muted-foreground">|</span>
+                  )}{" "}
+                </span>
+              );
+            })}
+          </p>
+          // <p>
+          //   React | TypeScript | Next.js | Tailwind CSS | tRPC | Prisma ORM |
+          //   MongoDB | Git
+          // </p>
+        )}
+
+        {/* <Card className="w-full bg-transparent border-none ">
         <CardHeader>
           <CardTitle className="pl-3 -mb-4">Stack</CardTitle>
         </CardHeader>
@@ -79,7 +99,8 @@ const TechStack = () => {
           </dl>
         </CardContent>
       </Card> */}
-    </div>
+      </div>
+    </>
   );
 };
 

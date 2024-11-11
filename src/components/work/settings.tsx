@@ -26,14 +26,14 @@ const Settings = () => {
         />
       </article>
       <article className="flex justify-evenly max-md:py-8 items-center mr-10">
-        <Image
+        {/* <Image
           alt="Mobile settings view"
           className="md:w-1/4 max-sm:pr-10 sm:w-72 h-auto"
           height={600}
           src="/settingsMobile.png"
           width={600}
-        />
-        {isLaptop ? (
+        /> */}
+        {/* {isLaptop ? (
           <pre className="-ml-10 p-5 rounded-sm bg-gray-200/75">
             <code>
               {`
@@ -56,7 +56,7 @@ updateUserSettings: protectedProcedure
             src="/settingsBar.png"
             width={600}
           />
-        )}
+        )} */}
       </article>
     </div>
   );

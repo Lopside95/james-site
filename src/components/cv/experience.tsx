@@ -22,7 +22,7 @@ const Experience = () => {
         <CardHeader className="-mb-2 sm:-mb-4">
           <CardTitle>Junior frontend developer</CardTitle>
           <CardDescription>Regulars</CardDescription>
-          <CardFooter>September 2023 - present</CardFooter>
+          <CardFooter>September 2023 - September 2024</CardFooter>
         </CardHeader>
         <CardContent
           className=""
