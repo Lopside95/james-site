@@ -15,6 +15,21 @@ const Education = () => {
       <Card className="flex flex-col justify-between   border-none ">
         <div className="flex">
           <CardHeader className="self-start -mb-2 sm:-mb-4">
+            <CardTitle>Software Engineering</CardTitle>
+            <CardDescription>BrainStation</CardDescription>
+            <CardFooter>September - December 2024</CardFooter>
+          </CardHeader>
+        </div>
+        <CardContent className="w-full self-center">
+          An immersive twelve-week software engineering bootcamp. Covering
+          everything from HTML to DevOps, BrainStation’s bootcamp is a
+          comprehensive, hands-on approach to learning and the real-world
+          application of the hard and soft skills required by developers.
+        </CardContent>
+      </Card>
+      <Card className="flex flex-col justify-between   border-none ">
+        <div className="flex">
+          <CardHeader className="self-start -mb-2 sm:-mb-4">
             <CardTitle>
               Certificate in Design Techniques, <br /> User-centred Design
             </CardTitle>

@@ -7,10 +7,6 @@ import { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  // const isLaptop = useMediaQuery({
-  //   query: "(min-width: 1200px)",
-  // });
-
   const [isLaptop, setIsLaptop] = useState<boolean>();
 
   useEffect(() => {

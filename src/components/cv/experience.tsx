@@ -22,7 +22,7 @@ const Experience = () => {
         <CardHeader className="-mb-2 sm:-mb-4">
           <CardTitle>Junior frontend developer</CardTitle>
           <CardDescription>Regulars</CardDescription>
-          <CardFooter>September 2023 - present</CardFooter>
+          <CardFooter>September 2023 - September 2024</CardFooter>
         </CardHeader>
         <CardContent
           className=""
@@ -42,18 +42,17 @@ const Experience = () => {
         <CardHeader className=" -mb-2 sm:-mb-4 -mt-12">
           <CardTitle>Freelance strategist and copywriter</CardTitle>
           <CardDescription>Serious Moonlight Consulting</CardDescription>
-          <CardFooter>July 2020 – present</CardFooter>
+          <CardFooter>July 2020 – September 2024</CardFooter>
         </CardHeader>
         <CardContent>
           I have freelanced for Serious Moonlight Consulting, developing
           strategies, concepts and content for about three years. What often
           makes or breaks a strategy is the story it tells, and the uniqueness
           of this story. A brand’s identity can be complex, with many assets,
-          aspects and asides. But at the end of the day, it’s a story, one which
-          should be simple and cohesive and finds meaning in empty spaces.
+          aspects and asides. But, at the end of the day, it’s a story - one
+          which should be simple and cohesive, finding meaning in empty spaces.
         </CardContent>
       </Card>
-      {/* <ExperienceCard /> */}
     </div>
   );
 };

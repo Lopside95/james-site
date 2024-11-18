@@ -2,8 +2,10 @@ import Emoji from "@/components/ui/emoji";
 import CardCreator from "@/components/work/cardCreator";
 import CardPage from "@/components/work/cardPage";
 import Settings from "@/components/work/settings";
-import Image from "next/image";
 import React, { useRef } from "react";
+import { useMediaQuery } from "react-responsive";
+import Image from "next/image";
+import SeriousMoonlight from "@/components/work/seriousMoonlight";
 
 type CardProps = {
   symbol: string;

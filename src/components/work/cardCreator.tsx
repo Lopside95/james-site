@@ -24,9 +24,9 @@ const CardCreator = () => {
         src="/regularsDownload.png"
         width={600}
       />
-      <StepOne />
+      {/* <StepOne />
       <StepTwo />
-      <StepThree />
+      <StepThree /> */}
     </article>
   );
 };

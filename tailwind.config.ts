@@ -67,6 +67,8 @@ const config = {
           txtClr: "hsl(var(--foreground))",
           bg: "hsl(var(--background))",
         },
+        moonText: "hsl(var(--moon-text))",
+        moonBg: "hsl(var(--moon-bg))",
       },
       borderRadius: {
         lg: "var(--radius)",
