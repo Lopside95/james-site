@@ -1,5 +1,5 @@
-import { Card, CardContent, CardTitle } from "../ui/card";
-import Emoji from "../ui/emoji";
+import { Card, CardContent, CardTitle } from "@/components/ui/card";
+import Emoji from "@/components/ui/emoji";
 
 type CardProps = {
   emoji?: string;

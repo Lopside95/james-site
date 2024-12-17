@@ -1,5 +1,4 @@
 import Image from "next/image";
-import RegularsCard from "../regularsCard";
 import { useEffect, useRef, useState } from "react";
 import { motion, useAnimationControls, useScroll } from "framer-motion";
 import { Button } from "../../ui/button";
@@ -12,6 +11,7 @@ import {
   downloadCardVariants,
 } from "@/helpers/helpers";
 import { Milestone } from "lucide-react";
+import RegularsCard from "./regularsCard";
 
 type ImageProps = "download" | "design" | "backside";
 
