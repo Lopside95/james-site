@@ -1,6 +1,12 @@
 import Link from "next/link";
 import { Button } from "@ui/button";
 import { useRouter } from "next/router";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "./ui/accordion";
 
 const Navbar = () => {
   const router = useRouter();
@@ -14,6 +20,16 @@ const Navbar = () => {
   return (
     <div className="flex w-full mb-3 md:h-14 h-[4.5rem] inset-0 items-center justify-center  text-base-txtClr  bg-base-bg  fixed  top-0  z-50">
       <div className="flex max-w-[1100px] md:w-[800px] 2xl:pl-10 xl:w-[1100px]  lg:w-[1000px] max-md:w-full max-md:px-10 justify-between  ">
+        {/* <Button
+          className={`${navItemStyle(
+            "/"
+          )} 2xl:-ml-40 xl:ml-[-7.6rem] md:pl-8 lg:pl-24`}
+          variant="link"
+        >
+          <Link href="/" tabIndex={-1}>
+            Projects
+          </Link>
+        </Button> */}
         <Button
           className={`${navItemStyle(
             "/"
@@ -25,6 +41,14 @@ const Navbar = () => {
           </Link>
         </Button>
         <div className="flex md:pr-6 lg:pr-[7rem] ">
+          {/* <Accordion type="single" collapsible>
+            <AccordionItem value="item-1">
+              <AccordionTrigger>Projects</AccordionTrigger>
+              <AccordionContent className="absolute">
+                Yes. It adheres to the WAI-ARIA design pattern.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion> */}
           {/* <Button className={navItemStyle("/cv")} variant="link">
             <Link href="/cv" tabIndex={-1}>
               CV

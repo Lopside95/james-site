@@ -1,11 +1,12 @@
 import Emoji from "@/components/ui/emoji";
-import CardCreator from "@/components/work/cardCreator";
-import CardPage from "@/components/work/cardPage";
-import Settings from "@/components/work/settings";
+import CardCreator from "@/components/work/regulars/cardCreator";
+import CardPage from "@/components/work/regulars/cardPage";
+import Settings from "@/components/work/regulars/settings";
 import React, { useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 import Image from "next/image";
 import SeriousMoonlight from "@/components/work/seriousMoonlight";
+import FindMyDog from "@/components/work/findmydog/findmydog";
 
 type CardProps = {
   symbol: string;
@@ -38,6 +39,8 @@ export default function Work() {
   return (
     <div className=" align-middle flex md:pl-5  flex-col min-h-screen">
       <section className=" pt-8 flex-col flex gap-5">
+        <FindMyDog />
+
         <h1 className="">Regulars</h1>
         <h2 className="pt-1">Junior frontend developer</h2>
 

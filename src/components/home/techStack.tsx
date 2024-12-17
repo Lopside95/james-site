@@ -10,9 +10,9 @@ const TechStack = () => {
     "Sass",
     "Node",
     "MySQL",
+    "MongoDB",
     "Jest",
     "Heroku",
-    "Loom",
     "Express.js",
     "Knex.js",
     "Git", // Git always needs to be last because of how the ' | ' is rendered

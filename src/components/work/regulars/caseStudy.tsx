@@ -1,8 +1,8 @@
 import Image from "next/image";
-import RegularsCard from "./regularsCard";
+import RegularsCard from "../regularsCard";
 import { useEffect, useRef, useState } from "react";
 import { motion, useAnimationControls, useScroll } from "framer-motion";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 import {
   backsideCardVariants,
   backsideVariants,
