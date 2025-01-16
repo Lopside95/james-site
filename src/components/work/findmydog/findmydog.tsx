@@ -18,10 +18,19 @@ const FindMyDog = () => {
         />
         <div className=" flex flex-col gap-5  w-96 lg:w-3/5">
           <p>
-            Fullstack project for the BrainStation software engineering
+            Fullstack capstone for the BrainStation software engineering
             bootcamp.
           </p>
-          <p>Node | Express | MySQL | React | TypeScript</p>
+          <div className="flex items-center justify-between">
+            <p>TypeScript | React | Node | MySQL | Express</p>
+            <Image
+              alt="QR code for Find My Dog"
+              className="mr-10 max-md:hidden"
+              height={140}
+              src="/qr-code.svg"
+              width={140}
+            />
+          </div>
         </div>
       </article>
     </section>

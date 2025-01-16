@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import SkillsAccordion from "../skillsAccordion";
 
 const TechStack = () => {
+  const [isMobile, setIsMobile] = useState<boolean>();
+
   const stack = [
     "React",
     "TypeScript",
-    "Next.js",
+    "Next",
     "Tailwind CSS",
     "Sass",
     "Node",
@@ -13,12 +16,23 @@ const TechStack = () => {
     "MongoDB",
     "Jest",
     "Heroku",
-    "Express.js",
-    "Knex.js",
+    "Express",
+    "Knex",
     "Git", // Git always needs to be last because of how the ' | ' is rendered
   ];
+  // const frontend = ["React", "TypeScript", "Next.js", "Tailwind CSS", "Sass"];
+  // const backend = [
+  //   "Node",
+  //   "MySQL",
+  //   "MongoDB",
+  //   "Prisma ORM",
+  //   "tRPC",
+  //   "Express.js",
+  //   "Knex.js",
+  // ];
+  // const tools = ["Vitest", "Heroku", "Zod", "React Hook Form", "Jira", "Git"]; // Git always needs to be last because of how the ' | ' is rendered
 
-  const [isMobile, setIsMobile] = useState<boolean>();
+  // const stack = [...frontend, ...backend, ...tools];
 
   useEffect(() => {
     const handleSize = () => {

@@ -6,7 +6,6 @@ import {
   CardFooter,
   CardHeader,
 } from "@ui/card";
-import ProjectLink from "./projectLink";
 
 const Education = () => {
   return (
@@ -45,7 +44,6 @@ const Education = () => {
           traits like creativity and empathy.
         </CardContent>
       </Card>
-
       <Card className="flex flex-col justify-between border-none py-7">
         <div className="flex">
           <CardHeader className="-mb-2 sm:-mb-4 -mt-12">
@@ -60,7 +58,6 @@ const Education = () => {
           Passed with merit and two of my projects were finalists in the
           Loeries’ student competitions, which recognises and awards advertising
           agencies and campaigns.
-          {/* <ProjectLink href={"/work"}>projects</ProjectLink>  */}
         </CardContent>
       </Card>
     </div>
