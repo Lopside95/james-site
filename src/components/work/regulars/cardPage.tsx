@@ -16,10 +16,10 @@ const CardPage = () => {
       </article>
       <div className="flex w-2/3 justify-between items-center py-5 self-center">
         <Image
-          alt="Download preview"
+          alt="Card page"
           className="w-[15rem] h-[26.5rem]"
           height={800}
-          src="/cardPage.png"
+          src="/regulars/cardPage.png"
           width={800}
         />
         <Image
