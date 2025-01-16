@@ -26,7 +26,7 @@ const CardPage = () => {
           alt="Download preview"
           className="w-[17.4rem] "
           height={800}
-          src="/cardPageDD.png"
+          src="/regulars/cardPageDD.png"
           width={800}
         />
       </div>

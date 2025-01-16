@@ -1,7 +1,4 @@
 import Image from "next/image";
-import StepOne from "./stepOne";
-import StepTwo from "./stepTwo";
-import StepThree from "./stepThree";
 
 const CardCreator = () => {
   return (
@@ -18,15 +15,12 @@ const CardCreator = () => {
         <p>My role mostly involved the preview of the card page.</p>
       </div>
       <Image
-        alt="Regulars home page"
+        alt="Regulars donwload page"
         className="self-center w-2/3 "
         height={600}
-        src="/regularsDownload.png"
+        src="/regulars/regularsDownload.png"
         width={600}
       />
-      {/* <StepOne />
-      <StepTwo />
-      <StepThree /> */}
     </article>
   );
 };

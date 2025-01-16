@@ -3,9 +3,7 @@ import CardCreator from "@/components/work/regulars/cardCreator";
 import CardPage from "@/components/work/regulars/cardPage";
 import Settings from "@/components/work/regulars/settings";
 import React, { useRef } from "react";
-import { useMediaQuery } from "react-responsive";
 import Image from "next/image";
-import SeriousMoonlight from "@/components/work/seriousMoonlight";
 import FindMyDog from "@/components/work/findmydog/findmydog";
 
 type CardProps = {
@@ -28,8 +26,6 @@ export default function Work() {
 
     if (ref.current) {
       const refPos = ref.current?.getBoundingClientRect().top + window.scrollY;
-      // ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
-      // const offsetPos = refPos - 80
       window.scrollTo({
         top: refPos - 72,
         behavior: "smooth",
@@ -40,7 +36,6 @@ export default function Work() {
     <div className=" align-middle flex md:pl-5  flex-col min-h-screen">
       <section className=" pt-8 flex-col flex gap-5">
         <FindMyDog />
-
         <h1 className="">Regulars</h1>
         <h2 className="pt-1">Junior frontend developer</h2>
 
@@ -64,16 +59,14 @@ export default function Work() {
             alt="Regulars home page"
             className="md:w-3/5 max-md:py-5"
             height={600}
-            src="/regularsHome.png"
+            src="/regulars/regularsHome.png"
             width={600}
           />
         </article>
         <section className="flex flex-col bg-gray-200/75 relative pl-5 py-10 z-20 gap-5 w-[99%] pr-2 ">
-          {/* <div className="bg-gray-200/75 h-[120%] absolute m -translate-y-[5%] overflow-hidden -z-10 pl-20 py-20 w-[100vw] border" /> */}
           <h3 className=" font-medium md:pl-[3.4rem]">
             Three things I loved working on at Regulars
           </h3>
-
           <article className="flex gap-4 items-center md:w-3/5">
             <Emoji className="text-3xl" label="spanner" symbol="🔧" />
             <h3>
@@ -116,7 +109,6 @@ export default function Work() {
               their accounts.
             </h3>
           </article>
-          {/* </div> */}
         </section>
         <div className="py-5" ref={creatorRef}>
           <CardCreator />
