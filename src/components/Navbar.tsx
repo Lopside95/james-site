@@ -30,6 +30,11 @@ const Navbar = () => {
               Work
             </Link>
           </Button>
+          <Button className={navItemStyle("/cv")} variant="link">
+            <Link className="" href="/cv" tabIndex={-1}>
+              CV
+            </Link>
+          </Button>
           <Button className={navItemStyle("")} variant="link">
             <Link
               href="https://github.com/Lopside95"

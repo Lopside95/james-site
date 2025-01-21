@@ -1,11 +1,21 @@
+import Education from "@/components/cv/education";
+import Experience from "@/components/cv/experience";
+import Intro from "@/components/home/Intro";
+import TechStack from "@/components/home/techStack";
 import Wheel from "@/components/home/wheel";
 
-export default function CV() {
+const CV = () => {
   return (
-    <div className="w-full items-center align-middle flex flex-col min-h-screen  ">
-      <section className="sm:w-3/5 ">
-        <Wheel />
+    <main className="sm:items-center w-full sm:align-middle flex flex-col min-h-screen ">
+      <section className="items-center">
+        <article className="flex">
+          <Experience />
+        </article>
+        <article>
+          <Education />
+        </article>
       </section>
-    </div>
+    </main>
   );
-}
+};
+export default CV;
