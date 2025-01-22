@@ -21,6 +21,22 @@ const FindMyDog = () => {
             Fullstack capstone for the BrainStation software engineering
             bootcamp.
           </p>
+          <div className="flex gap-3">
+            <Link
+              className="underline"
+              href="https://github.com/Lopside95/findmydog-client"
+              target="_blank"
+            >
+              Client Repo
+            </Link>
+            <Link
+              className="underline"
+              href="https://github.com/Lopside95/findmydog-server"
+              target="_blank"
+            >
+              Server Repo
+            </Link>
+          </div>
           <div className="flex items-center justify-between">
             <p>TypeScript | React | Node | MySQL | Express</p>
             <Image
