@@ -35,9 +35,9 @@ export default function Work() {
   return (
     <div className=" align-middle flex md:pl-5  flex-col min-h-screen">
       <section className=" pt-8 flex-col flex gap-5">
-        {/* <FindMyDog /> */}
+        <FindMyDog />
         <h1 className="">Regulars</h1>
-        <h2 className="pt-1">Junior frontend developer</h2>
+        <h2 className="pt-1">Frontend Developer</h2>
 
         <article className="flex max-md:flex-col items-center">
           <div className="flex flex-col">

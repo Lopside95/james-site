@@ -7,7 +7,7 @@
   "plugins": ["react"],
   "rules": {
     "react/jsx-sort-props": [
-      "warn",
+      "off",
       {
         "callbacksLast": false,
         "shorthandFirst": false,

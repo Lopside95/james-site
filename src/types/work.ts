@@ -4,3 +4,10 @@ export type Experience = {
   period: string;
   desc: string;
 };
+
+export type SkillGroup = {
+  type: string;
+  items: string[];
+  openGroup: string;
+  setOpenGroup: () => void;
+};

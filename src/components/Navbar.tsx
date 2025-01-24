@@ -25,14 +25,14 @@ const Navbar = () => {
           </Link>
         </Button>
         <div className="flex md:pr-6 lg:pr-[7rem] ">
-          <Button className={navItemStyle("/work")} variant="link">
-            <Link className="" href="/work" tabIndex={-1}>
-              Work
-            </Link>
-          </Button>
           <Button className={navItemStyle("/cv")} variant="link">
             <Link className="" href="/cv" tabIndex={-1}>
               CV
+            </Link>
+          </Button>
+          <Button className={navItemStyle("/work")} variant="link">
+            <Link className="" href="/work" tabIndex={-1}>
+              Work
             </Link>
           </Button>
           <Button className={navItemStyle("")} variant="link">
