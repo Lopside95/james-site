@@ -1,16 +1,18 @@
 import { Card, CardContent, CardTitle, CardHeader } from "@ui/card";
 import Emoji from "../ui/emoji";
+import Typewriter from "./Typewriter";
 
 const Intro = () => {
   return (
     <Card className="w-full bg-transparent border-none md:text-3xl ">
       <CardHeader>
-        <CardTitle className="md:text-4xl">
+        <Typewriter />
+        {/* <CardTitle className="md:text-4xl">
           Hi, I'm James <Emoji label="engineer" symbol="🧑‍🔧" />
-        </CardTitle>
+        </CardTitle> */}
       </CardHeader>
       <CardContent className="md:text-3xl flex gap-4 md:gap-2  flex-col">
-        I'm a software engineer.
+        {/* I'm a software engineer. */}
         <p>
           I have always appreciated the challenges and satisfactions that come
           with making things.
