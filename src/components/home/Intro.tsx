@@ -1,7 +1,7 @@
 import { Card, CardContent, CardTitle, CardHeader } from "@ui/card";
 import Emoji from "../ui/emoji";
 import { useState } from "react";
-import MyTypewriter from "./typewriter";
+import MyTypewriter from "./MyTypewriter";
 
 const Intro = () => {
   return (
