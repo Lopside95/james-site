@@ -2,7 +2,7 @@ import { TypeSpeed } from "@/types/work";
 import React, { SetStateAction, useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 
-const Typewriter = () => {
+const MyTypewriter = () => {
   const [step, setStep] = useState<number>(1);
   // const [typeSpeed, setTypeSpeed] = useState<TypeSpeed>(30);
 
@@ -43,4 +43,4 @@ const Typewriter = () => {
   );
 };
 
-export default Typewriter;
+export default MyTypewriter;

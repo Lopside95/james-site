@@ -1,13 +1,13 @@
 import { Card, CardContent, CardTitle, CardHeader } from "@ui/card";
 import Emoji from "../ui/emoji";
 import { useState } from "react";
-import Typewriter from "./typewriter";
+import MyTypewriter from "./typewriter";
 
 const Intro = () => {
   return (
     <Card className="w-full  bg-transparent border-none md:text-3xl ">
       <CardHeader className="px-0 pb-0">
-        <Typewriter />
+        <MyTypewriter />
         {/* <CardTitle className="md:text-4xl">
           Hi, I'm James <Emoji label="engineer" symbol="🧑‍🔧" />
         </CardTitle> */}
