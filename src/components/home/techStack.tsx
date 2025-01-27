@@ -6,8 +6,8 @@ const TechStack = () => {
   const [isMobile, setIsMobile] = useState<boolean>();
 
   const stack = [
-    "React",
     "TypeScript",
+    "React",
     "Next",
     "Tailwind CSS",
     "Sass",
