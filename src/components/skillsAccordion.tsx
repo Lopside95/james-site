@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -9,26 +10,29 @@ import { v4 as uuidv4 } from "uuid";
 type SkillGroup = {
   type: string;
   items: string[];
-  isOpen?: string;
+  group: string;
 };
 
-const SkillsAccordion = ({ type, items, isOpen }: SkillGroup) => {
-  // const {type, items} = skills;
-
+const SkillsAccordion = ({ type, items, group }: SkillGroup) => {
   return (
-    <Accordion collapsible type="single" defaultValue={isOpen}>
-      <AccordionItem value="item-1">
-        <AccordionTrigger>{type}</AccordionTrigger>
-        <AccordionContent>
-          <dl>
+    <Accordion
+      className="lg:w-34"
+      collapsible
+      type="single"
+      defaultValue={group}
+    >
+      <AccordionItem value={group}>
+        <AccordionTrigger className="text-3xl">{type}</AccordionTrigger>
+        <AccordionContent className="">
+          <ul className="flex sm:flex-col flex-wrap gap-2">
             {items.map((item) => {
               return (
-                <li className="text-lg" key={uuidv4()}>
+                <li className="text-2xl sm:text-xl" key={uuidv4()}>
                   {item}
                 </li>
               );
             })}
-          </dl>
+          </ul>
         </AccordionContent>
       </AccordionItem>
     </Accordion>

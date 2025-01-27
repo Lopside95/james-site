@@ -1,42 +1,70 @@
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import SkillsAccordion from "../skillsAccordion";
 
 const TechStack = () => {
   const [isMobile, setIsMobile] = useState<boolean>();
+  // const [isOpen, setOpenGroup] = useState<string>("item-1");
+  // const [openGroup, setOpenGroup] = useState<string>("");
 
-  const stack = [
-    "React",
-    "TypeScript",
-    "Next",
-    "Tailwind CSS",
-    "Sass",
-    "Node",
-    "MySQL",
-    "MongoDB",
-    "Jest",
-    "Heroku",
-    "Express",
-    "Knex",
-    "Git", // Git always needs to be last because of how the ' | ' is rendered
-  ];
-  // const frontend = ["React", "TypeScript", "Next.js", "Tailwind CSS", "Sass"];
-  // const backend = [
+  // const stack = [
+  //   "React",
+  //   "TypeScript",
+  //   "Next",
+  //   "Tailwind CSS",
+  //   "Sass",
   //   "Node",
   //   "MySQL",
   //   "MongoDB",
-  //   "Prisma ORM",
-  //   "tRPC",
-  //   "Express.js",
-  //   "Knex.js",
+  //   "Vitest",
+  //   "Heroku",
+  //   "Express",
+  //   "Knex",
+  //   "Git", // Git always needs to be last because of how the ' | ' is rendered
   // ];
-  // const tools = ["Vitest", "Heroku", "Zod", "React Hook Form", "Jira", "Git"]; // Git always needs to be last because of how the ' | ' is rendered
+  const frontend = ["TypeScript", "React", "Next.js", "TailwindCSS", "Sass"];
+  const backend = [
+    "Node",
+    "MySQL",
+    "MongoDB",
+    "Prisma ORM",
+    "tRPC",
+    "Express.js",
+    "Knex.js",
+  ];
+  const tools = ["Vitest", "Heroku", "Zod", "React Hook Form", "Jira", "Git"]; // Git always needs to be last because of how the ' | ' is rendered
 
-  // const stack = [...frontend, ...backend, ...tools];
+  const stack = [...frontend, ...backend, ...tools];
+  const frontendMobile = [
+    "TypeScript,",
+    "React,",
+    "Next.js,",
+    "TailwindCSS,",
+    "Sass",
+  ];
+  const backendMobile = [
+    "Node.js,",
+    "MySQL,",
+    "MongoDB,",
+    "Prisma ORM,",
+    "tRPC,",
+    "Express.js,",
+    "Knex.js",
+  ];
+  const toolsMobile = [
+    "Vitest,",
+    "Heroku,",
+    "Zod,",
+    "React Hook Form,",
+    "Git,",
+    "Jira",
+  ]; // Git always needs to be last because of how the ',' is rendered
+
+  const stackMobile = [...frontend, ...backend, ...tools];
 
   useEffect(() => {
     const handleSize = () => {
-      setIsMobile(window.innerWidth < 800);
+      setIsMobile(window.innerWidth < 640);
     };
 
     handleSize();
@@ -48,31 +76,66 @@ const TechStack = () => {
   });
 
   return (
-    <>
-      <div className="align-middle w-full py-5 pl-5 sm:text-xl max-sm:flex-col flex">
-        {isMobile ? (
-          <dl className="max-md:text-pBase">
-            {stack.map((skill) => {
-              return <li key={uuidv4()}>{skill}</li>;
-            })}
-          </dl>
-        ) : (
-          <p>
-            {stack.map((skill) => {
-              return (
-                <span key={uuidv4()}>
-                  {skill}{" "}
-                  {skill !== "Git" && (
-                    <span className="text-muted-foreground">|</span>
-                  )}{" "}
-                </span>
-              );
-            })}
-          </p>
-        )}
-      </div>
-    </>
+    <section>
+      <article className="align-middle w-full px-0 py-5 sm:text-xl justify-between xl:justify-between max-sm:flex-col flex">
+        <div className="sm:hidden">
+          <SkillsAccordion
+            group="frontend"
+            items={frontendMobile}
+            type="Frontend"
+          />
+          <SkillsAccordion
+            group="backend"
+            items={backendMobile}
+            type="Backend"
+          />
+          <SkillsAccordion group="tools" items={toolsMobile} type="Tools" />
+        </div>
+        <div className="hidden sm:flex justify-between w-full md:pr-4 lg:pr-0 ">
+          <SkillsAccordion group="frontend" items={frontend} type="Frontend" />
+          <SkillsAccordion group="backend" items={backend} type="Backend" />
+          <SkillsAccordion group="tools" items={tools} type="Tools" />
+        </div>
+      </article>
+    </section>
   );
 };
 
 export default TechStack;
+
+// <p>
+//   {stack.map((skill) => {
+//     return (
+//       <span key={uuidv4()}>
+//         {skill}{" "}
+//         {skill !== "Git" && (
+//           <span className="text-muted-foreground">|</span>
+//         )}{" "}
+//       </span>
+//     );
+//   })}
+// </p>
+
+// return (
+//   <div>
+//     <section className="align-middle w-full py-5 pl-5 sm:text-xl max-sm:flex-col flex">
+//       {isMobile ? (
+//         <dl className="max-md:text-pBase">
+//           {stack.map((skill) => {
+//             return <li key={uuidv4()}>{skill}</li>;
+//           })}
+//         </dl>
+//       ) : (
+//         <article className="flex justify-around w-full">
+//           <SkillsAccordion
+//             group="frontend"
+//             items={frontend}
+//             type="Frontend"
+//           />
+//           <SkillsAccordion group="backend" items={backend} type="Backend" />
+//           <SkillsAccordion group="tools" items={tools} type="Tools" />
+//         </article>
+//       )}
+//     </section>
+//   </div>
+// );
