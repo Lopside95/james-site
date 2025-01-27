@@ -11,10 +11,6 @@ const Typewriter = () => {
   //   const [isTyping, setIsTyping] = useState<string>("");
   const [fontSize, setFontSize] = useState<string>("1.5rem");
 
-  useEffect(() => {
-    console.log("step", step);
-  }, [step]);
-
   return (
     <div>
       <TypeAnimation
