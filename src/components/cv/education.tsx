@@ -10,7 +10,7 @@ import {
 const Education = () => {
   return (
     <div className="w-full flex flex-col">
-      <h1 className="text-3xl pl-6 py-4 ">Education</h1>
+      <h2 className="py-4 ">Education</h2>
       <Card className="flex flex-col justify-between   border-none ">
         <div className="flex">
           <CardHeader className="self-start -mb-2 sm:-mb-4">
