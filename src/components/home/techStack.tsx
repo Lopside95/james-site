@@ -35,10 +35,36 @@ const TechStack = () => {
   const tools = ["Vitest", "Heroku", "Zod", "React Hook Form", "Jira", "Git"]; // Git always needs to be last because of how the ' | ' is rendered
 
   const stack = [...frontend, ...backend, ...tools];
+  const frontendMobile = [
+    "TypeScript,",
+    "React,",
+    "Next.js,",
+    "TailwindCSS,",
+    "Sass",
+  ];
+  const backendMobile = [
+    "Node.js,",
+    "MySQL,",
+    "MongoDB,",
+    "Prisma ORM,",
+    "tRPC,",
+    "Express.js,",
+    "Knex.js",
+  ];
+  const toolsMobile = [
+    "Vitest,",
+    "Heroku,",
+    "Zod,",
+    "React Hook Form,",
+    "Git,",
+    "Jira",
+  ]; // Git always needs to be last because of how the ',' is rendered
+
+  const stackMobile = [...frontend, ...backend, ...tools];
 
   useEffect(() => {
     const handleSize = () => {
-      setIsMobile(window.innerWidth < 800);
+      setIsMobile(window.innerWidth < 640);
     };
 
     handleSize();
@@ -51,10 +77,25 @@ const TechStack = () => {
 
   return (
     <section>
-      <article className="align-middle w-full py-5 pl-5 sm:text-xl justify-between xl:justify-around max-sm:flex-col flex">
-        <SkillsAccordion group="frontend" items={frontend} type="Frontend" />
-        <SkillsAccordion group="backend" items={backend} type="Backend" />
-        <SkillsAccordion group="tools" items={tools} type="Tools" />
+      <article className="align-middle w-full px-0 py-5 sm:text-xl justify-between xl:justify-between max-sm:flex-col flex">
+        <div className="sm:hidden">
+          <SkillsAccordion
+            group="frontend"
+            items={frontendMobile}
+            type="Frontend"
+          />
+          <SkillsAccordion
+            group="backend"
+            items={backendMobile}
+            type="Backend"
+          />
+          <SkillsAccordion group="tools" items={toolsMobile} type="Tools" />
+        </div>
+        <div className="hidden sm:flex justify-between w-full">
+          <SkillsAccordion group="frontend" items={frontend} type="Frontend" />
+          <SkillsAccordion group="backend" items={backend} type="Backend" />
+          <SkillsAccordion group="tools" items={tools} type="Tools" />
+        </div>
       </article>
     </section>
   );

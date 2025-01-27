@@ -29,7 +29,7 @@ const Footer = () => {
   };
 
   return (
-    <div className="flex flex-col w-full lg:pl-2 pt-10 items-left  md:pl-5  md:gap-4  px-1  ">
+    <div className="flex flex-col w-full pt-10 items-left  md:gap-4   ">
       <div className="flex md:w-4/5">
         <HoverCard openDelay={200}>
           <HoverCardTrigger asChild>

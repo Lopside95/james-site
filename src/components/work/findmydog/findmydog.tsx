@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const FindMyDog = () => {
   return (
-    <main className="flex-col py-5 flex gap-5 px-5">
+    <section className="flex-col pb-5 flex gap-5">
       <h1>BrainStation</h1>
       <Link
         className="w-fit"
@@ -20,7 +20,7 @@ const FindMyDog = () => {
           src="/findmydog/home.png"
           width={200}
         />
-        <article className="flex flex-col gap-2 w-96 lg:w-3/5">
+        <article className="flex flex-col gap-5 sm:gap-2 w-96 lg:w-3/5">
           <p>
             Fullstack project for the BrainStation software engineering
             bootcamp. Primarily designed for mobile.
@@ -53,7 +53,7 @@ const FindMyDog = () => {
           </article>
         </article>
       </section>
-    </main>
+    </section>
   );
 };
 
