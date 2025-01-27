@@ -1,6 +1,5 @@
 import TechStack from "@home/techStack";
 import Intro from "@/components/home/Intro";
-import FindMyDog from "@/components/work/findmydog/findmydog";
 
 export default function Home() {
   return (
@@ -8,7 +7,6 @@ export default function Home() {
       <section className="items-center">
         <Intro />
         <TechStack />
-        {/* <FindMyDog /> */}
       </section>
     </main>
   );

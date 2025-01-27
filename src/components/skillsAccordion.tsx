@@ -23,8 +23,8 @@ const SkillsAccordion = ({ type, items, group }: SkillGroup) => {
     >
       <AccordionItem value={group}>
         <AccordionTrigger>{type}</AccordionTrigger>
-        <AccordionContent>
-          <ul>
+        <AccordionContent className="">
+          <ul className="flex sm:flex-col gap-2">
             {items.map((item) => {
               return (
                 <li className="text-lg" key={uuidv4()}>

@@ -1,6 +1,11 @@
 import { TypeSpeed } from "@/types/work";
-import React, { useEffect, useState } from "react";
+import React, { SetStateAction, useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
+
+// type TypewriterProps = {
+//   isCursorActive: boolean;
+//   setIsCursorActive: React.Dispatch<SetStateAction<boolean>>;
+// };
 
 const Typewriter = () => {
   const [step, setStep] = useState<number>(1);
@@ -8,17 +13,9 @@ const Typewriter = () => {
   const [fontSize, setFontSize] = useState<string>("1.5rem");
   const [typeSpeed, setTypeSpeed] = useState<TypeSpeed>(30);
 
-  //   const lineTwo = "I'm a Software Engineer.";
-
   useEffect(() => {
     console.log("step", step);
   }, [step]);
-
-  //   useEffect(() => {
-  //     if (step === 2) {
-  //       setTypeSpeed(40);
-  //     }
-  //   }, [step]);
 
   return (
     <div>
@@ -38,21 +35,20 @@ const Typewriter = () => {
         wrapper="span"
         speed={typeSpeed}
         style={{
-          whiteSpace: "pre-line",
-          fontSize: "1.5rem",
+          fontSize: "1.8rem",
           //   fontSize: step === 1 ? "1.5rem" : "4rem",
           display: "inline-block",
         }}
       />
-      <div className="h-20">
+      <div className="h-16 py-2">
         {step === 2 && (
           <TypeAnimation
             sequence={["I'm a Software Engineer.", 1000]}
             //   sequence={["Hi, 👋", 1000, "Hi, I'm James", 1000, "Hi, I'm James", 1000]}
             wrapper="span"
-            speed={50}
+            speed={40}
             style={{ fontSize: "2.5rem", display: "inline-block" }}
-            className="py-5"
+            cursor={false}
           />
         )}
       </div>
@@ -61,11 +57,3 @@ const Typewriter = () => {
 };
 
 export default Typewriter;
-
-// export const lineTwo: React.FC<string> = () => {
-//   return (
-//     <div>
-//       <p className="text-3xl">I'm a Software Engineer.</p>
-//     </div>
-//   );
-// };

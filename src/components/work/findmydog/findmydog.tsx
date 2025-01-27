@@ -43,13 +43,13 @@ const FindMyDog = () => {
           </div>
           <article className="flex items-center justify-between">
             <p>TypeScript | React | Node | MySQL | Express</p>
-            <Image
+            {/* <Image
               alt="QR code for Find My Dog"
               className="mr-10 max-md:hidden"
               height={140}
               src="/qr-code.svg"
               width={140}
-            />
+            /> */}
           </article>
         </article>
       </section>
