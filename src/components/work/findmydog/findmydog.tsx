@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ViewPost from "./sections/ViewPost";
 
 const FindMyDog = () => {
   return (
@@ -19,13 +20,13 @@ const FindMyDog = () => {
           Fullstack project for the BrainStation software engineering bootcamp.
         </p>
       </article>
-      <section className="flex justify-between items-center">
+      <section className="flex justify-between items-center ">
         <Image
           alt="Find my dog homepage screenshot"
           className="w-72"
-          height={200}
+          height={600}
           src="/findmydog/home.png"
-          width={200}
+          width={400}
         />
         <article className="flex md:flex-col flex-col-reverse gap-5 max-md:pl-3 sm:gap-2 w-96 lg:w-3/5">
           <p className="hidden md:inline-block">
@@ -49,7 +50,45 @@ const FindMyDog = () => {
             </Link>
           </div>
           <article className="flex items-center justify-between">
-            <p>TypeScript | React | Node | MySQL | Express</p>
+            <div className="flex gap-3">
+              <Image
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+                width={60}
+                height={60}
+                alt="TypeScript Icon"
+              />
+              <Image
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg"
+                width={60}
+                height={60}
+                alt="React Icon"
+              />
+              <Image
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg"
+                width={60}
+                height={60}
+                alt="Sass Icon"
+              />
+              <Image
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg"
+                width={60}
+                height={60}
+                alt="Node.js Icon"
+              />
+              <Image
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original-wordmark.svg"
+                width={60}
+                height={60}
+                alt="Express Icon"
+              />
+              <Image
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-plain-wordmark.svg"
+                width={60}
+                height={60}
+                alt="MySQL Icon"
+              />
+            </div>
+            {/* <p>TypeScript | React | Node | MySQL | Express</p> */}
             <Image
               alt="QR code for Find My Dog"
               className="mr-10 max-md:hidden"
@@ -60,6 +99,7 @@ const FindMyDog = () => {
           </article>
         </article>
       </section>
+      <ViewPost />
     </section>
   );
 };

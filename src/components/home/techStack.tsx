@@ -1,9 +1,11 @@
 import { use, useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import SkillsAccordion from "../skillsAccordion";
+import { title } from "process";
 
 const TechStack = () => {
   const [isMobile, setIsMobile] = useState<boolean>();
+  const [isAccordionOpen, setIsAccordionOpen] = useState<boolean>(false);
   // const [isOpen, setOpenGroup] = useState<string>("item-1");
   // const [openGroup, setOpenGroup] = useState<string>("");
 
@@ -60,7 +62,55 @@ const TechStack = () => {
     "Jira",
   ]; // Git always needs to be last because of how the ',' is rendered
 
-  const stackMobile = [...frontend, ...backend, ...tools];
+  // const stackMobile = [...frontend, ...backend, ...tools];
+
+  // const stackMobile = [
+  //   {
+  //     frontend: {
+  //       title: "Frontend",
+  //       val: frontend,
+  //     },
+  //   },
+  //   {
+  //     backend: {
+  //       title: "Backend",
+  //       val: backend,
+  //     },
+  //   },
+  //   {
+  //     tools: {
+  //       title: "Tools",
+  //       val: tools,
+  //     },
+  //   },
+  // ];
+  const stackMobile = [
+    {
+      title: "Frontend",
+      val: frontend,
+    },
+    {
+      title: "Backend",
+      val: backend,
+    },
+    {
+      title: "Tools",
+      val: tools,
+    },
+  ];
+
+  const handleAccordion = (group: string) => {
+    if (isAccordionOpen) {
+      setIsAccordionOpen(false);
+    } else {
+      setIsAccordionOpen(true);
+    }
+  };
+
+  setTimeout(() => {
+    setIsAccordionOpen(true);
+  }, 1000);
+  // useEffect(() => {}, []);
 
   useEffect(() => {
     const handleSize = () => {
@@ -78,23 +128,63 @@ const TechStack = () => {
   return (
     <section>
       <article className="align-middle w-full px-0 py-5 sm:text-xl justify-between xl:justify-between max-sm:flex-col flex">
-        <div className="sm:hidden">
+        {/* <div className="sm:hidden">
           <SkillsAccordion
+            isAccordionOpen={isAccordionOpen}
+            // setIsAccordionOpen={setIsAccordionOpen}
             group="frontend"
             items={frontendMobile}
             type="Frontend"
           />
           <SkillsAccordion
+            isAccordionOpen={isAccordionOpen}
+            // setIsAccordionOpen={setIsAccordionOpen}
             group="backend"
             items={backendMobile}
             type="Backend"
           />
-          <SkillsAccordion group="tools" items={toolsMobile} type="Tools" />
-        </div>
+          <SkillsAccordion
+            group="tools"
+            items={toolsMobile}
+            type="Tools"
+            isAccordionOpen={isAccordionOpen}
+            // setIsAccordionOpen={setIsAccordionOpen}
+          />
+        </div> */}
         <div className="hidden sm:flex justify-between w-full md:pr-4 lg:pr-0 ">
-          <SkillsAccordion group="frontend" items={frontend} type="Frontend" />
-          <SkillsAccordion group="backend" items={backend} type="Backend" />
-          <SkillsAccordion group="tools" items={tools} type="Tools" />
+          {stackMobile.map((stack) => {
+            return (
+              <SkillsAccordion
+                isAccordionOpen={isAccordionOpen}
+                setIsAccordionOpen={setIsAccordionOpen}
+                key={uuidv4()}
+                title={stack.title}
+                val={stack.val}
+              />
+            );
+          })}
+          {/* <SkillsAccordion
+            group="frontend"
+            items={frontend}
+            type="Frontend"
+            isAccordionOpen={isAccordionOpen}
+            // setIsAccordionOpen={setIsAccordionOpen}
+          />
+
+          <SkillsAccordion
+            group="backend"
+            items={backend}
+            type="Backend"
+            isAccordionOpen={isAccordionOpen}
+            // setIsAccordionOpen={setIsAccordionOpen}
+          />
+          <SkillsAccordion
+            group="tools"
+            items={tools}
+            type="Tools"
+            isAccordionOpen={isAccordionOpen}
+            // setIsAccordionOpen={setIsAccordionOpen}
+          /> */}
         </div>
       </article>
     </section>
