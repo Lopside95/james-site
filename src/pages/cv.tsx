@@ -1,8 +1,5 @@
 import Education from "@/components/cv/education";
 import Experience from "@/components/cv/experience";
-import Intro from "@/components/home/Intro";
-import TechStack from "@/components/home/techStack";
-import Wheel from "@/components/home/wheel";
 
 const CV = () => {
   return (

@@ -78,7 +78,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground md:w-full min-w-fit max-md:px-4;
+    @apply bg-background text-foreground w-full min-w-fit max-md:px-4;
   }
   h1 {
     @apply max-md:text-5xl text-4xl font-medium;

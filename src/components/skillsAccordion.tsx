@@ -1,4 +1,11 @@
-import { useEffect, useState } from "react";
+import {
+  backend,
+  backendMobile,
+  frontend,
+  frontendMobile,
+  tools,
+  toolsMobile,
+} from "@/helpers/data";
 import {
   Accordion,
   AccordionContent,
@@ -7,27 +14,79 @@ import {
 } from "./ui/accordion";
 import { v4 as uuidv4 } from "uuid";
 
-type SkillGroup = {
-  type: string;
-  items: string[];
-  group: string;
-};
-
-const SkillsAccordion = ({ type, items, group }: SkillGroup) => {
+const SkillsAccordion = () => {
+  const val = "data";
   return (
     <Accordion
-      className="lg:w-40"
+      className="justify-between w-full max-md:flex-col flex "
       collapsible
       type="single"
-      defaultValue={group}
+      defaultValue={val}
     >
-      <AccordionItem value={group}>
-        <AccordionTrigger className="text-3xl">{type}</AccordionTrigger>
+      <AccordionItem className="md:w-40 " value={val}>
+        <AccordionTrigger className="text-3xl no-underline">
+          Frontend
+        </AccordionTrigger>
         <AccordionContent className="">
-          <ul className="flex sm:flex-col flex-wrap gap-2">
-            {items.map((item) => {
+          <ul className="flex md:hidden flex-wrap gap-2">
+            {frontendMobile.map((item) => {
               return (
                 <li className="text-2xl sm:text-xl" key={uuidv4()}>
+                  {item}
+                </li>
+              );
+            })}
+          </ul>
+          <ul className="hidden md:flex md:flex-col flex-wrap gap-2">
+            {frontend.map((item) => {
+              return (
+                <li className="text-2xl sm:text-xl" key={uuidv4()}>
+                  {item}
+                </li>
+              );
+            })}
+          </ul>
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem className="md:w-40 " value={val}>
+        <AccordionTrigger className="text-3xl">Backend</AccordionTrigger>
+        <AccordionContent>
+          <ul className="flex md:hidden flex-wrap gap-2">
+            {backendMobile.map((item) => {
+              return (
+                <li className="text-2xl md:text-xl" key={uuidv4()}>
+                  {item}
+                </li>
+              );
+            })}
+          </ul>
+          <ul className="hidden md:flex md:flex-col flex-wrap gap-2">
+            {backend.map((item) => {
+              return (
+                <li className="text-2xl md:text-xl" key={uuidv4()}>
+                  {item}
+                </li>
+              );
+            })}
+          </ul>
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem className="md:w-40 " value={val}>
+        <AccordionTrigger className="text-3xl">Tools</AccordionTrigger>
+        <AccordionContent>
+          <ul className="flex md:hidden flex-wrap gap-2">
+            {toolsMobile.map((item) => {
+              return (
+                <li className="text-2xl md:text-xl" key={uuidv4()}>
+                  {item}
+                </li>
+              );
+            })}
+          </ul>
+          <ul className="hidden md:flex md:flex-col flex-wrap gap-2">
+            {tools.map((item) => {
+              return (
+                <li className="text-2xl md:text-xl" key={uuidv4()}>
                   {item}
                 </li>
               );
