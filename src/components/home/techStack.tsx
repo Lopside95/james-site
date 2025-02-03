@@ -107,23 +107,24 @@ const TechStack = () => {
     }
   };
 
-  setTimeout(() => {
-    setIsAccordionOpen(true);
-  }, 1000);
-  // useEffect(() => {}, []);
-
   useEffect(() => {
-    const handleSize = () => {
-      setIsMobile(window.innerWidth < 640);
-    };
+    setTimeout(() => {
+      setIsAccordionOpen(true);
+    }, 800);
+  }, []);
 
-    handleSize();
-    window.addEventListener("resize", handleSize);
+  // useEffect(() => {
+  //   const handleSize = () => {
+  //     setIsMobile(window.innerWidth < 640);
+  //   };
 
-    return () => {
-      window.removeEventListener("resize", handleSize);
-    };
-  });
+  //   handleSize();
+  //   window.addEventListener("resize", handleSize);
+
+  //   return () => {
+  //     window.removeEventListener("resize", handleSize);
+  //   };
+  // });
 
   return (
     <section>
@@ -151,18 +152,30 @@ const TechStack = () => {
             // setIsAccordionOpen={setIsAccordionOpen}
           />
         </div> */}
-        <div className="hidden sm:flex justify-between w-full md:pr-4 lg:pr-0 ">
-          {stackMobile.map((stack) => {
+        <div
+          className="hidden sm:flex justify-between w-full md:pr-4 lg:pr-0 "
+          // onClick={() => setIsAccordionOpen(false)}
+        >
+          <SkillsAccordion
+            key={uuidv4()}
+            isAccordionOpen={isAccordionOpen}
+            setIsAccordionOpen={setIsAccordionOpen}
+            // title={stack.title}
+            // val={stack.val}
+          />
+
+          {/* {stackMobile.map((stack) => {
             return (
               <SkillsAccordion
+                key={uuidv4()}
                 isAccordionOpen={isAccordionOpen}
                 setIsAccordionOpen={setIsAccordionOpen}
-                key={uuidv4()}
                 title={stack.title}
                 val={stack.val}
               />
+          
             );
-          })}
+          })} */}
           {/* <SkillsAccordion
             group="frontend"
             items={frontend}

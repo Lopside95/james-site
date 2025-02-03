@@ -8,8 +8,8 @@ import {
 import { v4 as uuidv4 } from "uuid";
 
 type SkillGroup = {
-  title: string;
-  val: string[];
+  // title: string;
+  // val: string[];
   // type: string;
   // items: string[];
   // group: string;
@@ -18,8 +18,8 @@ type SkillGroup = {
 };
 
 const SkillsAccordion = ({
-  title,
-  val,
+  // title,
+  // val,
   isAccordionOpen,
   setIsAccordionOpen,
 }: // type,
@@ -31,25 +31,107 @@ SkillGroup) => {
   //   isAccordionOpen ? setIsAccordionOpen(false) : setIsAccordionOpen(true);
   // };
 
+  // const dataState = isAccordionOpen ? "open" : "closed";
+  // const stackMobile = [
+  //   {
+  //     title: "Frontend",
+  //     val: frontend,
+  //   },
+  //   {
+  //     title: "Backend",
+  //     val: backend,
+  //   },
+  //   {
+  //     title: "Tools",
+  //     val: tools,
+  //   },
+  // ];
+
+  const frontend = ["TypeScript", "React", "Next.js", "TailwindCSS", "Sass"];
+  const backend = [
+    "Node",
+    "MySQL",
+    "MongoDB",
+    "Prisma ORM",
+    "tRPC",
+    "Express.js",
+    "Knex.js",
+  ];
+  const tools = ["Vitest", "Heroku", "Zod", "React Hook Form", "Jira", "Git"]; // Git always needs to be last because of how the ' | ' is rendered
+  const [dataState, setDataState] = useState<string>("closed");
+
+  useEffect(() => {
+    setTimeout(() => {});
+  });
+
   return (
-    <Accordion
-      className="lg:w-40"
-      collapsible
-      type="single"
-      defaultValue={title.toLocaleLowerCase()}
-    >
+    <Accordion className="lg:w-40 gap-10 flex" collapsible type="single">
       <AccordionItem
-        value={isAccordionOpen ? title.toLocaleLowerCase() : ""}
-        onClick={() => {
-          isAccordionOpen
-            ? setIsAccordionOpen(false)
-            : setIsAccordionOpen(true);
-        }}
+        value={"data"}
+        // value={"frontend backend tools"}
+        // value={isAccordionOpen ? title.toLocaleLowerCase() : ""}
+        // onClick={() => {
+        //   isAccordionOpen
+        //     ? setIsAccordionOpen(false)
+        //     : setIsAccordionOpen(true);
+        // }}
       >
-        <AccordionTrigger className="text-3xl">{title} </AccordionTrigger>
-        <AccordionContent className="">
+        <AccordionTrigger className="text-3xl">Frontend</AccordionTrigger>
+        <AccordionContent
+        // className={`transition-all duration-1000 ${!isAccordionOpen}:animate-accordion-up ${isAccordionOpen}:animate-accordion-down`}
+        >
           <ul className="flex sm:flex-col flex-wrap gap-2">
-            {val.map((item) => {
+            {frontend.map((item) => {
+              return (
+                <li className="text-2xl sm:text-xl" key={uuidv4()}>
+                  {item}
+                </li>
+              );
+            })}
+          </ul>
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem
+        value={"data"}
+        // value={"frontend backend tools"}
+        // value={isAccordionOpen ? title.toLocaleLowerCase() : ""}
+        // onClick={() => {
+        //   isAccordionOpen
+        //     ? setIsAccordionOpen(false)
+        //     : setIsAccordionOpen(true);
+        // }}
+      >
+        <AccordionTrigger className="text-3xl">Backend</AccordionTrigger>
+        <AccordionContent
+        // className={`transition-all duration-1000 ${!isAccordionOpen}:animate-accordion-up ${isAccordionOpen}:animate-accordion-down`}
+        >
+          <ul className="flex sm:flex-col flex-wrap gap-2">
+            {backend.map((item) => {
+              return (
+                <li className="text-2xl sm:text-xl" key={uuidv4()}>
+                  {item}
+                </li>
+              );
+            })}
+          </ul>
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem
+        value={"data"}
+        // value={"frontend backend tools"}
+        // value={isAccordionOpen ? title.toLocaleLowerCase() : ""}
+        // onClick={() => {
+        //   isAccordionOpen
+        //     ? setIsAccordionOpen(false)
+        //     : setIsAccordionOpen(true);
+        // }}
+      >
+        <AccordionTrigger className="text-3xl">Tools</AccordionTrigger>
+        <AccordionContent
+        // className={`transition-all duration-1000 ${!isAccordionOpen}:animate-accordion-up ${isAccordionOpen}:animate-accordion-down`}
+        >
+          <ul className="flex sm:flex-col flex-wrap gap-2">
+            {tools.map((item) => {
               return (
                 <li className="text-2xl sm:text-xl" key={uuidv4()}>
                   {item}
