@@ -4,21 +4,20 @@ import ViewPost from "./sections/ViewPost";
 
 const FindMyDog = () => {
   return (
-    <section className="flex-col py-10 pb-5 flex gap-5">
-      <article className="py-5 w-full max-md:flex items-center gap-16">
+    <section className="flex-col w-full py-10 pb-5 flex gap-5">
+      <article className="py-5 w-full items-center gap-16">
         <div>
-          <h2 className="pb-2">BrainStation</h2>
           <Link
             className="w-fit"
             href="https://findmydog.vercel.app/"
             target="_blank"
           >
-            <h3 className="underline underline-offset-3">Find My Dog</h3>
+            <h2 className="pb-2">Find My Dog</h2>
           </Link>
         </div>
-        <p className="md:hidden">
+        <h3 className="md:hidden font-normal">
           Fullstack project for the BrainStation software engineering bootcamp.
-        </p>
+        </h3>
       </article>
       <section className="flex justify-between items-center ">
         <Image
@@ -28,7 +27,7 @@ const FindMyDog = () => {
           src="/findmydog/home.png"
           width={400}
         />
-        <article className="flex md:flex-col flex-col-reverse gap-5 max-md:pl-3 sm:gap-2 w-96 lg:w-3/5">
+        <article className="flex md:flex-col flex-col-reverse gap-5 max-md:pl-3 sm:gap-2 lg:w-3/5">
           <p className="hidden md:inline-block">
             Fullstack project for the BrainStation software engineering
             bootcamp.
@@ -49,8 +48,8 @@ const FindMyDog = () => {
               Server Repo
             </Link>
           </div>
-          <article className="flex items-center justify-between">
-            <div className="flex gap-3">
+          <article className="flex items-center max-md:flex-col justify-between ">
+            <div className="flex gap-3 max-md:flex-wrap">
               <Image
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
                 width={60}
@@ -88,7 +87,6 @@ const FindMyDog = () => {
                 alt="MySQL Icon"
               />
             </div>
-            {/* <p>TypeScript | React | Node | MySQL | Express</p> */}
             <Image
               alt="QR code for Find My Dog"
               className="mr-10 max-md:hidden"

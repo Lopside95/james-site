@@ -9,17 +9,8 @@ const ViewPost = () => {
           Users can sign up, create posts and add comments to existing posts, as
           well as delete their own content and accounts.
         </p>
-
-        {/* <p className="">
-          Companies needed a way to make their cards accessible to their
-          customers.
-        </p>
-        <p>
-          This page makes it easy for customers to download their cards, whether
-          they’re at the café or not.
-        </p> */}
       </article>
-      <div className="flex w-2/3 justify-between items-center py-5 self-center">
+      <div className="flex  w-full justify-between items-center py-5 self-center">
         <Image
           alt="Google maps"
           className="w-72"
