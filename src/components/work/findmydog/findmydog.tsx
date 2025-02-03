@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import ViewPost from "./sections/ViewPost";
+import SignUp from "./sections/Signup";
+import CreatePost from "./sections/CreatePost";
 
 const FindMyDog = () => {
   return (
@@ -16,7 +18,7 @@ const FindMyDog = () => {
           </Link>
         </div>
         <h3 className="md:hidden font-normal">
-          Fullstack project for the BrainStation software engineering bootcamp.
+          Capstone for the BrainStation software engineering bootcamp.
         </h3>
       </article>
       <section className="flex justify-between items-center ">
@@ -27,10 +29,9 @@ const FindMyDog = () => {
           src="/findmydog/home.png"
           width={400}
         />
-        <article className="flex md:flex-col flex-col-reverse gap-5 max-md:pl-3 sm:gap-2 lg:w-3/5">
+        <article className="flex md:flex-col flex-col-reverse gap-5 max-md:pl-3 lg:w-3/5">
           <p className="hidden md:inline-block">
-            Fullstack project for the BrainStation software engineering
-            bootcamp.
+            Capstone project for the BrainStation software engineering bootcamp.
           </p>
           <div className="flex gap-3">
             <Link
@@ -48,8 +49,8 @@ const FindMyDog = () => {
               Server Repo
             </Link>
           </div>
-          <article className="flex items-center max-md:flex-col justify-between ">
-            <div className="flex gap-3 max-md:flex-wrap">
+          <article className="flex items-center justify-between ">
+            <div className="flex gap-3 max-xl:max-w-52 flex-wrap">
               <Image
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
                 width={60}
@@ -97,6 +98,8 @@ const FindMyDog = () => {
           </article>
         </article>
       </section>
+      <SignUp />
+      <CreatePost />
       <ViewPost />
     </section>
   );

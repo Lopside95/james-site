@@ -27,7 +27,8 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Navbar />
       <main className="pt-16 pb-5 max-md:px-5 flex flex-col items-center">
         {Boolean(isLaptop) && <Hammer />}
-        <div className="xl:max-w-[1150px] max-xl:-ml-0 md:pl-5  lg:-ml-24 md:max-w-[800px]">
+        <div className="xl:max-w-[1150px] max-xl:-ml-0 md:pl-5 max-w-[900px] lg:-ml-24 md:max-w-[800px]">
+          {/* <div className="xl:max-w-[1150px] max-xl:-ml-0 md:pl-5  lg:-ml-24 md:max-w-[800px]"> */}
           <Component {...pageProps} />
           <Footer />
         </div>

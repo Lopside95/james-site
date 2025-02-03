@@ -4,20 +4,13 @@ const ViewPost = () => {
   return (
     <div className="flex flex-col">
       <article className="flex flex-col gap-2 md:w-2/3">
-        <h1 className="pb-4">View Post</h1>
+        <h1 className="pb-4">Interacting with posts</h1>
         <p>
-          Users can sign up, create posts and add comments to existing posts, as
-          well as delete their own content and accounts.
+          Here users can add comments and, by clicking the map icon, link out to
+          the location pinned by the author.
         </p>
       </article>
       <div className="flex  w-full justify-between items-center py-5 self-center">
-        <Image
-          alt="Google maps"
-          className="w-72"
-          height={600}
-          src="/findmydog/google-maps.png"
-          width={400}
-        />
         <Image
           className="w-72"
           alt="Single post view"
@@ -25,8 +18,14 @@ const ViewPost = () => {
           height={600}
           width={400}
         />
+        <Image
+          alt="Google maps"
+          className="w-72"
+          height={600}
+          src="/findmydog/google-maps.png"
+          width={400}
+        />
       </div>
-      <p className="md:w-1/2 w-2/3 pt-5"></p>
     </div>
   );
 };

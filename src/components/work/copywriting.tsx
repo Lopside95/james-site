@@ -7,8 +7,6 @@ import { useState } from "react";
 const Copywriting = () => {
   const [popIsOpen, setPopIsOpen] = useState<boolean>(false);
 
-  // On different screen sizes the underlying text of the monkeyland
-  // popover was visible. This makes sure it's invisibleif the popover is open
   const handleClose = () => {
     if (popIsOpen) {
       setPopIsOpen(false);
@@ -175,74 +173,3 @@ const Copywriting = () => {
 };
 
 export default Copywriting;
-
-// import { ArrowBigRight } from "lucide-react";
-// import { motion, useScroll, useTransform } from "framer-motion";
-// import { Card, CardContent, CardDescription, CardTitle } from "../ui/card";
-// import Image from "next/image";
-// import { useRef } from "react";
-
-// const Regulars = () => {
-//   const contRef = useRef(null);
-//   const cardRef = useRef(null);
-
-//   const { scrollYProgress } = useScroll({ container: cardRef });
-//   const xTransform = useTransform(
-//     scrollYProgress,
-//     [0, 1 / 3, 2 / 3, 1],
-//     ["0%", "-100%", "-200%", "-300%"]
-//   );
-
-//   const OtherCard = () => {
-//     return (
-//       <Card className="flex flex-col items-center h-[400px] border overflow-hidden justify-between bg-green-100">
-//         <CardTitle>Card Page</CardTitle>
-//         <CardDescription></CardDescription>
-//         <CardContent>Here companies create cards</CardContent>
-//       </Card>
-//     );
-//   };
-
-//   return (
-//     <div
-//       className="flex w-full h-[400px] bg-blue-300 overflow-hidden"
-//       ref={contRef}
-//     >
-//       <motion.div
-//         className="w-2/3 flex"
-//         style={{
-//           x: xTransform,
-//         }}
-//       >
-//         <Image
-//           alt="Image 1"
-//           className="p-5"
-//           height={400}
-//           src="/regulars/download.png"
-//           width={600}
-//         />
-//         <Image
-//           alt="Image 2"
-//           className="p-5"
-//           height={400}
-//           src="/regulars/design.png"
-//           width={600}
-//         />
-//         <Image
-//           alt="Image 3"
-//           className="p-5"
-//           height={400}
-//           src="/regulars/backside.png"
-//           width={600}
-//         />
-//       </motion.div>
-//       <div className="w-1/3 overflow-y-scroll z-10" ref={cardRef}>
-//         <OtherCard />
-//         <OtherCard />
-//         <OtherCard />
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Regulars;
