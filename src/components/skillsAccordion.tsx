@@ -16,7 +16,7 @@ type SkillGroup = {
 const SkillsAccordion = ({ type, items, group }: SkillGroup) => {
   return (
     <Accordion
-      className="lg:w-34"
+      className="lg:w-40"
       collapsible
       type="single"
       defaultValue={group}
