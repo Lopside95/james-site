@@ -18,7 +18,7 @@ const SkillsAccordion = () => {
   const val = "data";
   return (
     <Accordion
-      className="justify-between w-full max-md:flex-col flex"
+      className="justify-between w-full max-md:flex-col flex "
       collapsible
       type="single"
       defaultValue={val}
@@ -27,7 +27,7 @@ const SkillsAccordion = () => {
         <AccordionTrigger className="text-3xl no-underline">
           Frontend
         </AccordionTrigger>
-        <AccordionContent>
+        <AccordionContent className="">
           <ul className="flex md:hidden flex-wrap gap-2">
             {frontendMobile.map((item) => {
               return (

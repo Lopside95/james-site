@@ -6,18 +6,18 @@ import CreatePost from "./sections/CreatePost";
 
 const FindMyDog = () => {
   return (
-    <section className="flex-col w-full py-10 pb-5 flex gap-5">
-      <article className="py-5 w-full items-center gap-16">
-        <div>
+    <section className="flex-col w-full py-10 pb-5 md:pb-0 flex gap-5">
+      <article className="max-md:py-5 items-center pl-2 gap-16">
+        <h2>
           <Link
-            className="w-fit"
             href="https://findmydog.vercel.app/"
+            className=" md:pb-0 md:pl-8 underline"
             target="_blank"
           >
-            <h2 className="pb-2">Find My Dog</h2>
+            Find My Dog
           </Link>
-        </div>
-        <h3 className="md:hidden font-normal">
+        </h2>
+        <h3 className="md:hidden font-normal pt-1">
           Capstone for the BrainStation software engineering bootcamp.
         </h3>
       </article>

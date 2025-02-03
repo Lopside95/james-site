@@ -1,4 +1,3 @@
-import { v4 as uuidv4 } from "uuid";
 import SkillsAccordion from "../skillsAccordion";
 
 const TechStack = () => {
@@ -8,7 +7,7 @@ const TechStack = () => {
         <SkillsAccordion />
       </div>
       <div className="hidden sm:flex justify-between w-full md:pr-4 lg:pr-0 ">
-        <SkillsAccordion key={uuidv4()} />
+        <SkillsAccordion />
       </div>
     </section>
   );

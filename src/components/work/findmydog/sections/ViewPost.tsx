@@ -10,7 +10,7 @@ const ViewPost = () => {
           the location pinned by the author.
         </p>
       </article>
-      <div className="flex  w-full justify-between items-center py-5 self-center">
+      <div className="flex w-full md:justify-around justify-between items-center py-5 self-center">
         <Image
           className="w-72"
           alt="Single post view"
