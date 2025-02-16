@@ -4,7 +4,6 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/footer";
 import Hammer from "@/components/hammer";
 import { useEffect, useState } from "react";
-import { useMediaQuery } from "react-responsive";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [isLaptop, setIsLaptop] = useState<boolean>();
@@ -28,7 +27,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       <main className="pt-16 pb-5 max-md:px-5 flex flex-col items-center">
         {Boolean(isLaptop) && <Hammer />}
         <div className="xl:max-w-[1150px] max-xl:-ml-0 md:pl-5 max-w-[900px] lg:-ml-24 md:max-w-[800px]">
-          {/* <div className="xl:max-w-[1150px] max-xl:-ml-0 md:pl-5  lg:-ml-24 md:max-w-[800px]"> */}
           <Component {...pageProps} />
           <Footer />
         </div>

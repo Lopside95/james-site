@@ -21,7 +21,7 @@ const Navbar = () => {
           variant="link"
         >
           <Link href="/" tabIndex={-1}>
-            Info
+            JW
           </Link>
         </Button>
         <div className="flex md:pr-6 lg:pr-[7rem] ">

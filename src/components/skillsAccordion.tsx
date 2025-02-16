@@ -18,12 +18,12 @@ const SkillsAccordion = () => {
   const val = "data";
   return (
     <Accordion
-      className="justify-between w-full max-md:flex-col flex "
+      className="justify-between w-full max-md:flex-col flex  "
       collapsible
       type="single"
       defaultValue={val}
     >
-      <AccordionItem className="md:w-40 " value={val}>
+      <AccordionItem className="md:w-40 md:border-b-0 " value={val}>
         <AccordionTrigger className="text-3xl no-underline">
           Frontend
         </AccordionTrigger>
@@ -48,7 +48,7 @@ const SkillsAccordion = () => {
           </ul>
         </AccordionContent>
       </AccordionItem>
-      <AccordionItem className="md:w-40 " value={val}>
+      <AccordionItem className="md:w-40 md:border-b-0 " value={val}>
         <AccordionTrigger className="text-3xl">Backend</AccordionTrigger>
         <AccordionContent>
           <ul className="flex md:hidden flex-wrap gap-2">
@@ -71,7 +71,7 @@ const SkillsAccordion = () => {
           </ul>
         </AccordionContent>
       </AccordionItem>
-      <AccordionItem className="md:w-40 " value={val}>
+      <AccordionItem className="md:w-40 md:border-b-0" value={val}>
         <AccordionTrigger className="text-3xl">Tools</AccordionTrigger>
         <AccordionContent>
           <ul className="flex md:hidden flex-wrap gap-2">
