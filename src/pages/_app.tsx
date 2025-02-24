@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/footer";
 import Hammer from "@/components/hammer";
 import { useEffect, useState } from "react";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [isLaptop, setIsLaptop] = useState<boolean>();
@@ -23,6 +24,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
+      <Head>
+        <link rel="icon" href="/favicon.svg" sizes="any" />
+      </Head>
       <Navbar />
       <main className="pt-16 pb-5 max-md:px-5 flex flex-col items-center">
         {Boolean(isLaptop) && <Hammer />}
