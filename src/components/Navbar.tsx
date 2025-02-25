@@ -2,9 +2,22 @@ import Link from "next/link";
 import { Button } from "@ui/button";
 import { useRouter } from "next/router";
 
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@radix-ui/react-dropdown-menu";
+import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
+import { useState } from "react";
+
 const Navbar = () => {
   const router = useRouter();
   const activePage = (path: string) => router.pathname === path;
+
+  const [isOpen, setIsOpen] = useState<boolean>();
 
   const navItemStyle = (page: string) =>
     ` hover:underline-offset-[6px] max-md:mt-3 md:text-xl text-2xl ${
@@ -25,11 +38,57 @@ const Navbar = () => {
           </Link>
         </Button>
         <div className="flex md:pr-6 lg:pr-[7rem] ">
-          <Button className={navItemStyle("/work")} variant="link">
-            <Link className="" href="/work" tabIndex={-1}>
+          <Popover open={isOpen} onOpenChange={setIsOpen}>
+            <PopoverTrigger asChild>
+              <Button
+                className={`${navItemStyle("/work")} ${
+                  (router.pathname === "/work/findmydog" ||
+                    router.pathname === "/work/regulars") &&
+                  "underline"
+                } `}
+                variant="link"
+              >
+                Work
+              </Button>
+            </PopoverTrigger>
+            <PopoverContent className="bg-base-bg w-full">
+              <div className="flex flex-col w-full gap-2">
+                <p
+                  className=""
+                  onClick={() => {
+                    router.push("/work/findmydog");
+                  }}
+                >
+                  Find My Dog
+                </p>
+                <p className="" onClick={() => router.push("/work/regulars")}>
+                  Regulars
+                </p>
+              </div>
+            </PopoverContent>
+          </Popover>
+          {/* <DropdownMenu>
+            <DropdownMenuTrigger className={navItemStyle("/work/findmydog")}>
               Work
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuLabel>My Account</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem>Find My Dog</DropdownMenuItem>
+              <DropdownMenuItem>Regulars</DropdownMenuItem>
+          
+            </DropdownMenuContent>
+          </DropdownMenu> */}
+          {/* <Button className={navItemStyle("/work/findmydog")} variant="link">
+            <Link className="" href="/work/findmydog" tabIndex={-1}>
+              Find My Dog
             </Link>
           </Button>
+          <Button className={navItemStyle("/work/regulars")} variant="link">
+            <Link className="" href="/work/regulars" tabIndex={-1}>
+              Regulars
+            </Link>
+          </Button> */}
           <Button className={navItemStyle("/cv")} variant="link">
             <Link className="" href="/cv" tabIndex={-1}>
               CV
