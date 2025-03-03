@@ -35,13 +35,13 @@ const Education = () => {
             <CardDescription>
               Red & Yellow, Creative School of Business
             </CardDescription>
-            <CardFooter>February 2021 - January 2022</CardFooter>
+            <CardFooter>January 2021 - January 2022</CardFooter>
           </CardHeader>
         </div>
         <CardContent className="w-full self-center">
-          Red & Yellow focusses on practical experience and, alongside technical
-          know-how, the school emphasises the development of distinctly human
-          traits like creativity and empathy.
+          Red & Yellow’s certificate in user-centred explored the design
+          thinking process in subjects ranging from colour theory to UX
+          research, information architecture and design.
         </CardContent>
       </Card>
       <Card className="flex flex-col justify-between border-none py-7">
@@ -51,13 +51,14 @@ const Education = () => {
             <CardDescription className="">
               Red & Yellow, Creative School of Business
             </CardDescription>
-            <CardFooter className="">January 2015 - December 2016</CardFooter>
+            <CardFooter className="">January 2015 - November 2016</CardFooter>
           </CardHeader>
         </div>
         <CardContent className=" w-full">
-          Passed with merit and two of my projects were finalists in the
-          Loeries’ student competitions, which recognises and awards advertising
-          agencies and campaigns.
+          With a focus on hands-on learning, collaboration with graphic
+          designers and marketers and practical experience, the two-year diploma
+          was an incredibly valuable experience and honed my ability to
+          communicate, empathise, and tell stories.
         </CardContent>
       </Card>
     </div>

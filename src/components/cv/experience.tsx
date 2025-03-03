@@ -31,7 +31,7 @@ const Experience = () => {
         <CardHeader className=" -mb-2 sm:-mb-4 pl-0 -mt-12">
           <CardTitle>Freelance Strategist and Copywriter</CardTitle>
           <CardDescription>Serious Moonlight Consulting</CardDescription>
-          <CardFooter>July 2020 – September 2024</CardFooter>
+          <CardFooter>January 2020 – September 2024</CardFooter>
         </CardHeader>
         <CardContent className="pl-0">
           I have freelanced for Serious Moonlight Consulting, developing
