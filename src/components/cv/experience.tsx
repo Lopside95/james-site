@@ -20,8 +20,7 @@ const Experience = () => {
         <CardContent className="pl-0">
           I have helped to develop the company’s website and mobile components.
           During this time I gained experience with TypeScript, Next.js and
-          Tailwind CSS. The ongoing project also involves collaboration with
-          other developers and using git for version control. <br />
+          Tailwind CSS, as MongoDB, tRPC and Prisma. <br />
           Regulars is a company geared towards restaurants with B2B and B2C
           digital solutions and strategies that offer a new way for businesses
           to engage with and retain customers.
