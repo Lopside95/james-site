@@ -9,7 +9,7 @@ export default function Home() {
     <main className="sm:items-center w-full sm:align-middle flex flex-col min-h-screen">
       <Intro />
       <TechStack />
-      <section className="flex max-lg:flex-col gap-10 py-10">
+      <section className="flex max-lg:flex-col gap-12 py-14">
         <ProjectCard
           title="Find My Dog"
           description="Capstone project for the BrainStation software engineering bootcamp."
