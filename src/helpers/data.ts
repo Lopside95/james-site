@@ -1,6 +1,6 @@
 const frontend = ["TypeScript", "React", "Next.js", "TailwindCSS", "Sass"];
 const backend = [
-  "Node",
+  "Node.js",
   "MySQL",
   "MongoDB",
   "Prisma ORM",
