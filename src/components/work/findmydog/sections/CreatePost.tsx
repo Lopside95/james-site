@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const CreatePost = () => {
   return (
-    <article className="flex gap-10  items-center">
+    <article className="flex gap-10 ">
       <Image
         alt="CreatePost"
         className="max-md:py-8 w-72"

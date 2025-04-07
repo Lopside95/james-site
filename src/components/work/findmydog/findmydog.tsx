@@ -29,7 +29,18 @@ const FindMyDog = () => {
           src="/findmydog/home.png"
           width={400}
         />
-        <article className="flex md:flex-col flex-col-reverse gap-5 max-md:pl-3 lg:w-3/5">
+        <h3>
+          Find my dog is a fullstack web app developed as my BrainStation
+          capstone. Britain is a nation of dog lovers with 13 million people
+          having them as pets. However, 40% of dog owners have a dog go missing
+          at some point, and 60% of people never find their dog. Find My Dog
+          aims to be the central meeting point for people who have lost their
+          dog, or people who have found or identified a missing or stray dog.
+          Users can quickly create a post, upload information and images, and
+          drop a pin on a map. By creating a digital community notice board,
+          Find My Dog aims to help dogs and owners find home.
+        </h3>
+        {/* <article className="flex md:flex-col flex-col-reverse gap-5 max-md:pl-3 lg:w-3/5">
           <p className="hidden md:inline-block">
             Capstone project for the BrainStation software engineering bootcamp.
           </p>
@@ -96,7 +107,7 @@ const FindMyDog = () => {
               width={140}
             />
           </article>
-        </article>
+        </article> */}
       </section>
       <SignUp />
       <CreatePost />
