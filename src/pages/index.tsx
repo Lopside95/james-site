@@ -13,7 +13,7 @@ export default function Home() {
         <ProjectCard
           title="Find My Dog"
           description="Capstone project for the BrainStation software engineering bootcamp."
-          image="/findmydog/home.png"
+          image="/findmydog/home-2.png"
           href="/work/findmydog"
           tags={["TypeScript", "React", "Sass", "MySQL", "Express.js"]}
         />

@@ -14,7 +14,7 @@ const ViewPost = () => {
         <Image
           className="w-72"
           alt="Single post view"
-          src="/findmydog/single-post.png"
+          src="/findmydog/post-w-comment.png"
           height={600}
           width={400}
         />
@@ -22,7 +22,7 @@ const ViewPost = () => {
           alt="Google maps"
           className="w-72"
           height={600}
-          src="/findmydog/google-maps.png"
+          src="/findmydog/add-comment.png"
           width={400}
         />
       </div>

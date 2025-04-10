@@ -32,7 +32,7 @@ const FindMyDog = () => {
         <h2>
           <Link
             href="https://findmydog.vercel.app/"
-            className=" md:pb-0 md:pl-8 underline"
+            className=" pb-10 md:pb-0 md:pl-8 underline"
             target="_blank"
           >
             Find My Dog
@@ -50,10 +50,12 @@ const FindMyDog = () => {
             <br />
             <br />
             Britain is a nation of dog lovers with 13 million people having them
+            as pets.
+            {/* Britain is a nation of dog lovers with 13 million people having them
             as pets. However, 40% of dog owners have a dog go missing at some
-            point, and 60% of people never find their dog.
+            point, and 60% of people never find their dog. */}
             <br />
-            <br />
+            {/* <br /> */}
             Find My Dog aims to be the central meeting point for people who have
             lost their dog, or people who have found or identified a missing or
             stray dog.
@@ -63,13 +65,29 @@ const FindMyDog = () => {
             drop a pin on a map. By creating a digital community notice board,
             Find My Dog aims to help dogs and owners find home.
           </h3>
+          <div className="flex gap-5 mt-5 text-2xl">
+            <Link
+              className="underline underline-offset-2"
+              href="https://github.com/Lopside95/findmydog-server"
+              target="_blank"
+            >
+              Server Repo
+            </Link>
+            <Link
+              className="underline underline-offset-2"
+              href="https://github.com/Lopside95/findmydog-client"
+              target="_blank"
+            >
+              Client Repo
+            </Link>
+          </div>
         </div>
 
         <Image
           alt="Find my dog homepage screenshot"
           className="w-72 max-sm:hidden"
           height={600}
-          src="/findmydog/home.png"
+          src="/findmydog/home-2.png"
           width={400}
         />
 

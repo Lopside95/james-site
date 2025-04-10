@@ -11,7 +11,7 @@ const FindMyDog = () => {
         <h2>
           <Link
             href="https://findmydog.vercel.app/"
-            className=" md:pb-0 md:pl-8 underline"
+            className=" md:pb-0 max-sm:mb-10 md:pl-8 underline"
             target="_blank"
           >
             Find My Dog
@@ -26,7 +26,7 @@ const FindMyDog = () => {
           alt="Find my dog homepage screenshot"
           className="w-72"
           height={600}
-          src="/findmydog/home.png"
+          src="/findmydog/home-2.png"
           width={400}
         />
         <h3>

@@ -19,7 +19,7 @@ const SignUp = () => {
           alt="Account SignUp"
           className="max-md:py-8 w-72"
           height={600}
-          src="/findmydog/signup.png"
+          src="/findmydog/signup-2.png"
           width={600}
         />
       </article>
