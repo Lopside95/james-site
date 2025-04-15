@@ -18,12 +18,22 @@ const Experience = () => {
           <CardFooter>September 2023 - September 2024</CardFooter>
         </CardHeader>
         <CardContent className="pl-0">
-          I have helped to develop the company’s website and mobile components.
+          I had some self-taught experience of frontend development, and had
+          taken an initial step into React. Once I joined the company as a
+          frontend developer, I was introduced to a wide range of new and
+          exciting technologies, some notable examples being TypeScript, Next.js
+          and TailwindCSS. <br />
+          Over the course of my time there I formed part of a remote team of
+          developers, using agile methodologies and working with designers and
+          marketing experts to deliver innovative digital solutions and
+          strategies for increased customer engagement and retention in the
+          hospitality industry.
+          {/* I have helped to develop the company’s website and mobile components.
           During this time I gained experience with TypeScript, Next.js and
           Tailwind CSS, as well as MongoDB, tRPC and Prisma. <br />
           Regulars is a company geared towards restaurants and cafes with
           digital solutions and strategies that offer a new way for businesses
-          to engage with and retain customers.
+          to engage with and retain customers. */}
         </CardContent>
       </Card>
       <Card className="flex flex-col justify-between border-none py-10">
@@ -33,12 +43,13 @@ const Experience = () => {
           <CardFooter>January 2020 – September 2024</CardFooter>
         </CardHeader>
         <CardContent className="pl-0">
-          I have freelanced for Serious Moonlight Consulting, developing
-          strategies, concepts and content for about three years. What often
-          makes or breaks a strategy is the story it tells, and the uniqueness
-          of this story. A brand’s identity can be complex, with many assets,
-          aspects and asides. But, at the end of the day, it’s a story - one
-          which should be simple and cohesive, finding meaning in empty spaces.
+          What often makes or breaks a strategy is the story it tells, and the
+          uniqueness of this story. A brand’s identity can be complex, with many
+          assets, aspects and asides. But, at the end of the day, it’s a story -
+          one which should be simple and cohesive, finding meaning in empty
+          spaces. Finding and filling this space was part of my job. For more
+          than four years, my job was to find this space and fill it with
+          stand-out strategies, concepts and content.
         </CardContent>
       </Card>
     </div>
