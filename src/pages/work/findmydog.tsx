@@ -32,7 +32,7 @@ const FindMyDog = () => {
         <h2>
           <Link
             href="https://findmydog.vercel.app/"
-            className=" pb-10 md:pb-0 md:pl-8 underline"
+            className="pb-10 md:pb-0  underline"
             target="_blank"
           >
             Find My Dog
@@ -42,7 +42,7 @@ const FindMyDog = () => {
           Capstone for the BrainStation software engineering bootcamp.
         </h3>
       </article>
-      <section className="flex max-sm:flex-col justify-around gap-10 items-center ">
+      <section className="flex max-sm:flex-col px-2 justify-between gap-10 items-center ">
         <div className="sm:w-1/2">
           <h3>
             Find my dog is a fullstack web app developed as my BrainStation
