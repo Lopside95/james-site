@@ -10,9 +10,9 @@ import {
 const Education = () => {
   return (
     <div className="w-full flex flex-col">
-      <h2 className="py-4 ">Education</h2>
+      <h2 className="pt-4 ">Education</h2>
       <Card className="flex flex-col justify-between border-none ">
-        <div className="flex">
+        <div className="flex  ">
           <CardHeader className="self-start -mb-2 sm:-mb-4">
             <CardTitle>Software Engineering</CardTitle>
             <CardDescription>BrainStation</CardDescription>
@@ -28,7 +28,7 @@ const Education = () => {
       </Card>
       <Card className="flex flex-col justify-between   border-none ">
         <div className="flex">
-          <CardHeader className="self-start -mb-2 sm:-mb-4">
+          <CardHeader className="self-start -mb-2 sm:-mb-4 lg:pt-0">
             <CardTitle>
               Certificate in Design Techniques, <br /> User-centred Design
             </CardTitle>
@@ -44,9 +44,9 @@ const Education = () => {
           research, information architecture and design.
         </CardContent>
       </Card>
-      <Card className="flex flex-col justify-between border-none py-7">
+      <Card className="flex flex-col justify-between border-none">
         <div className="flex">
-          <CardHeader className="-mb-2 sm:-mb-4 -mt-12">
+          <CardHeader className="-mb-2 sm:-mb-4 lg:pt-0">
             <CardTitle className="">Diploma in Copywriting</CardTitle>
             <CardDescription className="">
               Red & Yellow, Creative School of Business

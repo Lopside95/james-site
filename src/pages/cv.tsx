@@ -5,7 +5,7 @@ const CV = () => {
   return (
     <main className="sm:items-center w-full sm:align-middle flex flex-col min-h-screen ">
       <section className="items-center">
-        <article className="flex">
+        <article className="">
           <Experience />
         </article>
         <article>
