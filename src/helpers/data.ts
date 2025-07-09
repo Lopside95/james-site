@@ -8,7 +8,14 @@ const backend = [
   "Express.js",
   "Knex.js",
 ];
-const tools = ["Firebase", "Genkit", "Vitest", "Postman", "Git"];
+const tools = [
+  "Firebase",
+  "Genkit",
+  "Vitest",
+  "GitHub Copilot",
+  "Postman",
+  "Git",
+];
 
 const stack = [...frontend, ...backend, ...tools];
 const frontendMobile = [
@@ -31,9 +38,9 @@ const toolsMobile = [
   "Firebase",
   "Genkit",
   "Vitest,",
+  "GitHub Copilot,",
   "Postman",
   "Git,",
-  "Zod,",
 ];
 const stackMobile = [
   {
