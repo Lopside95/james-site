@@ -10,7 +10,7 @@ const backend = [
 ];
 const tools = [
   "Firebase",
-  "Genkit",
+  "Google Genkit",
   "Vitest",
   "GitHub Copilot",
   "Postman",
@@ -35,12 +35,12 @@ const backendMobile = [
   "Knex.js",
 ];
 const toolsMobile = [
-  "Firebase",
-  "Genkit",
+  "Firebase,",
+  "Google Genkit,",
   "Vitest,",
   "GitHub Copilot,",
-  "Postman",
-  "Git,",
+  "Postman,",
+  "Git",
 ];
 const stackMobile = [
   {
