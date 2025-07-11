@@ -47,7 +47,7 @@ const Footer = () => {
         </HoverCard>
         <Button
           className="underline sm:text-base text-lg"
-          onClick={() => handleCopy("+447501928666")}
+          onClick={() => handleCopy("+41 78 254 46 25")}
           variant="smLine"
         >
           +41 78 254 46 25
