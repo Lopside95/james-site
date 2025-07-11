@@ -50,7 +50,7 @@ const Footer = () => {
           onClick={() => handleCopy("+447501928666")}
           variant="smLine"
         >
-          +44 750 1928666
+          +41 78 254 46 25
         </Button>
         <Button className=" underline sm:text-base text-lg " variant="smLine">
           <Link
