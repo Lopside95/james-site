@@ -13,6 +13,32 @@ const Experience = () => {
       <h2 className="">Experience</h2>
       <Card className="flex flex-col justify-between relative border-none">
         <CardHeader className="-mb-2 sm:-mb-4 pl-0">
+          <CardTitle>Fullstack Engineer</CardTitle>
+          <CardDescription>Freelance</CardDescription>
+          <CardFooter>April 2025 - present</CardFooter>
+        </CardHeader>
+        <CardContent className="pl-0">
+          I’m working as a freelance engineer and the sole person responsible
+          for the product lifecycle in both instances. <br />
+          <li className="pt-1">
+            For one client I’m building a web app made to centralise and enhance
+            internal communications for businesses.
+          </li>
+          <li>
+            In another project I’m creating an AI agent and orchestrating
+            Retrieval Augmented Generation (RAG) and AI workflows with Firebase
+            and Google Genkit.
+          </li>
+          {/* I have helped to develop the company’s website and mobile components.
+          During this time I gained experience with TypeScript, Next.js and
+          Tailwind CSS, as well as MongoDB, tRPC and Prisma. <br />
+          Regulars is a company geared towards restaurants and cafes with
+          digital solutions and strategies that offer a new way for businesses
+          to engage with and retain customers. */}
+        </CardContent>
+      </Card>
+      <Card className="flex flex-col justify-between relative border-none">
+        <CardHeader className="-mb-2 sm:-mb-4 pl-0">
           <CardTitle>Frontend Developer</CardTitle>
           <CardDescription>Regulars</CardDescription>
           <CardFooter>September 2023 - September 2024</CardFooter>
