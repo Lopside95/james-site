@@ -1,7 +1,6 @@
 // import { useTransform } from "framer-motion";
 
 import { AnimateProps } from "@/components/work/regulars/caseStudy";
-import { delay } from "framer-motion";
 
 // export const scrollAction = useTransform(scrollY, (val) => {
 //     const swing = 600;

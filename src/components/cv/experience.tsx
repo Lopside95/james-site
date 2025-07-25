@@ -29,12 +29,6 @@ const Experience = () => {
             Retrieval Augmented Generation (RAG) and AI workflows with Firebase
             and Google Genkit.
           </li>
-          {/* I have helped to develop the company’s website and mobile components.
-          During this time I gained experience with TypeScript, Next.js and
-          Tailwind CSS, as well as MongoDB, tRPC and Prisma. <br />
-          Regulars is a company geared towards restaurants and cafes with
-          digital solutions and strategies that offer a new way for businesses
-          to engage with and retain customers. */}
         </CardContent>
       </Card>
       <Card className="flex flex-col justify-between relative border-none">
@@ -54,12 +48,6 @@ const Experience = () => {
           marketing experts to deliver innovative digital solutions and
           strategies for increased customer engagement and retention in the
           hospitality industry.
-          {/* I have helped to develop the company’s website and mobile components.
-          During this time I gained experience with TypeScript, Next.js and
-          Tailwind CSS, as well as MongoDB, tRPC and Prisma. <br />
-          Regulars is a company geared towards restaurants and cafes with
-          digital solutions and strategies that offer a new way for businesses
-          to engage with and retain customers. */}
         </CardContent>
       </Card>
       <Card className="flex flex-col justify-between border-none py-10">

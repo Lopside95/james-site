@@ -1,12 +1,8 @@
-import { TypeSpeed } from "@/types/work";
-import React, { SetStateAction, useEffect, useState } from "react";
+import React, { useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 
 const MyTypewriter = () => {
   const [step, setStep] = useState<number>(1);
-  // const [typeSpeed, setTypeSpeed] = useState<TypeSpeed>(30);
-
-  const engEmoji = "🧑‍🔧";
 
   return (
     <div className="h-24">
