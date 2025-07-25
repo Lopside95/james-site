@@ -6,7 +6,7 @@ const CV = () => {
   return (
     <>
       <Head>
-        <title>James Wallington - CV</title>
+        <title>CV</title>
         <meta name="description" content="James Wallington's CV" />
         <meta lang="en" />
       </Head>

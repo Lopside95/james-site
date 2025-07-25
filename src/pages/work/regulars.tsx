@@ -35,7 +35,7 @@ export default function Work() {
   return (
     <>
       <Head>
-        <title>Regulars | Work by James Wallington</title>
+        <title>Regulars</title>
         <meta
           name="description"
           content="Regulars is a digital solution for the hospitality industry, helping cafes build customer loyalty."

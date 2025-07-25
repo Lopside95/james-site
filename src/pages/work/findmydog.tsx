@@ -30,7 +30,7 @@ const FindMyDog = () => {
   return (
     <>
       <Head>
-        <title>Find My Dog | Capstone Project by James Wallington</title>
+        <title>Find My Dog</title>
         <meta
           name="description"
           content="Find My Dog is a fullstack web app capstone project for BrainStation, helping dog owners and finders connect quickly and easily."

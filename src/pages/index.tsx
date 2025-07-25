@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>James Wallington - Home</title>
+        <title>Home</title>
         <meta
           name="description"
           lang="en"
