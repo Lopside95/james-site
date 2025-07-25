@@ -73,9 +73,8 @@ const Experience = () => {
           uniqueness of this story. A brand’s identity can be complex, with many
           assets, aspects and asides. But, at the end of the day, it’s a story -
           one which should be simple and cohesive, finding meaning in empty
-          spaces. Finding and filling this space was part of my job. For more
-          than four years, my job was to find this space and fill it with
-          stand-out strategies, concepts and content.
+          spaces. For over four years, my job was to find this space and fill it
+          with stand-out strategies, concepts and content.
         </CardContent>
       </Card>
     </div>
