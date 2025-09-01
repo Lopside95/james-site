@@ -1,4 +1,4 @@
-const frontend = ["TypeScript", "React", "Next.js", "TailwindCSS", "Sass"];
+const frontend = ["TypeScript", "React", "Next.js", "TailwindCSS", "SCSS"];
 const backend = [
   "Node.js",
   "MySQL",
@@ -10,11 +10,12 @@ const backend = [
 ];
 const tools = [
   "Firebase",
+  "Google Cloud Platform",
+  "Docker",
   "Google Genkit",
   "Vitest",
   "GitHub Copilot",
   "Postman",
-  "Git",
 ];
 
 const stack = [...frontend, ...backend, ...tools];
@@ -23,7 +24,7 @@ const frontendMobile = [
   "React,",
   "Next.js,",
   "TailwindCSS,",
-  "Sass",
+  "SCSS",
 ];
 const backendMobile = [
   "Node.js,",
@@ -36,11 +37,12 @@ const backendMobile = [
 ];
 const toolsMobile = [
   "Firebase,",
+  "Google Cloud Platform,",
+  "Docker,",
   "Google Genkit,",
   "Vitest,",
   "GitHub Copilot,",
   "Postman,",
-  "Git",
 ];
 const stackMobile = [
   {
