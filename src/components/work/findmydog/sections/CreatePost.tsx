@@ -13,13 +13,13 @@ const CreatePost = () => {
       <div className="flex w-full md:justify-around justify-between items-center py-5 self-center">
         <Image
           className="w-72"
-          alt="Single post view"
+          alt="Screenshot of Find My Dog post creation form with fields for dog information and image upload"
           src="/findmydog/create-1.png"
           height={600}
           width={400}
         />
         <Image
-          alt="Google maps"
+          alt="Screenshot of MapboxGL interactive map showing location pins and search functionality for lost dog posts"
           className="w-72"
           height={600}
           src="/findmydog/map.png"

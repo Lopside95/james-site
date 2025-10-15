@@ -16,14 +16,14 @@ const CardPage = () => {
       </article>
       <div className="flex w-2/3 justify-between items-center py-5 self-center">
         <Image
-          alt="Card page"
+          alt="Screenshot of Regulars mobile card page form where customers enter their information to download loyalty cards"
           className="w-[15rem] h-[26.5rem]"
           height={800}
           src="/regulars/cardPage.png"
           width={800}
         />
         <Image
-          alt="Download preview"
+          alt="Screenshot of Regulars card download button with preview of digital loyalty card ready for Apple or Google Wallet"
           className="w-[17.4rem] "
           height={800}
           src="/regulars/cardPageDD.png"

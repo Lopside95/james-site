@@ -24,7 +24,7 @@ export function ProjectCard({
       <div className="flex relative px-2 gap-3  justify-center xl:gap-10 items-center ">
         <Image
           src={image || "/placeholder.svg"}
-          alt={title}
+          alt={`Screenshot of ${title} application homepage showing the main interface`}
           width={200}
           height={450}
           className="w-52 transition-transform duration-300 group-hover:scale-105"

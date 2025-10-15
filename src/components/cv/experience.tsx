@@ -18,17 +18,17 @@ const Experience = () => {
           <CardFooter>April 2025 - present</CardFooter>
         </CardHeader>
         <CardContent className="pl-0">
-          I’m working as a freelance engineer and the sole person responsible
-          for the product lifecycle in both instances. <br />
-          <li className="pt-1">
+          {/* I’m working as a freelance engineer and the sole person responsible
+          for the product lifecycle in both instances. <br /> */}
+          <div className="pt-0">
             For one client I’m building a web app made to centralise and enhance
             internal communications for businesses.
-          </li>
-          <li>
+          </div>
+          <div>
             In another project I’m creating an AI agent and orchestrating
             Retrieval Augmented Generation (RAG) and AI workflows with Firebase
             and Google Genkit.
-          </li>
+          </div>
         </CardContent>
       </Card>
       <Card className="flex flex-col justify-between relative border-none">

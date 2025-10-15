@@ -16,7 +16,7 @@ const SignUp = () => {
           </p>
         </div>
         <Image
-          alt="Account SignUp"
+          alt="Screenshot of Find My Dog signup form with email, password fields and validation messages"
           className="max-md:py-8 w-72"
           height={600}
           src="/findmydog/signup-2.png"

@@ -23,7 +23,7 @@ export function RegularsProjectCard({
     >
       <Image
         src={image || "/placeholder.svg"}
-        alt={title}
+        alt={`Screenshot of ${title} application homepage displaying the main user interface`}
         width={500}
         height={400}
         className="transition-transform duration-300 pt-10 group-hover:scale-105 self-center md:my-auto"

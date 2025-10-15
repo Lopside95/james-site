@@ -15,7 +15,7 @@ const CardCreator = () => {
         <p>My role mostly involved the preview of the card page.</p>
       </div>
       <Image
-        alt="Regulars donwload page"
+        alt="Screenshot of Regulars card creator interface showing the customizable loyalty card download page preview"
         className="self-center w-2/3 "
         height={600}
         src="/regulars/regularsDownload.png"

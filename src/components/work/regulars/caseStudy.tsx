@@ -90,7 +90,7 @@ const CaseStudy = () => {
         variants={donwloadVariants}
       >
         <Image
-          alt=" "
+          alt="Screenshot of Regulars card download step in the card creation process"
           className="w-full"
           height={600}
           src="/regulars/download.png"
@@ -121,7 +121,7 @@ const CaseStudy = () => {
         variants={designVariants}
       >
         <Image
-          alt=" "
+          alt="Screenshot of Regulars card design step showing customization options for loyalty cards"
           className="w-full"
           height={600}
           src="/regulars/design.png"
@@ -149,7 +149,7 @@ const CaseStudy = () => {
         variants={backsideVariants}
       >
         <Image
-          alt=" "
+          alt="Screenshot of Regulars loyalty card backside customization showing terms and conditions layout"
           className="w-full"
           height={600}
           src="/regulars/backside.png"
