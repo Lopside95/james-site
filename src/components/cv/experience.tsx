@@ -18,16 +18,12 @@ const Experience = () => {
           <CardFooter>April 2025 - present</CardFooter>
         </CardHeader>
         <CardContent className="pl-0">
-          {/* I’m working as a freelance engineer and the sole person responsible
-          for the product lifecycle in both instances. <br /> */}
           <div className="pt-0">
-            For one client I’m building a web app made to centralise and enhance
-            internal communications for businesses.
-          </div>
-          <div>
-            In another project I’m creating an AI agent and orchestrating
-            Retrieval Augmented Generation (RAG) and AI workflows with Firebase
-            and Google Genkit.
+            Architected and deployed a full stack web application to streamline
+            information flows and enhance internal business communications,
+            owning the whole development lifecycle. This project also lead to my
+            introduction with Docker and Cloud infrastructure in the form of GCP
+            and Firebase.
           </div>
         </CardContent>
       </Card>

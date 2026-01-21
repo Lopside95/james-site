@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import {
   backend,
   backendMobile,
@@ -15,15 +16,24 @@ import {
 import { v4 as uuidv4 } from "uuid";
 
 const SkillsAccordion = () => {
-  const val = "data";
+  const [value, setValue] = useState<string[]>([]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setValue(["frontend", "backend", "tools"]);
+    }, 4000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <Accordion
       className="justify-between w-full max-md:flex-col flex  "
-      collapsible
-      type="single"
-      defaultValue={val}
+      type="multiple"
+      value={value}
+      onValueChange={setValue}
     >
-      <AccordionItem className="md:w-40 md:border-b-0 " value={val}>
+      <AccordionItem className="md:w-40 md:border-b-0 " value="frontend">
         <AccordionTrigger className="text-3xl no-underline">
           Frontend
         </AccordionTrigger>
@@ -48,7 +58,7 @@ const SkillsAccordion = () => {
           </ul>
         </AccordionContent>
       </AccordionItem>
-      <AccordionItem className="md:w-40 md:border-b-0 " value={val}>
+      <AccordionItem className="md:w-40 md:border-b-0 " value="backend">
         <AccordionTrigger className="text-3xl">Backend</AccordionTrigger>
         <AccordionContent>
           <ul className="flex md:hidden flex-wrap gap-2">
@@ -71,7 +81,7 @@ const SkillsAccordion = () => {
           </ul>
         </AccordionContent>
       </AccordionItem>
-      <AccordionItem className="md:w-40 md:border-b-0" value={val}>
+      <AccordionItem className="md:w-40 md:border-b-0" value="tools">
         <AccordionTrigger className="text-3xl">Tools</AccordionTrigger>
         <AccordionContent>
           <ul className="flex md:hidden flex-wrap gap-2">
