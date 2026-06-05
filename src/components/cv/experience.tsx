@@ -15,7 +15,7 @@ const Experience = () => {
         <CardHeader className="-mb-2 sm:-mb-4 pl-0">
           <CardTitle>Fullstack Engineer</CardTitle>
           <CardDescription>Freelance</CardDescription>
-          <CardFooter>April 2025 - present</CardFooter>
+          <CardFooter>April 2025 - November 2025</CardFooter>
         </CardHeader>
         <CardContent className="pl-0">
           <div className="pt-0">
