@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
   backend,
   backendMobile,
@@ -16,15 +16,11 @@ import {
 import { v4 as uuidv4 } from "uuid";
 
 const SkillsAccordion = () => {
-  const [value, setValue] = useState<string[]>([]);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setValue(["frontend", "backend", "tools"]);
-    }, 4000);
-
-    return () => clearTimeout(timer);
-  }, []);
+  const [value, setValue] = useState<string[]>([
+    "frontend",
+    "backend",
+    "tools",
+  ]);
 
   return (
     <Accordion
