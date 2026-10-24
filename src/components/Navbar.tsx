@@ -4,13 +4,27 @@ import Link from "next/link";
 import { Button } from "@ui/button";
 import { useRouter } from "next/router";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Navbar = () => {
   const router = useRouter();
   const activePage = (path: string) => router.pathname === path;
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const workLinksRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handleOutsideClick = (e: MouseEvent) => {
+      if (!workLinksRef.current?.contains(e.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleOutsideClick);
+    return () => document.removeEventListener("mousedown", handleOutsideClick);
+  }, [isOpen]);
 
   const navItemStyle = (page: string) =>
     ` hover:underline-offset-[6px] max-md:mt-3 md:text-xl text-2xl ${
@@ -34,23 +48,24 @@ const Navbar = () => {
 
         <div className="flex md:pr-6 lg:pr-[7rem] border-none">
           {isOpen ? (
-            <div className="flex md:gap-2">
+            <div className="flex md:gap-2" ref={workLinksRef}>
+              <Button
+                className={`${navItemStyle("/work/axtrabot")}`}
+                onClick={() => router.push("/work/axtrabot")}
+                variant={"link"}
+              >
+                Axtra Bot
+              </Button>
               <Button
                 className={`${navItemStyle("/work/regulars")}`}
-                onClick={() => {
-                  setIsOpen(false);
-                  router.push("/work/regulars");
-                }}
+                onClick={() => router.push("/work/regulars")}
                 variant={"link"}
               >
                 Regulars
               </Button>
               <Button
                 className={`${navItemStyle("/work/findmydog")}`}
-                onClick={() => {
-                  setIsOpen(false);
-                  router.push("/work/findmydog");
-                }}
+                onClick={() => router.push("/work/findmydog")}
                 variant={"link"}
               >
                 Find My Dog
@@ -60,7 +75,8 @@ const Navbar = () => {
             <Button
               className={`${navItemStyle("/work")} ${
                 (router.pathname === "/work/findmydog" ||
-                  router.pathname === "/work/regulars") &&
+                  router.pathname === "/work/regulars" ||
+                  router.pathname === "/work/axtrabot") &&
                 "underline"
               } ${isOpen ? "hidden" : ""} `}
               onClick={() => {

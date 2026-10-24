@@ -20,7 +20,7 @@ export default function Work() {
 
   const handleNav = (
     e: React.MouseEvent,
-    ref: React.RefObject<HTMLDivElement>
+    ref: React.RefObject<HTMLDivElement>,
   ) => {
     e.preventDefault();
 
@@ -50,20 +50,22 @@ export default function Work() {
           <h2 className="pt-1">Frontend Developer</h2>
           <article className="flex max-md:flex-col items-center">
             <div className="flex flex-col">
-              <p>
+              <h3>
                 The company helps cafes by building customer loyalty, turning
                 guests into regulars.
-              </p>
-              <p>
+              </h3>
+              <br />
+              <h3>
                 Built on the idea that retaining guests is cheaper and more
                 effective than acquiring new ones, Regulars provides a seamless
                 shift from traditional loyalty methods – cutting paper waste,
                 elevating customer engagement and changing the loyalty game.
-              </p>
-              <p>
+              </h3>
+              <br />
+              <h3>
                 I have helped to develop Regulars’ website and mobile
                 components.
-              </p>
+              </h3>
             </div>
             <Image
               alt="Regulars home page"
