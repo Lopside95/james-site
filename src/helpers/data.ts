@@ -12,8 +12,8 @@ const tools = [
   "Firebase",
   "Google Cloud Platform",
   "Docker",
-  "Google Genkit",
   "Vitest",
+  "Claude Code",
   "GitHub Copilot",
   "Postman",
 ];
@@ -39,8 +39,8 @@ const toolsMobile = [
   "Firebase,",
   "Google Cloud Platform,",
   "Docker,",
-  "Google Genkit,",
   "Vitest,",
+  "Claude Code,",
   "GitHub Copilot,",
   "Postman,",
 ];
