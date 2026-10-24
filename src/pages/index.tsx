@@ -1,7 +1,8 @@
 import TechStack from "@home/techStack";
 import Intro from "@/components/home/Intro";
-import { ProjectCard } from "@/components/ProjectCard";
+import { FindMyDogProjectCard } from "@/components/FindMyDogProjectCard";
 import { RegularsProjectCard } from "@/components/RegularsProjectCard";
+import { AxtraBotProjectCard } from "@/components/AxtraBotProjectCard";
 import Head from "next/head";
 
 export default function Home() {
@@ -18,8 +19,8 @@ export default function Home() {
       <main className="sm:items-center w-full sm:align-middle flex flex-col min-h-screen">
         <Intro />
         <TechStack />
-        <section className="flex max-lg:flex-col gap-12 py-14">
-          <ProjectCard
+        <section className="grid lg:grid-cols-2 gap-12 py-14">
+          <FindMyDogProjectCard
             title="Find My Dog"
             description="Capstone project for the BrainStation software engineering bootcamp."
             image="/findmydog/home-2.png"
@@ -32,6 +33,12 @@ export default function Home() {
             image="/regulars/regularsHome.png"
             href="/work/regulars"
             tags={["TypeScript", "Next.js", "TailwindCSS", "MongoDB", "tRPC"]}
+          />
+          <AxtraBotProjectCard
+            title="Axtra Bot"
+            description="A Telegram bot that flags new bookings on the days I'm working."
+            href="/work/axtrabot"
+            tags={["TypeScript", "Node.js", "Telegram API", "Google Calendar"]}
           />
         </section>
       </main>
