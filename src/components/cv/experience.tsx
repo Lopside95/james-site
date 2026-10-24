@@ -15,7 +15,7 @@ const Experience = () => {
         <CardHeader className="-mb-2 sm:-mb-4 pl-0">
           <CardTitle>Fullstack Engineer</CardTitle>
           <CardDescription>Freelance</CardDescription>
-          <CardFooter>April 2025 - November 2025</CardFooter>
+          <CardFooter>April 2025 - March 2026</CardFooter>
         </CardHeader>
         <CardContent className="pl-0">
           <div className="pt-0">
@@ -31,19 +31,18 @@ const Experience = () => {
         <CardHeader className="-mb-2 sm:-mb-4 pl-0">
           <CardTitle>Frontend Developer</CardTitle>
           <CardDescription>Regulars</CardDescription>
-          <CardFooter>September 2023 - September 2024</CardFooter>
+          <CardFooter>September 2023 - August 2024</CardFooter>
         </CardHeader>
         <CardContent className="pl-0">
           I had some self-taught experience of frontend development, and had
           taken an initial step into React. Once I joined the company as a
           frontend developer, I was introduced to a wide range of new and
           exciting technologies, some notable examples being TypeScript, Next.js
-          and TailwindCSS. <br />
-          Over the course of my time there I formed part of a remote team of
-          developers, using agile methodologies and working with designers and
-          marketing experts to deliver innovative digital solutions and
-          strategies for increased customer engagement and retention in the
-          hospitality industry.
+          and TailwindCSS. <br />I formed part of a team of remote developers
+          using agile methodologies and working with designers and marketing
+          experts to deliver innovative digital solutions and strategies for
+          increased customer engagement and retention in the hospitality
+          industry.
         </CardContent>
       </Card>
       <Card className="flex flex-col justify-between border-none py-10">
